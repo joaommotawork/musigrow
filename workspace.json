@@ -4,6 +4,6 @@
 		"musigrow": "apps/musigrow",
 		"musigrow-e2e": "apps/musigrow-e2e",
 		"musigrow-ui": "libs/musigrow-ui",
-		"musigrow-ui-e2e": "apps/musigrow-ui-e2e"
+		"musigrow-ui-e2e": "libs/musigrow-ui-e2e"
 	}
 }
