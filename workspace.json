@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "musigrow": "apps/musigrow",
+    "musigrow-e2e": "apps/musigrow-e2e"
+  }
+}
