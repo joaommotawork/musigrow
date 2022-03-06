@@ -1,7 +1,8 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["testing-library", "jest", "@nrwl/nx"],
+  "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -18,18 +19,30 @@
               }
             ]
           }
-        ]
+        ],
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "testing-library/await-async-query": "error",
+        "testing-library/no-await-sync-query": "error",
+        "testing-library/no-debugging-utils": "warn",
+        "testing-library/no-dom-import": "off"
       }
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
+      "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks", "plugin:@nrwl/nx/typescript"],
       "rules": {}
     },
     {
       "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
+      "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks", "plugin:@nrwl/nx/javascript"],
       "rules": {}
     }
-  ]
+  ],
+  "env": {
+    "jest/globals": true
+  }
 }

@@ -9,5 +9,7 @@
 	"trailingComma": "all",
 	"bracketSpacing": true,
 	"bracketSameLine": true,
-	"arrowParens": "always"
+	"arrowParens": "always",
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"tailwindConfig": ["./apps/musigrow/tailwind.config.js", "./libs/musigrow-ui/tailwind.config.js"]
 }
