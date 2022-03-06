@@ -10,7 +10,17 @@
 		"noImplicitOverride": true,
 		"noPropertyAccessFromIndexSignature": true,
 		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"baseUrl": ".",
+		"paths": {
+			"@atoms/*": ["src/lib/atoms/*"],
+			"@molecules/*": ["src/lib/molecules/*"],
+			"@organisms/*": ["src/lib/organisms/*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@types/*": ["src/types/*"],
+			"@utils/*": ["src/utils/*"],
+			"@constants/*": ["src/constants/*"]
+		}
 	},
 	"files": [],
 	"include": [],
@@ -24,5 +34,14 @@
 		{
 			"path": "./.storybook/tsconfig.json"
 		}
-	]
+	],
+	"paths": {
+		"@atoms/*": ["src/lib/atoms/*"],
+		"@molecules/*": ["src/lib/molecules/*"],
+		"@organisms/*": ["src/lib/organisms/*"],
+		"@hooks/*": ["src/hooks/*"],
+		"@types/*": ["src/types/*"],
+		"@utils/*": ["src/utils/*"],
+		"@constants/*": ["src/constants/*"]
+	}
 }
