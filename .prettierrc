@@ -11,5 +11,5 @@
 	"bracketSameLine": true,
 	"arrowParens": "always",
 	"plugins": ["prettier-plugin-tailwindcss"],
-	"tailwindConfig": ["./apps/musigrow/tailwind.config.js", "./libs/musigrow-ui/tailwind.config.js"]
+	"tailwindConfig": "./tailwind-workspace-preset.js"
 }
