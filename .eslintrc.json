@@ -2,7 +2,7 @@
   "root": true,
   "ignorePatterns": ["**/*"],
   "plugins": ["testing-library", "jest", "@nrwl/nx"],
-  "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks"],
+  /* "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks"], */
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -33,12 +33,12 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks", "plugin:@nrwl/nx/typescript"],
+      "extends": ["plugin:@nrwl/nx/typescript"],
       "rules": {}
     },
     {
       "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks", "plugin:@nrwl/nx/javascript"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {}
     }
   ],

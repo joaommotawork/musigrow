@@ -1,0 +1,5 @@
+{
+	"hello": "Hello",
+	"title": "Title",
+	"variableExample": "Using a variable {{count}}"
+}

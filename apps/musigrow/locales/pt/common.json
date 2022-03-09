@@ -1,0 +1,5 @@
+{
+	"hello": "Olá",
+	"title": "Título",
+	"variableExample": "Usar variável{{count}}"
+}
