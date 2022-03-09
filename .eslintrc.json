@@ -2,7 +2,7 @@
   "root": true,
   "ignorePatterns": ["**/*"],
   "plugins": ["testing-library", "jest", "@nrwl/nx"],
-  /* "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks"], */
+  "extends": ["plugin:testing-library/react", "plugin:jest/recommended", "@infinumjs/eslint-config-react-ts", "airbnb", "airbnb/hooks"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
