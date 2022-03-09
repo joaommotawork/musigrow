@@ -2,5 +2,8 @@
     "yaml.schemas": {
         "file:///Users/joaommota/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
         "https://json.schemastore.org/github-workflow.json": "file:///Users/joaommota/Desktop/Desktop/Backup/Projects/GitHub/musigrow/.github/workflows/build.yml"
-    }
+    },
+    "i18n-ally.localesPaths": [
+        "apps/musigrow/locales"
+    ]
 }
