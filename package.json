@@ -1,0 +1,14 @@
+{
+  "name": "musigrow",
+  "version": "0.0.1",
+  "private": true,
+  "license": "GPL-3.0",
+  "scripts": {
+    "upgrade": "yarn upgrade-interactive"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "packageManager": "yarn@3.2.2"
+}
