@@ -4,11 +4,29 @@
   "private": true,
   "license": "GPL-3.0",
   "scripts": {
-    "upgrade": "yarn upgrade-interactive"
+    "upgrade": "yarn upgrade-interactive",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "prepare": "husky install",
+    "postinstall": "husky install",
+    "dev:ui": "turbo run dev --filter=musigrow-ui",
+    "dev:app": "turbo run dev --filter=musigrow-app",
+    "build:ui": "turbo run build --filter=musigrow-ui",
+    "build-storybook:ui": "turbo run build-storybook --filter=musigrow-ui",
+    "build:app": "turbo run build --filter=musigrow-app",
+    "deploy:ui": "turbo run deploy --filter=musigrow-ui",
+    "deploy:app": "turbo run deploy --filter=musigrow-app"
   },
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
-  "packageManager": "yarn@3.2.2"
+  "packageManager": "yarn@3.2.2",
+  "devDependencies": {
+    "turbo": "^1.4.2"
+  }
 }
