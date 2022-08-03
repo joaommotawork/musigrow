@@ -1,0 +1,10 @@
+{
+	"name": "tailwind-config",
+	"version": "0.0.1",
+	"private": true,
+	"main": "index.js",
+	"packageManager": "yarn@3.2.2",
+	"dependencies": {
+		"tailwindcss": "^3.1.7"
+	}
+}

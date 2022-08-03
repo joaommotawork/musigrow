@@ -2,36 +2,36 @@
   "$schema": "https://turborepo.org/schema.json",
   "baseBranch": "origin/main",
   "pipeline": {
-    "dev": {
-      "cache": false
-    },
-    "build": {
-      "outputs": ["dist/**", ".next/**"],
-      "dependsOn": ["^build"]
-    },
-    "build-storybook": {
-      "outputs": ["dist/storybook/**"],
-      "dependsOn": ["^build"]
-    },
-    "test": {
-      "dependsOn": ["build"],
-      "outputs": ["coverage/**"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts"]
-    },
-    "test:e2e": {
-      "dependsOn": ["build"],
-      "outputs": []
-    },
-    "format": {
-      "outputs": []
-    },
-    "lint": {
-      "outputs": []
-    },
-    "deploy": {
-      "dependsOn": ["build", "test", "format", "lint"],
-      "outputs": []
-    }
+		"dev": {
+			"cache": false
+		},
+		"clean": {
+			"cache": false
+		},
+		"build": {
+			"outputs": ["dist/**", ".next/**"],
+			"dependsOn": ["^build"]
+		},
+		"build-storybook": {
+			"outputs": ["dist/storybook/**"],
+			"dependsOn": ["^build"]
+		},
+		"test": {
+			"dependsOn": ["build"],
+			"outputs": ["coverage/**"],
+			"inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts"]
+		},
+		"test:e2e": {
+			"dependsOn": ["build"],
+			"outputs": []
+		},
+		"lint": {
+			"outputs": []
+		},
+		"deploy": {
+			"dependsOn": ["build", "test", "format", "lint"],
+			"outputs": []
+		}
   },
   "globalDependencies": [".env", "tsconfig.json", "jest.config.js"]
 }
