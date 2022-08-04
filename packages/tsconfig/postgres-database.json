@@ -1,0 +1,12 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Postgres Database",
+	"extends": "./base.json",
+	"compilerOptions": {
+		"lib": ["ESNext"],
+		"module": "CommonJS",
+		"target": "ESNext",
+		"sourceMap": true,
+		"outDir": "dist"
+	}
+}

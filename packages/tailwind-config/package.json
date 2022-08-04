@@ -1,10 +1,21 @@
 {
+	"private": true,
 	"name": "tailwind-config",
 	"version": "0.0.1",
-	"private": true,
+	"description": "",
 	"main": "index.js",
-	"packageManager": "yarn@3.2.2",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": {
+		"name": "",
+		"email": "",
+		"url": ""
+	},
+	"license": "GPL-3.0",
 	"dependencies": {
 		"tailwindcss": "^3.1.7"
-	}
+	},
+	"packageManager": "yarn@3.2.2"
 }

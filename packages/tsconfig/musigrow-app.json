@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"display": "Next.js",
+	"display": "Musigrow App",
 	"extends": "./base.json",
 	"compilerOptions": {
 		"allowJs": true,
@@ -9,11 +9,11 @@
 		"incremental": true,
 		"jsx": "preserve",
 		"lib": ["dom", "dom.iterable", "esnext"],
-		"module": "esnext",
+		"module": "ESNext",
 		"noEmit": true,
 		"resolveJsonModule": true,
 		"strict": false,
-		"target": "es5"
+		"target": "ES5"
 	},
 	"include": ["src", "next-env.d.ts"],
 	"exclude": ["node_modules"]

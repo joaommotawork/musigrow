@@ -1,8 +1,12 @@
 {
+	"private": true,
 	"name": "musigrow",
 	"version": "0.0.1",
-	"private": true,
-	"license": "GPL-3.0",
+	"description": "",
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
 	"scripts": {
 		"local-postgres": "docker-compose -f docker-compose.yml up -d",
 		"upgrade": "yarn upgrade-interactive",
@@ -12,7 +16,7 @@
 		"test": "turbo run test",
 		"test:e2e": "turbo run test:e2e",
 		"lint": "turbo run lint",
-		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
+		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json}\"",
 		"prepare": "husky install",
 		"postinstall": "husky install",
 		"dev:ui": "turbo run dev --filter=musigrow-ui",
@@ -27,11 +31,23 @@
 		"db:push": "turbo run db:push",
 		"db:seed": "turbo run db:seed"
 	},
-	"workspaces": [
-		"packages/*",
-		"apps/*"
-	],
-	"packageManager": "yarn@3.2.2",
+	"keywords": [],
+	"author": {
+		"name": "",
+		"email": "",
+		"url": ""
+	},
+	"license": "GPL-3.0",
+	"lint-staged": {
+		"**/*": "prettier --write --ignore-unknown"
+	},
+	"engines": {
+		"node": ">=14.0.0",
+		"npm": ">=7.0.0"
+	},
+	"dependencies": {
+		"prettier-plugin-tailwindcss": "^0.1.13"
+	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
 		"@commitlint/config-conventional": "^17.0.3",
@@ -44,14 +60,5 @@
 		"prettier": "2.7.1",
 		"turbo": "^1.4.2"
 	},
-	"lint-staged": {
-		"**/*": "prettier --write --ignore-unknown"
-	},
-	"engines": {
-		"node": ">=14.0.0",
-		"npm": ">=7.0.0"
-	},
-	"dependencies": {
-		"prettier-plugin-tailwindcss": "^0.1.13"
-	}
+	"packageManager": "yarn@3.2.2"
 }

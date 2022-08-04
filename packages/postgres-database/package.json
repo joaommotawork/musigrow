@@ -1,7 +1,7 @@
 {
 	"name": "postgres-database",
 	"version": "0.0.1",
-	"license": "GPL-3.0",
+	"description": "",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
@@ -23,6 +23,13 @@
 		"predev": "npm run generate",
 		"studio": "prisma studio"
 	},
+	"keywords": [],
+	"author": {
+		"name": "",
+		"email": "",
+		"url": ""
+	},
+	"license": "GPL-3.0",
 	"dependencies": {
 		"@prisma/client": "^4.1.1"
 	},
