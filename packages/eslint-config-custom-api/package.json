@@ -1,5 +1,5 @@
 {
-	"name": "eslint-config-custom",
+	"name": "eslint-config-custom-api",
 	"version": "0.0.1",
 	"description": "",
 	"main": "index.js",

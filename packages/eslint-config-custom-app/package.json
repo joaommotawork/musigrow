@@ -1,0 +1,22 @@
+{
+	"name": "eslint-config-custom-app",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": [],
+	"author": {
+		"name": "",
+		"email": "",
+		"url": ""
+	},
+	"license": "GPL-3.0",
+	"dependencies": {
+		"eslint-config-next": "^12.2.3",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-react": "^7.30.1"
+	},
+	"packageManager": "yarn@3.2.2"
+}

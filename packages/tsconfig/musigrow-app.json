@@ -12,7 +12,6 @@
 		"module": "ESNext",
 		"noEmit": true,
 		"resolveJsonModule": true,
-		"strict": false,
 		"target": "ES5"
 	},
 	"include": ["src", "next-env.d.ts"],
