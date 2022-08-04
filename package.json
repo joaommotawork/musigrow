@@ -33,11 +33,12 @@
 	],
 	"packageManager": "yarn@3.2.2",
 	"devDependencies": {
+		"@commitlint/cli": "^17.0.3",
+		"@commitlint/config-conventional": "^17.0.3",
 		"@types/eslint": "^8",
-		"@types/prettier": "^2",
 		"eslint": "^8.21.0",
 		"eslint-config-custom": "*",
-		"prettier": "^2.7.1",
+		"husky": "^8.0.1",
 		"turbo": "^1.4.2"
 	},
 	"engines": {
