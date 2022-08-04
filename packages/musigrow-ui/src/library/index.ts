@@ -1,1 +1,1 @@
-export * from '@library/atoms';
+export * from './atoms/index';

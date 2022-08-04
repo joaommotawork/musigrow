@@ -1,3 +1,3 @@
-import '@styles/main.css';
+import './styles/main.css';
 
-export * from '@library/index';
+export * from './library/index';
