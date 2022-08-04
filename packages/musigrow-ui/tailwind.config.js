@@ -1,3 +1,4 @@
-const config = require('tailwind-config/tailwind.config.js');
-
-module.exports = config;
+module.exports = {
+	presets: [require('tailwind-config/tailwind.config.js')],
+	content: [`./src/**/*.{js,ts,jsx,tsx}`],
+};

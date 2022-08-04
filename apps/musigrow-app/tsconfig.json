@@ -1,5 +1,21 @@
 {
 	"extends": "tsconfig/musigrow-app.json",
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@app/*": ["src/app/*"],
+			"@features/*": ["src/features/*"],
+			"@services/*": ["src/services/*"],
+			"@components/*": ["src/components/*"],
+			"@pages/*": ["src/pages/*"],
+			"@public/*": ["src/public/*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@types/*": ["src/types/*"],
+			"@utils/*": ["src/utils/*"],
+			"@constants/*": ["src/constants/*"],
+			"@styles/*": ["src/styles/*"]
+		}
+	}
 }
