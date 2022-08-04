@@ -870,23 +870,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"database@workspace:packages/database":
-  version: 0.0.0-use.local
-  resolution: "database@workspace:packages/database"
-  dependencies:
-    "@prisma/client": ^4.1.1
-    "@types/eslint": ^8
-    "@types/node": ^18.6.3
-    eslint: ^8.21.0
-    prisma: ^4.1.1
-    ts-node: ^10.9.1
-    tsconfig: "*"
-    tsup: ^6.2.1
-    tsx: ^3.8.0
-    typescript: ^4.7.4
-  languageName: unknown
-  linkType: soft
-
 "debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
@@ -3088,6 +3071,23 @@ __metadata:
   checksum: fe58766ff32e4becf65a7d57678995cfd239df6deed2fe0557f038b47c94e4132e7e5f68b5aa820c13adfec32e523b693efaeb65798efb995ce49ccd83953816
   languageName: node
   linkType: hard
+
+"postgres-database@workspace:packages/postgres-database":
+  version: 0.0.0-use.local
+  resolution: "postgres-database@workspace:packages/postgres-database"
+  dependencies:
+    "@prisma/client": ^4.1.1
+    "@types/eslint": ^8
+    "@types/node": ^18.6.3
+    eslint: ^8.21.0
+    prisma: ^4.1.1
+    ts-node: ^10.9.1
+    tsconfig: "*"
+    tsup: ^6.2.1
+    tsx: ^3.8.0
+    typescript: ^4.7.4
+  languageName: unknown
+  linkType: soft
 
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
