@@ -31,6 +31,18 @@
 		"deploy": {
 			"dependsOn": ["build", "test", "format", "lint"],
 			"outputs": []
+		},
+		"generate": {
+			"dependsOn": ["^generate"]
+		},
+		"db:migrate:deploy": {
+			"outputs": []
+		},
+		"db:push": {
+			"outputs": []
+		},
+		"db:seed": {
+			"outputs": []
 		}
   },
   "globalDependencies": [".env", "tsconfig.json", "jest.config.js"]
