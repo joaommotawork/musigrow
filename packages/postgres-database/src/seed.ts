@@ -1,16 +1,16 @@
-import { prisma } from ".";
+import { prisma } from '.';
 
 (async () => {
 	try {
 		await prisma.user.create({
 			data: {
-				name: "Alice",
-				email: "alice@prisma.io",
+				name: 'Alice',
+				email: 'alice@prisma.io',
 				posts: {
-					create: { title: "Hello World" },
+					create: { title: 'Hello World' },
 				},
 				profile: {
-					create: { bio: "I like turtles" },
+					create: { bio: 'I like turtles' },
 				},
 			},
 		});

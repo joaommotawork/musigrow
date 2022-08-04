@@ -1,4 +1,4 @@
 module.exports = {
-	extends: ["next", "prettier"],
+	extends: ['next', 'prettier'],
 	rules: {},
 };
