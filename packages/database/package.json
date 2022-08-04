@@ -1,0 +1,17 @@
+{
+	"name": "database",
+	"version": "0.0.1",
+	"scripts": {
+		"studio": "npx prisma studio"
+	},
+	"devDependencies": {
+		"@types/node": "^18.6.3",
+		"prisma": "^4.1.1",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.7.4"
+	},
+	"dependencies": {
+		"@prisma/client": "^4.1.1"
+	},
+	"packageManager": "yarn@3.2.2"
+}

@@ -4,6 +4,7 @@
 	"private": true,
 	"license": "GPL-3.0",
 	"scripts": {
+		"local-database": "docker-compose -f docker-compose.yml up -d",
 		"upgrade": "yarn upgrade-interactive",
 		"clean": "turbo run clean && npx rimraf node_modules",
 		"build": "turbo run build",
