@@ -5,6 +5,11 @@
 	"compilerOptions": {
 		"jsx": "react-jsx",
 		"module": "ESNext",
-		"outDir": "./dist"
+		"target": "es5",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true,
+		"noEmit": true
 	}
 }

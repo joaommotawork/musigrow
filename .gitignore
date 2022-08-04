@@ -24,8 +24,6 @@ dist
 # Misc
 .DS_Store
 *.pem
-
-.DS_Store
 node_modules
 *.log
 dist-ssr
@@ -33,7 +31,8 @@ dist-ssr
 .cache
 server/dist
 public/dist
-storybook-static/
+storybook-static
+lib
 
 # Debug
 npm-debug.log*

@@ -1,5 +1,21 @@
 {
 	"extends": "tsconfig/musigrow-ui.json",
-	"include": ["."],
-	"exclude": ["dist", "build", "node_modules"]
+	"include": ["src"],
+	"exclude": ["lib", "node_modules"],
+	"compilerOptions": {
+		"outDir": "lib",
+		"declarationDir": "lib",
+		"baseUrl": ".",
+		"paths": {
+			"@library/*": ["src/library/*"],
+			"@atoms/*": ["src/library/atoms/*"],
+			"@molecules/*": ["src/library/molecules/*"],
+			"@organisms/*": ["src/library/organisms/*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@types/*": ["src/types/*"],
+			"@utils/*": ["src/utils/*"],
+			"@constants/*": ["src/constants/*"],
+			"@styles/*": ["src/styles/*"]
+		}
+	}
 }
