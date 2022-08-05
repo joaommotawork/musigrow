@@ -1968,6 +1968,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookform/error-message@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@hookform/error-message@npm:2.0.0"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+    react-hook-form: ^7.0.0
+  checksum: 84aa3a6cb5cc729581850dcbe2bb5dfa43431c148782b4e8676757f808cd81e220fbc4e709c4eee381b0168a991c3a3f5306acae2a09a9760859c9a188d591ec
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.10.4":
   version: 0.10.4
   resolution: "@humanwhocodes/config-array@npm:0.10.4"
@@ -12241,6 +12252,7 @@ __metadata:
   dependencies:
     "@axe-core/react": ^4.4.3
     "@headlessui/react": ^1.6.6
+    "@hookform/error-message": ^2.0.0
     "@lottiefiles/react-lottie-player": ^3.4.7
     "@types/eslint": ^8
     "@types/node": 18.6.3
@@ -12270,6 +12282,7 @@ __metadata:
     "@axe-core/react": ^4.4.3
     "@babel/core": ^7.18.10
     "@headlessui/react": ^1.6.6
+    "@hookform/error-message": ^2.0.0
     "@lottiefiles/react-lottie-player": ^3.4.7
     "@mdx-js/react": ^1.6.22
     "@rollup/plugin-commonjs": ^22.0.1
