@@ -8923,6 +8923,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"filepond@npm:^4.30.4":
+  version: 4.30.4
+  resolution: "filepond@npm:4.30.4"
+  checksum: ec1c06a11ceda231e5589f52307fa2f34b9c67c14b22c2be7adde227159f32e9ed1aa0e0a32fbca4e08a837b6714084e9f629c097a669fc1c3076be8c5f3c295
+  languageName: node
+  linkType: hard
+
 "fill-range@npm:^4.0.0":
   version: 4.0.0
   resolution: "fill-range@npm:4.0.0"
@@ -12263,11 +12270,13 @@ __metadata:
     classnames: ^2.3.1
     eslint: 8.21.0
     eslint-config-next: 12.2.4
+    filepond: ^4.30.4
     framer-motion: ^7.0.0
     next: 12.2.4
     postcss: ^8.4.14
     react: 18.2.0
     react-dom: 18.2.0
+    react-filepond: ^7.1.2
     react-hook-form: ^7.34.0
     react-icons: ^4.4.0
     tailwindcss: ^3.1.7
@@ -12306,10 +12315,12 @@ __metadata:
     autoprefixer: ^10.4.8
     babel-loader: ^8.2.5
     classnames: ^2.3.1
+    filepond: ^4.30.4
     framer-motion: ^7.0.0
     postcss: ^8.4.14
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-filepond: ^7.1.2
     react-hook-form: ^7.34.0
     react-icons: ^4.4.0
     rollup: ^2.77.2
@@ -14470,6 +14481,17 @@ __metadata:
     react: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1
     react-dom: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1
   checksum: 42bcd4423f12e9ee21b2d3f0c2a28805ff4953bd82b6be4c1f5b5f9a371115aafa36a6f3d82726d43b4912179b79e99550c2b9a772c7fe6a5cd8f7e93ff34ceb
+  languageName: node
+  linkType: hard
+
+"react-filepond@npm:^7.1.2":
+  version: 7.1.2
+  resolution: "react-filepond@npm:7.1.2"
+  peerDependencies:
+    filepond: ">=3.7.x < 5.x"
+    react: 16 - 18
+    react-dom: 16 - 18
+  checksum: 5aaa41dff2c3b3330442c521c3d73505b73bc14a3989c3e62f5e48de52d07904e1146280ec926fd805d7571b9ec14eec71769e55205f80ed0154094c48242b8f
   languageName: node
   linkType: hard
 
