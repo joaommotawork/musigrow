@@ -22,7 +22,8 @@
 		"@lottiefiles/react-lottie-player": "^3.4.7",
 		"atropos": "^1.0.2",
 		"classnames": "^2.3.1",
-		"framer-motion": "^7.0.0"
+		"framer-motion": "^7.0.0",
+		"react-icons": "^4.4.0"
 	},
 	"devDependencies": {
 		"@axe-core/react": "^4.4.3",
