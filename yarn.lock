@@ -1958,6 +1958,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@headlessui/react@npm:^1.6.6":
+  version: 1.6.6
+  resolution: "@headlessui/react@npm:1.6.6"
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: 6ebb34bde0bd2a5045ae29a2bac1dc166f7163c9ad98aabe5abb580c3c770d0b3040d5992045f9e68b6c8e8eca5bf7eca71276ff9b1696a9fb88a9380d8fcf96
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.10.4":
   version: 0.10.4
   resolution: "@humanwhocodes/config-array@npm:0.10.4"
@@ -12230,6 +12240,7 @@ __metadata:
   resolution: "musigrow-app@workspace:apps/musigrow-app"
   dependencies:
     "@axe-core/react": ^4.4.3
+    "@headlessui/react": ^1.6.6
     "@lottiefiles/react-lottie-player": ^3.4.7
     "@types/eslint": ^8
     "@types/node": 18.6.3
@@ -12256,6 +12267,7 @@ __metadata:
   dependencies:
     "@axe-core/react": ^4.4.3
     "@babel/core": ^7.18.10
+    "@headlessui/react": ^1.6.6
     "@lottiefiles/react-lottie-player": ^3.4.7
     "@mdx-js/react": ^1.6.22
     "@rollup/plugin-commonjs": ^22.0.1
