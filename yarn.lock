@@ -5450,6 +5450,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"atropos@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "atropos@npm:1.0.2"
+  checksum: b4bd3f76807f0a0c9001fd9216411df5988c47ffebdb6b6137ec0f1537b11d069600c9d795d75f0154b61a89c1e58bad2fb370138c39c3c3b0ccceff003cdd1c
+  languageName: node
+  linkType: hard
+
 "autoprefixer@npm:^10.4.8":
   version: 10.4.8
   resolution: "autoprefixer@npm:10.4.8"
@@ -12228,6 +12235,7 @@ __metadata:
     "@types/node": 18.6.3
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
+    atropos: ^1.0.2
     autoprefixer: ^10.4.8
     classnames: ^2.3.1
     eslint: 8.21.0
@@ -12267,6 +12275,7 @@ __metadata:
     "@types/react": ^18.0.15
     "@types/react-dom": ^18
     "@types/rollup-plugin-peer-deps-external": ^2
+    atropos: ^1.0.2
     autoprefixer: ^10.4.8
     babel-loader: ^8.2.5
     classnames: ^2.3.1
