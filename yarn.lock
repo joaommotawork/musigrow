@@ -2186,6 +2186,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lottiefiles/react-lottie-player@npm:^3.4.7":
+  version: 3.4.7
+  resolution: "@lottiefiles/react-lottie-player@npm:3.4.7"
+  dependencies:
+    lottie-web: ^5.7.8
+  peerDependencies:
+    react: 16 - 18
+  checksum: cffabececafbe3cbf09b54c5d2c45fdeed32cf7156fa5cae1ba2f4218048cbef239c23ed19e36b94a1b4b41c4518f77269865b9f7111ab2f4bf1ba2b59f4ef76
+  languageName: node
+  linkType: hard
+
 "@mdx-js/mdx@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/mdx@npm:1.6.22"
@@ -11526,6 +11537,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-web@npm:^5.7.8":
+  version: 5.9.6
+  resolution: "lottie-web@npm:5.9.6"
+  checksum: aed6a1d0c24eefb6c42a42aae18f29737746551cfdc86319f1b9675f5bc276ba26971e8d2b0e1498df880571fe4bfe2fc87885a1d4f8a318d5e4e5b939b7a474
+  languageName: node
+  linkType: hard
+
 "loud-rejection@npm:^1.0.0":
   version: 1.6.0
   resolution: "loud-rejection@npm:1.6.0"
@@ -12205,6 +12223,7 @@ __metadata:
   resolution: "musigrow-app@workspace:apps/musigrow-app"
   dependencies:
     "@axe-core/react": ^4.4.3
+    "@lottiefiles/react-lottie-player": ^3.4.7
     "@types/eslint": ^8
     "@types/node": 18.6.3
     "@types/react": 18.0.15
@@ -12229,6 +12248,7 @@ __metadata:
   dependencies:
     "@axe-core/react": ^4.4.3
     "@babel/core": ^7.18.10
+    "@lottiefiles/react-lottie-player": ^3.4.7
     "@mdx-js/react": ^1.6.22
     "@rollup/plugin-commonjs": ^22.0.1
     "@rollup/plugin-node-resolve": ^13.3.0
