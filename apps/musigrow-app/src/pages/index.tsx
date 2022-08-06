@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { notify } from 'reapop';
 import { Button } from 'musigrow-ui';
 import { useAppSelector, useAppDispatch } from '@app/hooks';
 import { decrement, increment } from '@features/counter/counterSlice';
@@ -65,6 +66,13 @@ const Home: NextPage = (locale) => {
 					aria-label='Open Menu'
 					onClick={() => dispatch(openMenu())}>
 					Open Menu
+				</button>
+				<button
+					aria-label='Notification'
+					onClick={() =>
+						dispatch(notify('Notification Test', 'info'))
+					}>
+					Notification
 				</button>
 			</main>
 
