@@ -13924,6 +13924,7 @@ __metadata:
     postcss: ^8.4.14
     react: 18.2.0
     react-burger-menu: ^3.0.8
+    react-content-loader: ^6.2.0
     react-dom: 18.2.0
     react-filepond: ^7.1.2
     react-hook-form: ^7.34.0
@@ -13982,6 +13983,7 @@ __metadata:
     jest-extended: ^3.0.2
     postcss: ^8.4.14
     react: ^18.2.0
+    react-content-loader: ^6.2.0
     react-dom: ^18.2.0
     react-filepond: ^7.1.2
     react-hook-form: ^7.34.0
@@ -16182,6 +16184,15 @@ __metadata:
     react: ">=0.14.0"
     react-dom: ">=0.14.0"
   checksum: 01e252d7aebb4f03c25f2de45a8f81d845a5890058f9658b8ba93eeae112cbd8c8eb33e2ffb8120743cacd8efb5ed4aaef6d5d25117e40be386dcc0860417ead
+  languageName: node
+  linkType: hard
+
+"react-content-loader@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "react-content-loader@npm:6.2.0"
+  peerDependencies:
+    react: ">=16.0.0"
+  checksum: a6c33ae62c3e2907a4f7f05fb1f14518927eb06608120db32064b9b32993535bb46cee92766fef4dd920658eb27662aa7bd593b1fa5ab4606c2bddd6124bfb58
   languageName: node
   linkType: hard
 

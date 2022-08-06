@@ -30,6 +30,7 @@
 		"date-fns": "^2.29.1",
 		"filepond": "^4.30.4",
 		"framer-motion": "^7.0.0",
+		"react-content-loader": "^6.2.0",
 		"react-filepond": "^7.1.2",
 		"react-hook-form": "^7.34.0",
 		"react-icons": "^4.4.0"
