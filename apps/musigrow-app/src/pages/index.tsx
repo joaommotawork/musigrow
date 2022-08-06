@@ -5,13 +5,14 @@ import { useTranslation } from 'next-i18next';
 import { Button } from 'musigrow-ui';
 import { useAppSelector, useAppDispatch } from '@app/hooks';
 import { decrement, increment } from '@features/counter/counterSlice';
+import { openMenu } from '@features/reactBurgerMenu/reactBurgerMenuSlice';
 import { useGetPokemonByNameQuery } from '@services/pokemon';
 
 const Home: NextPage = (locale) => {
 	const { t } = useTranslation('common');
 	// The `state` arg is correctly typed as `RootState` already
-	const count = useAppSelector((state) => state.counter.value);
 	const dispatch = useAppDispatch();
+	const count = useAppSelector((state) => state.counter.value);
 
 	// Using a query hook automatically fetches data and returns query values
 	const { data, error, isLoading } = useGetPokemonByNameQuery('bulbasaur');
@@ -60,6 +61,11 @@ const Home: NextPage = (locale) => {
 					) : null}
 				</div>
 				<p>{t('hello')}</p>
+				<button
+					aria-label='Open Menu'
+					onClick={() => dispatch(openMenu())}>
+					Open Menu
+				</button>
 			</main>
 
 			<footer></footer>

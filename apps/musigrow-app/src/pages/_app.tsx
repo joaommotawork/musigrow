@@ -3,6 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { appWithTranslation } from 'next-i18next';
 import { setupStore } from '@app/store';
+import Layout from '@components/Layout/Layout';
 import '@styles/globals.css';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
@@ -14,7 +15,9 @@ if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<Provider store={setupStore()}>
-			<Component {...pageProps} />
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
 		</Provider>
 	);
 }

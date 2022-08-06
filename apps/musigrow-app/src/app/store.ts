@@ -3,13 +3,15 @@ import {
 	configureStore,
 	PreloadedState,
 } from '@reduxjs/toolkit';
-import counterReducer from '@features/counter/counterSlice';
 import { setupListeners } from '@reduxjs/toolkit/query';
+import counterReducer from '@features/counter/counterSlice';
+import reactBurgerMenuReducer from '@features/reactBurgerMenu/reactBurgerMenuSlice';
 import { pokemonApi } from '@services/pokemon';
 
 // Create the root reducer independently to obtain the RootState type
 const rootReducer = combineReducers({
 	counter: counterReducer,
+	reactBurgerMenu: reactBurgerMenuReducer,
 	// Add the generated reducer as a specific top-level slice
 	[pokemonApi.reducerPath]: pokemonApi.reducer,
 });
