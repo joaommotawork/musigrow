@@ -1,11 +1,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import { Button } from 'musigrow-ui';
 import { useAppSelector, useAppDispatch } from '@app/hooks';
 import { decrement, increment } from '@features/counter/counterSlice';
 import { useGetPokemonByNameQuery } from '@services/pokemon';
 
-const Home: NextPage = () => {
+const Home: NextPage = (locale) => {
+	const { t } = useTranslation('common');
 	// The `state` arg is correctly typed as `RootState` already
 	const count = useAppSelector((state) => state.counter.value);
 	const dispatch = useAppDispatch();
@@ -56,11 +59,21 @@ const Home: NextPage = () => {
 						</>
 					) : null}
 				</div>
+				<p>{t('hello')}</p>
 			</main>
 
 			<footer></footer>
 		</div>
 	);
 };
+
+export async function getStaticProps({ locale }: any) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+			// Will be passed to the page component as props
+		},
+	};
+}
 
 export default Home;
