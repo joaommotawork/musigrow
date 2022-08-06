@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { appWithTranslation } from 'next-i18next';
 import { setupStore } from '@app/store';
 import Layout from '@components/Layout/Layout';
+import '@vime/core/themes/default.css';
 import '@styles/globals.css';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {

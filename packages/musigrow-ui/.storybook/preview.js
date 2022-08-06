@@ -1,4 +1,5 @@
 import React from 'react';
+import '@vime/core/themes/default.css';
 import '@styles/main.css';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
