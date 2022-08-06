@@ -13939,6 +13939,7 @@ __metadata:
     react-hook-form: ^7.34.0
     react-icons: ^4.4.0
     react-redux: ^8.0.2
+    react-spinners: ^0.13.4
     react-test-renderer: ^18.2.0
     tailwindcss: ^3.1.7
     ts-jest: ^28.0.7
@@ -13997,6 +13998,7 @@ __metadata:
     react-filepond: ^7.1.2
     react-hook-form: ^7.34.0
     react-icons: ^4.4.0
+    react-spinners: ^0.13.4
     react-test-renderer: ^18.2.0
     rollup: ^2.77.2
     rollup-plugin-peer-deps-external: ^2.2.4
@@ -16403,6 +16405,16 @@ __metadata:
   peerDependencies:
     react: ^16.0.0 || ^17.0.0 || ^18.0.0
   checksum: 6052c7e3e9627485120ebd8257f128aad8f56386fe8d42374b7743eac1be457c33506d153c7886b4e32923c0c352d402ab805ef9ca02dbcd8393b2bdeb6e5af8
+  languageName: node
+  linkType: hard
+
+"react-spinners@npm:^0.13.4":
+  version: 0.13.4
+  resolution: "react-spinners@npm:0.13.4"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: ae9430bc8a2fede2ffdcac57c3586c56c5b459e1ba3ee60058c4eaf9b7cbdd87cf07c15927cfe0a171fc7460553385b69d961dc8448356bc558fd44db02eee63
   languageName: node
   linkType: hard
 
