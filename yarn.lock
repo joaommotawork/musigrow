@@ -4623,6 +4623,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nprogress@npm:^0":
+  version: 0.2.0
+  resolution: "@types/nprogress@npm:0.2.0"
+  checksum: 561384775008ae58111f038f8f9468b3de8987cd753feef9bf6d07af0e1343390d492a078bb08a7b53ac7370208e31e06ac069cb852c435d49f5fe218e9769c4
+  languageName: node
+  linkType: hard
+
 "@types/parse-json@npm:^4.0.0":
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
@@ -13902,6 +13909,7 @@ __metadata:
     "@types/jest": ^28.1.6
     "@types/jest-axe": ^3.5.4
     "@types/node": 18.6.3
+    "@types/nprogress": ^0
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
     "@types/react-test-renderer": ^18
@@ -13921,6 +13929,7 @@ __metadata:
     msw: ^0.44.2
     next: 12.2.4
     next-i18next: ^11.3.0
+    nprogress: ^0.2.0
     postcss: ^8.4.14
     react: 18.2.0
     react-burger-menu: ^3.0.8
@@ -14408,6 +14417,13 @@ __metadata:
     gauge: ^4.0.3
     set-blocking: ^2.0.0
   checksum: ae238cd264a1c3f22091cdd9e2b106f684297d3c184f1146984ecbe18aaa86343953f26b9520dedd1b1372bc0316905b736c1932d778dbeb1fcf5a1001390e2a
+  languageName: node
+  linkType: hard
+
+"nprogress@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "nprogress@npm:0.2.0"
+  checksum: 66b7bec5d563ecf2d1c3d2815e6d5eb74ed815eee8563e0afa63d3f185ab1b9cf2ddd97e1ded263b9995c5019d26d600320e849e50f3747984daa033744619dc
   languageName: node
   linkType: hard
 
