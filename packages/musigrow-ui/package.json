@@ -25,6 +25,7 @@
 		"@lottiefiles/react-lottie-player": "^3.4.7",
 		"atropos": "^1.0.2",
 		"classnames": "^2.3.1",
+		"date-fns": "^2.29.1",
 		"filepond": "^4.30.4",
 		"framer-motion": "^7.0.0",
 		"react-filepond": "^7.1.2",
