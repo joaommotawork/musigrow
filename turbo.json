@@ -1,7 +1,7 @@
 {
-  "$schema": "https://turborepo.org/schema.json",
-  "baseBranch": "origin/main",
-  "pipeline": {
+	"$schema": "https://turborepo.org/schema.json",
+	"baseBranch": "origin/main",
+	"pipeline": {
 		"dev": {
 			"cache": false
 		},
@@ -44,6 +44,6 @@
 		"db:seed": {
 			"outputs": []
 		}
-  },
-  "globalDependencies": [".env", "tsconfig.json", "jest.config.js"]
+	},
+	"globalDependencies": [".env", "tsconfig.json"]
 }
