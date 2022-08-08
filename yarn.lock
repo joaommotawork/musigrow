@@ -4881,6 +4881,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uuid@npm:^8":
+  version: 8.3.4
+  resolution: "@types/uuid@npm:8.3.4"
+  checksum: 6f11f3ff70f30210edaa8071422d405e9c1d4e53abbe50fdce365150d3c698fe7bbff65c1e71ae080cbfb8fded860dbb5e174da96fdbbdfcaa3fb3daa474d20f
+  languageName: node
+  linkType: hard
+
 "@types/webpack-env@npm:^1.16.0":
   version: 1.17.0
   resolution: "@types/webpack-env@npm:1.17.0"
@@ -14535,6 +14542,7 @@ __metadata:
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
     "@types/react-test-renderer": ^18.0.0
+    "@types/uuid": ^8
     "@vime/core": ^5.3.1
     "@vime/react": ^5.3.1
     atropos: ^1.0.2
@@ -14573,6 +14581,7 @@ __metadata:
     tailwindcss: ^3.1.7
     ts-jest: ^28.0.7
     typescript: 4.7.4
+    uuid: ^8.3.2
   languageName: unknown
   linkType: soft
 
@@ -14609,6 +14618,7 @@ __metadata:
     "@types/react-dom": ^18
     "@types/react-test-renderer": ^18.0.0
     "@types/rollup-plugin-peer-deps-external": ^2
+    "@types/uuid": ^8
     "@vime/core": ^5.3.1
     "@vime/react": ^5.3.1
     atropos: ^1.0.2
@@ -14643,6 +14653,7 @@ __metadata:
     ts-jest: ^28.0.7
     tsconfig-paths-webpack-plugin: ^4.0.0
     typescript: ^4.7.4
+    uuid: ^8.3.2
   peerDependencies:
     react: ^18.2.0
     react-dom: ^18.2.0
