@@ -16,20 +16,11 @@
 			"outputs": ["dist/storybook/**"],
 			"dependsOn": ["^build"]
 		},
-		"test": {
-			"dependsOn": ["build"],
-			"outputs": ["coverage/**"],
-			"inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts"]
-		},
-		"test:e2e": {
-			"dependsOn": ["build"],
-			"outputs": []
-		},
 		"lint": {
 			"outputs": []
 		},
 		"deploy": {
-			"dependsOn": ["build", "test", "format", "lint"],
+			"dependsOn": ["build", "format", "lint"],
 			"outputs": []
 		},
 		"generate": {

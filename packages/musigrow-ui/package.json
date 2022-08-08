@@ -8,7 +8,8 @@
 	"scripts": {
 		"dev": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
-		"build": "rollup -c"
+		"build": "rollup -c",
+		"cypress:open": "cypress open"
 	},
 	"keywords": [],
 	"author": {
@@ -58,14 +59,13 @@
 		"@types/babel__core": "^7",
 		"@types/react": "^18.0.15",
 		"@types/react-dom": "^18",
-		"@types/react-test-renderer": "^18",
 		"@types/rollup-plugin-peer-deps-external": "^2",
 		"autoprefixer": "^10.4.8",
 		"babel-loader": "^8.2.5",
+		"cypress": "^10.4.0",
 		"postcss": "^8.4.14",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-test-renderer": "^18.2.0",
 		"rollup": "^2.77.2",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
 		"rollup-plugin-postcss": "^4.0.2",
