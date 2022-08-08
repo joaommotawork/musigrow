@@ -14662,6 +14662,7 @@ __metadata:
     "@testing-library/react": ^13.3.0
     "@testing-library/user-event": ^14.4.2
     "@types/babel__core": ^7
+    "@types/eslint": ^8
     "@types/jest": ^28.1.6
     "@types/jest-axe": ^3.5.4
     "@types/react": ^18.0.15
@@ -14676,6 +14677,7 @@ __metadata:
     classnames: ^2.3.1
     cypress: ^10.4.0
     date-fns: ^2.29.1
+    eslint: ^8.21.0
     filepond: ^4.30.4
     framer-motion: ^7.0.0
     jest: ^28.1.3

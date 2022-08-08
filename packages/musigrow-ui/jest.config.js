@@ -33,6 +33,7 @@ module.exports = {
 		'<rootDir>/node_modules/',
 		'<rootDir>/.next/',
 		'<rootDir>/e2e/',
+		'<rootDir>/cypress/',
 	],
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 	collectCoverage: true,
