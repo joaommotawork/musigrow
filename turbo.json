@@ -16,11 +16,20 @@
 			"outputs": ["dist/storybook/**"],
 			"dependsOn": ["^build"]
 		},
+		"test": {
+			"dependsOn": ["build"],
+			"outputs": ["coverage/**"],
+			"inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts"]
+		},
+		"test:e2e": {
+			"dependsOn": ["build"],
+			"outputs": []
+		},
 		"lint": {
 			"outputs": []
 		},
 		"deploy": {
-			"dependsOn": ["build", "format", "lint"],
+			"dependsOn": ["build", "test", "format", "lint"],
 			"outputs": []
 		},
 		"generate": {
@@ -36,5 +45,5 @@
 			"outputs": []
 		}
 	},
-	"globalDependencies": [".env", "tsconfig.json"]
+	"globalDependencies": [".env", "tsconfig.json", "jest.config.js"]
 }

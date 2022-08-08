@@ -8,4 +8,12 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
+	overrides: [
+		{
+			files: ['**/__tests__/**/*'],
+			env: {
+				jest: true,
+			},
+		},
+	],
 };

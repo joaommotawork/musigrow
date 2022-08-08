@@ -1,7 +1,8 @@
 module.exports = {
 	env: {
-		browser: true,
-		es2021: true,
+		'browser': true,
+		'es2021': true,
+		'jest/globals': true,
 	},
 	extends: [
 		'eslint:recommended',
@@ -13,6 +14,14 @@ module.exports = {
 	],
 	rules: {},
 	overrides: [
+		{
+			files: [
+				'**/__tests__/**/*.[jt]s?(x)',
+				'**/?(*.)+(spec|test).[jt]s?(x)',
+			],
+			plugins: ['testing-library', 'jest'],
+			extends: ['plugin:jest/all', 'plugin:testing-library/react'],
+		},
 		{
 			files: ['*.ts', '*.tsx'],
 			parserOptions: {

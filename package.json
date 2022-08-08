@@ -13,6 +13,8 @@
 		"clean": "turbo run clean && npx rimraf node_modules",
 		"build": "turbo run build",
 		"dev": "turbo run dev --no-cache --parallel --continue",
+		"test": "turbo run test",
+		"test:e2e": "turbo run test:e2e",
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json}\"",
 		"prepare": "husky install",
