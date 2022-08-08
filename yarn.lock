@@ -14561,6 +14561,7 @@ __metadata:
     musigrow-ui: "*"
     next: 12.2.4
     next-i18next: ^11.3.0
+    nextjs-google-analytics: ^2.0.0
     nprogress: ^0.2.0
     postcss: ^8.4.14
     react: 18.2.0
@@ -14845,6 +14846,16 @@ __metadata:
   bin:
     next: dist/bin/next
   checksum: 31da1485d3499b2d43b452378931cc04d3593dcdecb7629263d5f5dae375ae956d68963a7398b613a283d0c42c50a7ab9f5ef911d8df50f740e8438721e06457
+  languageName: node
+  linkType: hard
+
+"nextjs-google-analytics@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "nextjs-google-analytics@npm:2.0.0"
+  peerDependencies:
+    next: ">=11.0.0"
+    react: ">=17.0.0"
+  checksum: 8d5fe522f593f033d96bb80b5ee8ab90f3ad35b226334f497928ae4ff08badb8213657ab13c101c2e32a85f4f7385ace8658569106d7f7e2463778f3e4a5f7c1
   languageName: node
   linkType: hard
 
