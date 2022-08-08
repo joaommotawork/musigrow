@@ -10,7 +10,7 @@
 		},
 		"build": {
 			"outputs": ["dist/**", ".next/**"],
-			"dependsOn": ["^build"]
+			"dependsOn": ["^build", "$NODE_ENV", "$NEXT_PUBLIC_NODE_ENV"]
 		},
 		"build-storybook": {
 			"outputs": ["dist/storybook/**"],
@@ -29,7 +29,14 @@
 			"outputs": []
 		},
 		"deploy": {
-			"dependsOn": ["build", "test", "format", "lint"],
+			"dependsOn": [
+				"build",
+				"test",
+				"format",
+				"lint",
+				"$NODE_ENV",
+				"$NEXT_PUBLIC_NODE_ENV"
+			],
 			"outputs": []
 		},
 		"generate": {
