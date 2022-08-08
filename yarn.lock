@@ -14550,6 +14550,7 @@ __metadata:
     jest-axe: ^6.0.0
     jest-extended: ^3.0.2
     msw: ^0.44.2
+    musigrow-ui: "*"
     next: 12.2.4
     next-i18next: ^11.3.0
     nprogress: ^0.2.0
@@ -14575,7 +14576,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"musigrow-ui@workspace:packages/musigrow-ui":
+"musigrow-ui@*, musigrow-ui@workspace:packages/musigrow-ui":
   version: 0.0.0-use.local
   resolution: "musigrow-ui@workspace:packages/musigrow-ui"
   dependencies:
