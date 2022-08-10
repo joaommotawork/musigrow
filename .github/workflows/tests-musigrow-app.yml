@@ -21,8 +21,7 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 16
-                  cache: 'yarn'
             - name: Install Dependencies
-              run: rm -rf node_modules && yarn cache clean && yarn install
+              run: yarn install --network-concurrency 1 --frozen-lockfile
             - name: Run Jest Musigrow APP
               run: yarn test
