@@ -1,0 +1,25 @@
+name: Tests Musigrow APP
+
+on:
+    push:
+        branches:
+            - "**"
+    pull_request:
+        types: [opened, synchronize, reopened]
+
+jobs:
+    test:
+        timeout-minutes: 60
+        runs-on: ubuntu-latest
+        defaults:
+          run:
+            working-directory: apps/musigrow-app
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "14.x"
+            - name: Install Dependencies
+              run: yarn install
+            - name: Run Jest Musigrow APP
+              run: yarn test
