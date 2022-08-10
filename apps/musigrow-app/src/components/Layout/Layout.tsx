@@ -8,7 +8,7 @@ import NotificationsSystem, {
 import { useAppSelector, useAppDispatch } from '@app/hooks';
 import { closeMenu } from '@features/reactBurgerMenu/reactBurgerMenuSlice';
 import NProgress from '@components/NProgress/NProgress';
-import reactBurgerMenuStyles from '@styles/reactBurgerMenu';
+import reactBurgerMenuStyles from '@styles/reactBurgerMenuStyles';
 
 const Layout = ({ children }: { children: ReactNode }) => {
 	const [isSSR, setIsSSR] = useState(true);

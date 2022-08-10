@@ -16,9 +16,9 @@
 	},
 	"keywords": [],
 	"author": {
-		"name": "",
-		"email": "",
-		"url": ""
+		"name": "João Mota",
+		"email": "joaommota.work@gmail.com",
+		"url": "https://www.joaommota.com"
 	},
 	"license": "GPL-3.0",
 	"dependencies": {

@@ -4,7 +4,7 @@ module.exports = {
 	preset: 'ts-jest',
 	testEnvironment: 'node',
 	collectCoverageFrom: [
-		'**/*.{js,jsx,ts,tsx}',
+		'src/**/*.{js,jsx,ts,tsx}',
 		'!**/*.d.ts',
 		'!**/node_modules/**',
 	],
@@ -34,13 +34,16 @@ module.exports = {
 		'<rootDir>/.next/',
 		'<rootDir>/e2e/',
 		'<rootDir>/cypress/',
+		'<rootDir>/coverage/',
 	],
-	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+	setupFilesAfterEnv: ['jest-extended/all', '<rootDir>/jest.setup.js'],
 	collectCoverage: true,
 	coverageDirectory: 'coverage',
 	coveragePathIgnorePatterns: [
 		'<rootDir>/node_modules/',
 		'<rootDir>/.next/',
 		'<rootDir>/e2e/',
+		'<rootDir>/cypress/',
+		'<rootDir>/coverage/',
 	],
 };

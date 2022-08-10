@@ -4,6 +4,7 @@
 	"exclude": ["lib", "node_modules", "cypress"],
 	"compilerOptions": {
 		"outDir": "lib",
+		"declaration": true,
 		"declarationDir": "lib",
 		"baseUrl": ".",
 		"paths": {

@@ -1,0 +1,10 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Musigrow Api",
+	"extends": "./base.json",
+	"compilerOptions": {
+		"sourceMap": true,
+		"outDir": "dist",
+		"lib": ["esnext"]
+	}
+}
