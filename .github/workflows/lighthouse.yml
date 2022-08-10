@@ -19,7 +19,7 @@ jobs:
               with:
                   node-version: 16
                   cache: 'yarn'
-            - run: cd ../.. && yarn install && yarn build
+            - run: cd ../.. && rm -rf node_modules && yarn cache clean && yarn install && yarn build
             - run: npm install -g @lhci/cli@0.8.x
             - run: cd apps/musigrow-app
             - run: lhci autorun
