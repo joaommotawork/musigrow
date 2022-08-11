@@ -20,7 +20,7 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 16
-            - run: cd ../.. && yarn install --network-concurrency 1 --frozen-lockfile && yarn build
+            - run: cd ../.. && rm -rf node_modules && yarn cache clean && yarn install && yarn build
             - run: npm install -g @lhci/cli@0.8.x
             - run: cd apps/musigrow-app
             - run: lhci autorun
