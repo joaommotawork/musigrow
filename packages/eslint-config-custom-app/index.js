@@ -4,8 +4,10 @@ module.exports = {
 		'es2021': true,
 		'jest/globals': true,
 	},
+	plugins: ['sonarjs'],
 	extends: [
 		'eslint:recommended',
+		'plugin:sonarjs/recommended',
 		'@infinumjs/eslint-config-nextjs-ts',
 		'airbnb',
 		'airbnb/hooks',

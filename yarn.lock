@@ -5175,7 +5175,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.32.0":
+"@typescript-eslint/eslint-plugin@npm:^5.32.0, @typescript-eslint/eslint-plugin@npm:^5.33.0":
   version: 5.33.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.33.0"
   dependencies:
@@ -5198,7 +5198,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.21.0, @typescript-eslint/parser@npm:^5.32.0":
+"@typescript-eslint/parser@npm:^5.21.0, @typescript-eslint/parser@npm:^5.32.0, @typescript-eslint/parser@npm:^5.33.0":
   version: 5.33.0
   resolution: "@typescript-eslint/parser@npm:5.33.0"
   dependencies:
@@ -9829,9 +9829,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "eslint-config-custom-api@workspace:packages/eslint-config-custom-api"
   dependencies:
+    "@typescript-eslint/eslint-plugin": ^5.33.0
+    "@typescript-eslint/parser": ^5.33.0
     eslint-config-next: ^12.2.3
     eslint-config-prettier: ^8.5.0
+    eslint-plugin-import: ^2.26.0
+    eslint-plugin-jest: ^26.8.2
     eslint-plugin-react: ^7.30.1
+    eslint-plugin-sonarjs: ^0.15.0
   languageName: unknown
   linkType: soft
 
@@ -9851,6 +9856,7 @@ __metadata:
     eslint-plugin-jsx-a11y: ^6.6.1
     eslint-plugin-react: ^7.30.1
     eslint-plugin-react-hooks: ^4.6.0
+    eslint-plugin-sonarjs: ^0.15.0
     eslint-plugin-testing-library: ^5.6.0
   languageName: unknown
   linkType: soft
@@ -9959,7 +9965,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^26.8.1":
+"eslint-plugin-jest@npm:^26.8.1, eslint-plugin-jest@npm:^26.8.2":
   version: 26.8.2
   resolution: "eslint-plugin-jest@npm:26.8.2"
   dependencies:
@@ -10053,6 +10059,15 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
   checksum: 553fb9ece6beb7c14cf6f84670c786c8ac978c2918421994dcc4edd2385302022e5d5ac4a39fafdb35954e29cecddefed61758040c3c530cafcf651f674a9d51
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-sonarjs@npm:^0.15.0":
+  version: 0.15.0
+  resolution: "eslint-plugin-sonarjs@npm:0.15.0"
+  peerDependencies:
+    eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+  checksum: 0718232626057e9a30c58350ef79af3bbc5ea7c3a880d1609965b0c1cbe347e4834ddf831962f755464f7a6350cb715c1c76e2670dc7bdf1a48c37bf0fe269c8
   languageName: node
   linkType: hard
 
