@@ -22,6 +22,6 @@ jobs:
               with:
                   node-version: 16
             - name: Install Dependencies
-              run: rm -rf node_modules && yarn cache clean && yarn install
+              run: yarn install
             - name: Run Jest Musigrow UI
               run: yarn test

@@ -10,9 +10,6 @@ on:
 jobs:
     lighthouseci:
         runs-on: ubuntu-latest
-        defaults:
-            run:
-                working-directory: apps/musigrow-app
         steps:
             - uses: actions/checkout@v3
               with:
@@ -20,7 +17,7 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 16
-            - run: cd ../.. && rm -rf node_modules && yarn cache clean && yarn install && yarn build
-            - run: npm install -g @lhci/cli@0.8.x
+            - run: yarn install && yarn build
+            - run: yarn add -g @lhci/cli@0.8.x
             - run: cd apps/musigrow-app
             - run: lhci autorun
