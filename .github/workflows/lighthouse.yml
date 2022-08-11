@@ -18,6 +18,6 @@ jobs:
               with:
                   node-version: 16
             - run: yarn install && yarn build
-            - run: yarn add -g @lhci/cli@0.8.x
+            - run: yarn global add @lhci/cli@0.8.x
             - run: cd apps/musigrow-app
             - run: lhci autorun
