@@ -2976,30 +2976,30 @@ __metadata:
   linkType: hard
 
 "@prisma/client@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "@prisma/client@npm:4.1.1"
+  version: 4.2.1
+  resolution: "@prisma/client@npm:4.2.1"
   dependencies:
-    "@prisma/engines-version": 4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8
+    "@prisma/engines-version": 4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826
   peerDependencies:
     prisma: "*"
   peerDependenciesMeta:
     prisma:
       optional: true
-  checksum: 0251ebba98c5212e5d2fabfadac945c5977b6e48c1baeaa5d962cd2d486524304e14f320870df879c7cc83de2783d0dd3fee9c63bcdd300bd88d2b5f8f461ed0
+  checksum: 2eefe7182f2ebc26c35777e9ff22acb9c1d1f6e0988c518b32063d7677d066ab7258d13a0ee851addc77526dc0de9c05a02d5688c55377d65ddee1b6866b9e95
   languageName: node
   linkType: hard
 
-"@prisma/engines-version@npm:4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8":
-  version: 4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8
-  resolution: "@prisma/engines-version@npm:4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8"
-  checksum: 6c2e937663439589412f5b5765abbae6aeed0df10640a9fdd5a8d39b77981e95b5b5871ed865e50ef8e4c150511f455d7b3acbf44cd3cae4a67732489dc58fec
+"@prisma/engines-version@npm:4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826":
+  version: 4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826
+  resolution: "@prisma/engines-version@npm:4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826"
+  checksum: 65975c69a361b56a85cf3652c8d7aec7549abe574158e423a64bc0be4bee83fe72ac2abd60133f776f3d410f97e7dc8c5dc516791ec963703cc6f914d378efc4
   languageName: node
   linkType: hard
 
-"@prisma/engines@npm:4.1.1":
-  version: 4.1.1
-  resolution: "@prisma/engines@npm:4.1.1"
-  checksum: 23877091007c288065b002cedc70273bc1a5eb601e3bae767549521aeffbd58775f079ba61fd9516546befe0a6c50db2fb2469f33b1e2ee847f5b1056ac4a07a
+"@prisma/engines@npm:4.2.1":
+  version: 4.2.1
+  resolution: "@prisma/engines@npm:4.2.1"
+  checksum: 60a13c34412d875f803fbf6452df7dd811b92f9d08e0096629841f404b14e9830ff2e487c8e462d710a1a38a6b0a202e60369d804d0251ae139376772c64f00a
   languageName: node
   linkType: hard
 
@@ -3025,8 +3025,8 @@ __metadata:
   linkType: hard
 
 "@reduxjs/toolkit@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@reduxjs/toolkit@npm:1.8.3"
+  version: 1.8.4
+  resolution: "@reduxjs/toolkit@npm:1.8.4"
   dependencies:
     immer: ^9.0.7
     redux: ^4.1.2
@@ -3040,7 +3040,7 @@ __metadata:
       optional: true
     react-redux:
       optional: true
-  checksum: 2c932ac6fa430b982108829a6150ca0c15ff617eb121b8055b91a89ab2124e8d93a1277ccdc96ff8af680fbde9d4c7021b1f924f11e28004ee61c6a7d39915bc
+  checksum: 2ed7ee22bc84f0a2370ca2746513ece4593b8310c16c89e1ccf43ce23dcb83d7c4f4773d78049b68b4e92b3c5bee641e8081faf3947371be6b004ebba8142a51
   languageName: node
   linkType: hard
 
@@ -4386,8 +4386,8 @@ __metadata:
   linkType: hard
 
 "@testing-library/dom@npm:^8.1.0, @testing-library/dom@npm:^8.3.0, @testing-library/dom@npm:^8.5.0":
-  version: 8.16.1
-  resolution: "@testing-library/dom@npm:8.16.1"
+  version: 8.17.1
+  resolution: "@testing-library/dom@npm:8.17.1"
   dependencies:
     "@babel/code-frame": ^7.10.4
     "@babel/runtime": ^7.12.5
@@ -4397,7 +4397,7 @@ __metadata:
     dom-accessibility-api: ^0.5.9
     lz-string: ^1.4.4
     pretty-format: ^27.0.2
-  checksum: eca86b69f28cdab7226209075b3ca54f87fc0fc92a41440bbfa41e14ed0815aac4a63b1d9a08230e0dbd0de3a54c61cd90a3a423695e6840124e2473c8149e99
+  checksum: e4df091fcf84c9eac4a6ee4c76674c1d562bf98732f0ac8820972d7718ab10397b672b9f082aace3cacd1f610fc77de6e1b6094e67afe1df0443bf22eb9deab2
   languageName: node
   linkType: hard
 
@@ -4427,11 +4427,11 @@ __metadata:
   linkType: hard
 
 "@testing-library/user-event@npm:^14.4.2":
-  version: 14.4.2
-  resolution: "@testing-library/user-event@npm:14.4.2"
+  version: 14.4.3
+  resolution: "@testing-library/user-event@npm:14.4.3"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: 66364f2c503ddc01f5fdf98507aecf40b4edf0b9c140332aaf0161b1d7d52dea8a5d93baee927ae955bd7d6d58be0c12367a2cff924bdb4232746f0e614f9e03
+  checksum: 852c48ea6db1c9471b18276617c84fec4320771e466cd58339a732ca3fd73ad35e5a43ae14f51af51a8d0a150dcf60fcaab049ef367871207bea8f92c4b8195e
   languageName: node
   linkType: hard
 
@@ -4834,9 +4834,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=12, @types/node@npm:^18.6.3":
-  version: 18.6.5
-  resolution: "@types/node@npm:18.6.5"
-  checksum: e3e66c9a84b94010a57c1b9dac882c08484278d74f9d120dbe6a3e45d00740d178bd1d34a5deee28197c94b9f4359153b637bab9b305328e865027e9987a0f3d
+  version: 18.7.1
+  resolution: "@types/node@npm:18.7.1"
+  checksum: f1e2b701b107f97be01da4c46845cd23bcdcb2865f9abbb2847546d09587e726ea207daca6f0d1e72196875ef8c62feeeff5f1c1f2070445acd6d1a61d815c7c
   languageName: node
   linkType: hard
 
@@ -7426,9 +7426,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001332, caniuse-lite@npm:^1.0.30001370, caniuse-lite@npm:^1.0.30001373":
-  version: 1.0.30001374
-  resolution: "caniuse-lite@npm:1.0.30001374"
-  checksum: a75656e971d7ef2af4d2f3529a4620ae1a45d09460601fbc34b26f6867f31bbca006f71d8840291c471a2f01fc1994044f319a5660241ffaf35a2d84535af442
+  version: 1.0.30001375
+  resolution: "caniuse-lite@npm:1.0.30001375"
+  checksum: 6ed9cf7a3f80f5880cb021105864b869dddfdda8490559aa623e77feeca5ce8958a3b7c1cf37322e519176dcb488c99e6358b8c2de2aa4a0e08846ac122c4e75
   languageName: node
   linkType: hard
 
@@ -7619,8 +7619,8 @@ __metadata:
   linkType: hard
 
 "chromatic@npm:^6.7.3":
-  version: 6.7.3
-  resolution: "chromatic@npm:6.7.3"
+  version: 6.7.4
+  resolution: "chromatic@npm:6.7.4"
   dependencies:
     "@discoveryjs/json-ext": ^0.5.7
     "@types/webpack-env": ^1.17.0
@@ -7628,7 +7628,7 @@ __metadata:
     chroma: bin/main.cjs
     chromatic: bin/main.cjs
     chromatic-cli: bin/main.cjs
-  checksum: 4e1cc61f42708251e0dee06180e6399ba58a5eda1e3f7b0a8dc50a063a937f2bdcdcb0d1ad222a5c55e09884b80a965b864665fc661ad6c695609510e54fd806
+  checksum: 87240eee64a8c38cbb517b6bdc05a9a1360413facecdb8da73b27a7151014192a86a8d8c2f1fbbd9340c5dac491fe23a7bbcde44172c3d65e9b6298265bf99f4
   languageName: node
   linkType: hard
 
@@ -7893,9 +7893,9 @@ __metadata:
   linkType: hard
 
 "colord@npm:^2.9.1":
-  version: 2.9.2
-  resolution: "colord@npm:2.9.2"
-  checksum: 2aa6a9b3abbce74ba3c563886cfeb433ea0d7df5ad6f4a560005eddab1ddf7c0fc98f39b09b599767a19c86dd3837b77f66f036e479515d4b17347006dbd6d9f
+  version: 2.9.3
+  resolution: "colord@npm:2.9.3"
+  checksum: 95d909bfbcfd8d5605cbb5af56f2d1ce2b323990258fd7c0d2eb0e6d3bb177254d7fb8213758db56bb4ede708964f78c6b992b326615f81a18a6aaf11d64c650
   languageName: node
   linkType: hard
 
@@ -9219,9 +9219,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.202":
-  version: 1.4.211
-  resolution: "electron-to-chromium@npm:1.4.211"
-  checksum: 43d983b94f5aa542926c4063bae597591458b59e96ec0ab85a62cc296b9760c447d7d0af369d3c40b44b75cfc9d3a66277495736517c370cf03e181cf3ed39f1
+  version: 1.4.215
+  resolution: "electron-to-chromium@npm:1.4.215"
+  checksum: 9cee61cc47615f75bc8433eddc6f058cc2a503561bb28d3776acc47d2cb37a0d654c4d63adf715c81ebe9d638b5bdc1dba80eae4a187df3e35244d4b3dba0640
   languageName: node
   linkType: hard
 
@@ -9960,8 +9960,8 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-jest@npm:^26.8.1":
-  version: 26.8.1
-  resolution: "eslint-plugin-jest@npm:26.8.1"
+  version: 26.8.2
+  resolution: "eslint-plugin-jest@npm:26.8.2"
   dependencies:
     "@typescript-eslint/utils": ^5.10.0
   peerDependencies:
@@ -9972,7 +9972,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: bd50499f9b1fd12e701cf918b23e1220fb78161085205c4d0bb2146d60a5f0db84de3fea1f4a3467629e00c092c1b57473f41983449a0daae03e19e932f00587
+  checksum: 78d61467fef83fc0ce896cc54343d5b20e587baceb2e2d44f39a0c5fb1b693ee4adde7ed3b18e090381c4cd8a6b1094ad116caa502362f4152f9918b0a351a3e
   languageName: node
   linkType: hard
 
@@ -11065,15 +11065,15 @@ __metadata:
   linkType: hard
 
 "framer-motion@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "framer-motion@npm:7.0.0"
+  version: 7.1.0
+  resolution: "framer-motion@npm:7.1.0"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": 10.13.1
-    framesync: 6.0.1
+    framesync: 6.1.1
     hey-listen: ^1.0.8
-    popmotion: 11.0.3
-    style-value-types: 5.1.0
+    popmotion: 11.0.4
+    style-value-types: 5.1.1
     tslib: ^2.1.0
   peerDependencies:
     react: ^18.0.0
@@ -11081,16 +11081,16 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 13d4f1e0a74025404fc09665f5e54ed99a7f0a33a89accdd9f96be1686725620b73a92f922ecb2a48618529aca61b0a95be1de06f823ee784442caba88c38064
+  checksum: 499eddd14a0d72c41ddb0e9a3ced5021c1cd25695f98ab7b81659df60e14380f62e5bf45d2c49466a85ce64b33ae79b3fd760374f215abdb3818450d54f3f9be
   languageName: node
   linkType: hard
 
-"framesync@npm:6.0.1":
-  version: 6.0.1
-  resolution: "framesync@npm:6.0.1"
+"framesync@npm:6.1.1":
+  version: 6.1.1
+  resolution: "framesync@npm:6.1.1"
   dependencies:
-    tslib: ^2.1.0
-  checksum: a23ebe8f7e20a32c0b99c2f8175b6f07af3ec6316aad52a2316316a6d011d717af8d2175dcc2827031c59fabb30232ed3e19a720a373caba7f070e1eae436325
+    tslib: ^2.3.1
+  checksum: f75f77bb3fcb1874fd05e5d254c075c97f431cb74e1d11982661a77248bba442f7d2f251e0c4a019ba9293336bc941b42c7f760b926bd1ff3d3c269c0c7f1a8a
   languageName: node
   linkType: hard
 
@@ -16832,15 +16832,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"popmotion@npm:11.0.3":
-  version: 11.0.3
-  resolution: "popmotion@npm:11.0.3"
+"popmotion@npm:11.0.4":
+  version: 11.0.4
+  resolution: "popmotion@npm:11.0.4"
   dependencies:
-    framesync: 6.0.1
+    framesync: 6.1.1
     hey-listen: ^1.0.8
-    style-value-types: 5.0.0
+    style-value-types: 5.1.1
     tslib: ^2.1.0
-  checksum: 9fe7d03b4ec0e85bfb9dadc23b745147bfe42e16f466ba06e6327197d0e38b72015afc2f918a8051dedc3680310417f346ffdc463be6518e2e92e98f48e30268
+  checksum: ecfa6fbfcbb418386ddab7ee10b52b848c163586bcc8c31a322d09c3b897d1833415729567b0ee252f5c23007382a6d6cfe3458b9af1f2367a3389cccb7bc65f
   languageName: node
   linkType: hard
 
@@ -17492,14 +17492,14 @@ __metadata:
   linkType: hard
 
 "prisma@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "prisma@npm:4.1.1"
+  version: 4.2.1
+  resolution: "prisma@npm:4.2.1"
   dependencies:
-    "@prisma/engines": 4.1.1
+    "@prisma/engines": 4.2.1
   bin:
     prisma: build/index.js
     prisma2: build/index.js
-  checksum: fdaa0cb464e00700539eced334f743fbc669336076cbe12c3a7bbd043c546baa9792064a216ae2ca061c5cb05d720b8fc6e2c6f7e434ab3d1d63ec9f25fa525f
+  checksum: 7f6fa164e153aa09f28f90420756831bb275a123ee0691fdd70bccee193ccc1d537cd14394cdf2ad549bb8773e06704025664948275d17f0fe4c139a470848e1
   languageName: node
   linkType: hard
 
@@ -18860,8 +18860,8 @@ __metadata:
   linkType: hard
 
 "rollup@npm:^2.74.1, rollup@npm:^2.77.2":
-  version: 2.77.2
-  resolution: "rollup@npm:2.77.2"
+  version: 2.77.3
+  resolution: "rollup@npm:2.77.3"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -18869,7 +18869,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 5a84fb98a6f858906bceba091430442f6c1f362b07c5fa9123b708f87e39f52640e34a189cd9a1776ceae61300055c78ba648205fa03188451539ebeb19797df
+  checksum: b179c68249584565ddb5664a241e8e48c293b2207718d885b08ee25797d98857a383f06b544bb89819407da5a71557f4713309a278f61c4778bb32b1d3321a1c
   languageName: node
   linkType: hard
 
@@ -20051,23 +20051,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-value-types@npm:5.0.0":
-  version: 5.0.0
-  resolution: "style-value-types@npm:5.0.0"
-  dependencies:
-    hey-listen: ^1.0.8
-    tslib: ^2.1.0
-  checksum: 16d198302cd102edf9dba94e7752a2364c93b1eaa5cc7c32b42b28eef4af4ccb5149a3f16bc2a256adc02616a2404f4612bd15f3081c1e8ca06132cae78be6c0
-  languageName: node
-  linkType: hard
-
-"style-value-types@npm:5.1.0":
-  version: 5.1.0
-  resolution: "style-value-types@npm:5.1.0"
+"style-value-types@npm:5.1.1":
+  version: 5.1.1
+  resolution: "style-value-types@npm:5.1.1"
   dependencies:
     hey-listen: ^1.0.8
     tslib: ^2.3.1
-  checksum: 25af60d2ea8e2c64a405f377e3208fe3cad672a115417748d72c3d515809655d8468b3ee2dbdef19bade4aa0dc4a07086c63faa2b10ef39673a2ab01a35b9cfa
+  checksum: 108ff80c7b94e7345b708cdb4870efb9286c89ceb17398f157dd797b1ccb3252476517a10b43c4ad4136401946a190b1f50ea9b31c01ccce20a04542a14a2c3f
   languageName: node
   linkType: hard
 
@@ -20926,122 +20916,122 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo-android-arm64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-android-arm64@npm:1.4.2"
+"turbo-android-arm64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-android-arm64@npm:1.4.3"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-darwin-64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-darwin-64@npm:1.4.2"
+"turbo-darwin-64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-darwin-64@npm:1.4.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-darwin-arm64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-darwin-arm64@npm:1.4.2"
+"turbo-darwin-arm64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-darwin-arm64@npm:1.4.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-freebsd-64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-freebsd-64@npm:1.4.2"
+"turbo-freebsd-64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-freebsd-64@npm:1.4.3"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-freebsd-arm64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-freebsd-arm64@npm:1.4.2"
+"turbo-freebsd-arm64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-freebsd-arm64@npm:1.4.3"
   conditions: os=freebsd & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-linux-32@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-linux-32@npm:1.4.2"
+"turbo-linux-32@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-linux-32@npm:1.4.3"
   conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
 
-"turbo-linux-64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-linux-64@npm:1.4.2"
+"turbo-linux-64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-linux-64@npm:1.4.3"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-linux-arm64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-linux-arm64@npm:1.4.2"
+"turbo-linux-arm64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-linux-arm64@npm:1.4.3"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-linux-arm@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-linux-arm@npm:1.4.2"
+"turbo-linux-arm@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-linux-arm@npm:1.4.3"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"turbo-linux-mips64le@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-linux-mips64le@npm:1.4.2"
+"turbo-linux-mips64le@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-linux-mips64le@npm:1.4.3"
   conditions: os=linux & cpu=mipsel
   languageName: node
   linkType: hard
 
-"turbo-linux-ppc64le@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-linux-ppc64le@npm:1.4.2"
+"turbo-linux-ppc64le@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-linux-ppc64le@npm:1.4.3"
   conditions: os=linux & cpu=ppc64
   languageName: node
   linkType: hard
 
-"turbo-windows-32@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-windows-32@npm:1.4.2"
+"turbo-windows-32@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-windows-32@npm:1.4.3"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"turbo-windows-64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-windows-64@npm:1.4.2"
+"turbo-windows-64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-windows-64@npm:1.4.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-windows-arm64@npm:1.4.2":
-  version: 1.4.2
-  resolution: "turbo-windows-arm64@npm:1.4.2"
+"turbo-windows-arm64@npm:1.4.3":
+  version: 1.4.3
+  resolution: "turbo-windows-arm64@npm:1.4.3"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
 "turbo@npm:^1.4.2":
-  version: 1.4.2
-  resolution: "turbo@npm:1.4.2"
+  version: 1.4.3
+  resolution: "turbo@npm:1.4.3"
   dependencies:
-    turbo-android-arm64: 1.4.2
-    turbo-darwin-64: 1.4.2
-    turbo-darwin-arm64: 1.4.2
-    turbo-freebsd-64: 1.4.2
-    turbo-freebsd-arm64: 1.4.2
-    turbo-linux-32: 1.4.2
-    turbo-linux-64: 1.4.2
-    turbo-linux-arm: 1.4.2
-    turbo-linux-arm64: 1.4.2
-    turbo-linux-mips64le: 1.4.2
-    turbo-linux-ppc64le: 1.4.2
-    turbo-windows-32: 1.4.2
-    turbo-windows-64: 1.4.2
-    turbo-windows-arm64: 1.4.2
+    turbo-android-arm64: 1.4.3
+    turbo-darwin-64: 1.4.3
+    turbo-darwin-arm64: 1.4.3
+    turbo-freebsd-64: 1.4.3
+    turbo-freebsd-arm64: 1.4.3
+    turbo-linux-32: 1.4.3
+    turbo-linux-64: 1.4.3
+    turbo-linux-arm: 1.4.3
+    turbo-linux-arm64: 1.4.3
+    turbo-linux-mips64le: 1.4.3
+    turbo-linux-ppc64le: 1.4.3
+    turbo-windows-32: 1.4.3
+    turbo-windows-64: 1.4.3
+    turbo-windows-arm64: 1.4.3
   dependenciesMeta:
     turbo-android-arm64:
       optional: true
@@ -21073,7 +21063,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: 19c173aa06d0ae224ef03353d5c05875a2386bb2451bc0bf06af05881e700e08931d4ee9acb01f5a00bb8a3ecd961ffec6cc611cdb90e881d541679cf3ce4dc0
+  checksum: ed4f327bf4bdd152a0842c707c4b7f614c360d610fb079dcf351b2d83490883e62e148f30f46c20b963a2c58286461ce12d7fb284f8526801cc25a97a160177f
   languageName: node
   linkType: hard
 
