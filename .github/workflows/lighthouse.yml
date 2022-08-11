@@ -19,5 +19,4 @@ jobs:
                   node-version: 16
             - run: yarn install && yarn build
             - run: npm install -g @lhci/cli@0.8.x
-            - run: cd apps/musigrow-app
-            - run: lhci autorun --collect.staticDistDir=.next/static
+            - run: cd apps/musigrow-app && lhci autorun --collect.staticDistDir=.next/static
