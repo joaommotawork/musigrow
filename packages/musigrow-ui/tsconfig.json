@@ -1,6 +1,6 @@
 {
 	"extends": "tsconfig/musigrow-ui.json",
-	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"include": ["src"],
 	"exclude": ["lib", "node_modules", "cypress"],
 	"compilerOptions": {
 		"outDir": "lib",
