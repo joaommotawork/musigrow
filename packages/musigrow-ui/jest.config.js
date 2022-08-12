@@ -46,4 +46,8 @@ module.exports = {
 		'<rootDir>/cypress/',
 		'<rootDir>/coverage/',
 	],
+	transform: {
+		'^.+\\.[tj]sx?$': 'babel-jest',
+		'^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx',
+	},
 };

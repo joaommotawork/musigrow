@@ -1,6 +1,11 @@
 import React from 'react';
 import '@vime/core/themes/default.css';
 import '@styles/main.css';
+import '@storybook/addon-actions/register';
+import { addDecorator } from '@storybook/react';
+import { withConsole } from '@storybook/addon-console';
+
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
 	const ReactDOM = require('react-dom');
