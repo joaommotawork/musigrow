@@ -16,7 +16,6 @@ module.exports = {
 			},
 		},
 		'@storybook/addon-a11y',
-		'@storybook/addon-interactions',
 		'storybook-addon-designs',
 		{
 			name: '@storybook/addon-storysource',
