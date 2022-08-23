@@ -22,4 +22,20 @@ export const parameters = {
 			date: /Date$/,
 		},
 	},
+	options: {
+		storySort: {
+			method: 'alphabetical',
+			order: [
+				'Introduction',
+				'Styleguide',
+				'Atoms',
+				['Readme', '*'],
+				'Molecules',
+				['Readme', '*'],
+				'Organisms',
+				['Readme', '*'],
+			],
+			locales: 'en-US',
+		},
+	},
 };

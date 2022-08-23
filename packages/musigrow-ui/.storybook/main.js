@@ -29,7 +29,6 @@ module.exports = {
 				},
 			},
 		},
-		'storybook-dark-mode',
 		'@storybook/addon-actions',
 		'@storybook/addon-viewport',
 		'@storybook/addon-docs',
@@ -39,6 +38,8 @@ module.exports = {
 		'@storybook/addon-measure',
 		'@storybook/addon-outline',
 		'@storybook/addon-jest',
+		'storybook-dark-mode',
+		'storybook-tailwind-dark-mode',
 	],
 	framework: '@storybook/react',
 	webpackFinal: async (config) => {

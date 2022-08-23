@@ -1,20 +1,20 @@
 import { Meta } from '@storybook/react/types-6-0';
 import { Story } from '@storybook/react';
-import { Button, ButtonProps } from '@library/atoms/Button/Button';
+import { IconTag, IconTagProps } from '@library/atoms/Tag/IconTag/IconTag';
+import { FaUser } from 'react-icons/fa';
 
 export default {
-	title: 'Atoms/Button',
-	component: Button,
+	title: 'Atoms/Tag/IconTag',
+	component: IconTag,
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => (
+const Template: Story<IconTagProps> = (args) => (
 	<div className='flex h-[500px] w-[500px] items-center justify-center'>
-		<Button {...args} />
+		<IconTag {...args} />
 	</div>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-	children: 'Button',
-	buttonOnClick: () => console.log('Button Clicked'),
+	children: <FaUser />,
 };
