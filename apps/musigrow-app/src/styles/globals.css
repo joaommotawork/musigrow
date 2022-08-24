@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
+	main > footer {
+		@apply sticky;
+		@apply top-[100vh];
+	}
+}
+
+@layer components {
 	html,
 	body {
 		@apply h-full;
 	}
 }
+
 @layer components {
 	#__next {
 		@apply h-full;

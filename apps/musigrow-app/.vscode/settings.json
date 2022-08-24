@@ -41,5 +41,6 @@
 		"yml",
 		"COBOL",
 		"ACUCOBOL"
-	]
+	],
+	"i18n-ally.localesPaths": ["public/locales"]
 }

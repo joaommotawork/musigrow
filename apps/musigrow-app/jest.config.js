@@ -25,7 +25,7 @@ module.exports = {
 		'^@services(.*)$': '<rootDir>/src/services$1',
 		'^@components(.*)$': '<rootDir>/src/components$1',
 		'^@pages(.*)$': '<rootDir>/src/pages$1',
-		'^@public(.*)$': '<rootDir>/src/public$1',
+		'^@public(.*)$': '<rootDir>/public$1',
 		'^@hooks(.*)$': '<rootDir>/src/hooks$1',
 		'^@types(.*)$': '<rootDir>/src/types$1',
 		'^@utils(.*)$': '<rootDir>/src/utils$1',

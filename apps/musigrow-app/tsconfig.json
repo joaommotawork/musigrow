@@ -10,7 +10,7 @@
 			"@services/*": ["src/services/*"],
 			"@components/*": ["src/components/*"],
 			"@pages/*": ["src/pages/*"],
-			"@public/*": ["src/public/*"],
+			"@public/*": ["public/*"],
 			"@hooks/*": ["src/hooks/*"],
 			"@types/*": ["src/types/*"],
 			"@utils/*": ["src/utils/*"],

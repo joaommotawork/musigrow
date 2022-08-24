@@ -1,0 +1,84 @@
+{
+	"layout": {
+		"menu": {
+			"close": "Close Menu",
+			"home": "Home",
+			"news": "News",
+			"members": "Members",
+			"gallery": "Gallery",
+			"songs": "Songs",
+			"prizes": "Prizes"
+		},
+		"header": {
+			"logo": "Logo Orquestra ISTEC"
+		},
+		"footer": {
+			"logo": "Logo Orquestra ISTEC"
+		}
+	},
+	"notFound": {
+		"headTitle": "Page Not Found",
+		"title": "Page Not Found!"
+	},
+	"admin": {
+		"headTitle": "Admin",
+		"signIn": {
+			"title": "Admin",
+			"email": "Email",
+			"emailErrorMessage": "Email is Required",
+			"passwordErrorMessage": "Password is Required",
+			"password": "Password",
+			"labelButton": "Sign In"
+		}
+	},
+	"homePage": {
+		"headTitle": "Homepage",
+		"slider": {
+			"one": "Orquestra ISTEC"
+		},
+		"statistics": {
+			"years": "Years",
+			"members": "Members",
+			"prizes": "Prizes",
+			"songs": "Songs"
+		},
+		"history": {
+			"title": "Where are we from?",
+			"subTitle": "History",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor id aliquet lectus proin nibh. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Auctor neque vitae tempus quam. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. Ut tellus elementum sagittis vitae. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Enim tortor at auctor urna nunc. Posuere urna nec tincidunt praesent semper feugiat nibh. Rhoncus urna neque viverra justo nec ultrices dui sapien eget. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Posuere lorem ipsum dolor sit amet. Ac felis donec et odio pellentesque diam. Massa tempor nec feugiat nisl pretium fusce id velit ut. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Turpis in eu mi bibendum neque. Nulla aliquet enim tortor at auctor urna. Amet purus gravida quis blandit. Orci sagittis eu volutpat odio facilisis mauris. Aliquam nulla facilisi cras fermentum odio. Quis risus sed vulputate odio ut enim blandit. Sit amet dictum sit amet justo donec enim diam vulputate. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Auctor elit sed vulputate mi sit amet mauris commodo. Elit pellentesque habitant morbi tristique senectus et netus et. Mi in nulla posuere sollicitudin. Turpis tincidunt id aliquet risus feugiat in ante metus."
+		},
+		"news": {
+			"title": "What have we been doing?",
+			"subTitle": "News"
+		},
+		"contacts": {
+			"title": "What have we been doing?",
+			"description": "Find us Tuesdays and Thursdays at 21:30 in Campus do Lumiar"
+		}
+	},
+	"news": {
+		"headTitle": "News",
+		"title": "What have we been doing?",
+		"subTitle": "News"
+	},
+	"members": {
+		"headTitle": "Members",
+		"title": "Who are we?",
+		"subTitle": "Members"
+	},
+	"gallery": {
+		"headTitle": "Gallery",
+		"title": "How do we look?",
+		"subTitle": "Gallery"
+	},
+	"songs": {
+		"headTitle": "Songs",
+		"title": "What do we play?",
+		"subTitle": "Songs"
+	},
+	"prizes": {
+		"headTitle": "Prizes",
+		"title": "What are our accomplishments?",
+		"subTitle": "Prizes"
+	}
+}

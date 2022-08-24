@@ -1,20 +1,20 @@
-import NProgress from 'nprogress';
+import NProgressLibrary from 'nprogress';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-export default function Progress() {
+export default function NProgress() {
 	const router = useRouter();
 
 	useEffect(() => {
 		let timeout: NodeJS.Timeout;
 
 		const start = () => {
-			timeout = setTimeout(NProgress.start, 100);
+			timeout = setTimeout(NProgressLibrary.start, 100);
 		};
 
 		const done = () => {
 			clearTimeout(timeout);
-			NProgress.done();
+			NProgressLibrary.done();
 		};
 
 		router.events.on('routeChangeStart', start);
