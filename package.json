@@ -8,6 +8,8 @@
 		"apps/*"
 	],
 	"scripts": {
+		"postinstall": "husky install",
+		"postinstall-musigrow-strapi": "cd apps/musigrow-strapi && yarn install --focus",
 		"local-postgres": "docker-compose -f docker-compose.yml up -d",
 		"upgrade": "yarn upgrade-interactive",
 		"clean": "turbo run clean && npx rimraf node_modules",
@@ -18,7 +20,6 @@
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json}\"",
 		"prepare": "husky install",
-		"postinstall": "husky install",
 		"dev:ui": "turbo run dev --filter=musigrow-ui",
 		"dev:app": "turbo run dev --filter=musigrow-app",
 		"build:ui": "turbo run build --filter=musigrow-ui",
