@@ -8,6 +8,7 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:sonarjs/recommended',
+		'plugin:storybook/recommended',
 		'@infinumjs/eslint-config-nextjs-ts',
 		'airbnb',
 		'airbnb/hooks',
@@ -23,12 +24,6 @@ module.exports = {
 			],
 			plugins: ['testing-library', 'jest'],
 			extends: ['plugin:jest/all', 'plugin:testing-library/react'],
-		},
-		{
-			files: ['*.ts', '*.tsx'],
-			parserOptions: {
-				project: ['../tsconfig/musigrow-app.json'],
-			},
 		},
 	],
 	parser: '@typescript-eslint/parser',
