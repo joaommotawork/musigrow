@@ -9,7 +9,6 @@
 	],
 	"scripts": {
 		"postinstall": "husky install",
-		"heroku-postbuild": "if [ $STRAPI_ENV ]; then yarn run prod-strapi; else echo no environment detected; fi",
 		"local-postgres": "docker-compose -f docker-compose.yml up -d",
 		"upgrade": "yarn upgrade-interactive",
 		"clean": "turbo run clean && npx rimraf node_modules",
@@ -34,6 +33,7 @@
 		"deploy:app": "turbo run deploy --filter=musigrow-app",
 		"deploy:strapi": "turbo run deploy --filter=musigrow-strapi",
 		"prod-strapi": "yarn run build:strapi",
+		"heroku-postbuild": "if [ $STRAPI_ENV ]; then yarn run prod-strapi; else echo no environment detected; fi",
 		"generate": "turbo run generate",
 		"db:migrate:deploy": "turbo run db:migrate:deploy",
 		"db:push": "turbo run db:push",
@@ -50,8 +50,9 @@
 		"**/*": "prettier --write --ignore-unknown"
 	},
 	"engines": {
-		"node": ">=14.0.0",
-		"npm": ">=7.0.0"
+		"node": "18.x",
+		"npm": "8.x",
+		"yarn": "3.x"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
