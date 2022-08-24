@@ -4,7 +4,7 @@
 	"info": {
 		"singularName": "news",
 		"pluralName": "news-collection",
-		"displayName": "News Public",
+		"displayName": "News",
 		"description": ""
 	},
 	"options": {
@@ -52,6 +52,15 @@
 			},
 			"type": "string",
 			"unique": true
+		},
+		"description": {
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			},
+			"type": "text",
+			"required": true
 		}
 	}
 }

@@ -14,7 +14,7 @@
 			"name": "Apache 2.0",
 			"url": "https://www.apache.org/licenses/LICENSE-2.0.html"
 		},
-		"x-generation-date": "2022-08-23T23:56:36.885Z"
+		"x-generation-date": "2022-08-24T22:18:16.110Z"
 	},
 	"x-strapi-config": {
 		"path": "/documentation",
@@ -82,7 +82,7 @@
 				}
 			},
 			"NewsLocalizationRequest": {
-				"required": ["content", "locale"],
+				"required": ["content", "description", "locale"],
 				"type": "object",
 				"properties": {
 					"title": {
@@ -108,6 +108,9 @@
 					"slug": {
 						"type": "string"
 					},
+					"description": {
+						"type": "string"
+					},
 					"locale": {
 						"type": "string"
 					},
@@ -121,7 +124,7 @@
 				"required": ["data"],
 				"properties": {
 					"data": {
-						"required": ["content"],
+						"required": ["content", "description"],
 						"type": "object",
 						"properties": {
 							"title": {
@@ -145,6 +148,9 @@
 								"type": "string"
 							},
 							"slug": {
+								"type": "string"
+							},
+							"description": {
 								"type": "string"
 							},
 							"locale": {
@@ -803,6 +809,9 @@
 						"type": "string"
 					},
 					"slug": {
+						"type": "string"
+					},
+					"description": {
 						"type": "string"
 					},
 					"createdAt": {
@@ -1771,6 +1780,9 @@
 											"type": "string"
 										},
 										"slug": {
+											"type": "string"
+										},
+										"description": {
 											"type": "string"
 										},
 										"createdAt": {
@@ -2765,6 +2777,9 @@
 										"type": "string"
 									},
 									"slug": {
+										"type": "string"
+									},
+									"description": {
 										"type": "string"
 									},
 									"createdAt": {

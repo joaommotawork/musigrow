@@ -18,6 +18,8 @@
 		"@strapi/plugin-users-permissions": "4.3.4",
 		"@strapi/strapi": "4.3.4",
 		"better-sqlite3": "7.4.6",
+		"pg": "^8.8.0",
+		"pg-connection-string": "^2.5.0",
 		"strapi-plugin-duplicate-button": "^1.0.4",
 		"strapi-plugin-entity-relationship-chart": "^4.1.0",
 		"strapi-plugin-fast-content": "^0.0.5",
@@ -36,5 +38,8 @@
 		"node": ">=12.x.x <=16.x.x",
 		"npm": ">=6.0.0"
 	},
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"@types/pg": "^8"
+	}
 }
