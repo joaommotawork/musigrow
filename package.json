@@ -33,7 +33,7 @@
 		"deploy:app": "turbo run deploy --filter=musigrow-app",
 		"deploy:strapi": "turbo run deploy --filter=musigrow-strapi",
 		"prod-strapi": "yarn run build:strapi",
-		"heroku-postbuild": "if [ $STRAPI_ENV ]; then yarn run prod-strapi; else echo no environment detected; fi",
+		"heroku-postbuild": "yarn run prod-strapi",
 		"generate": "turbo run generate",
 		"db:migrate:deploy": "turbo run db:migrate:deploy",
 		"db:push": "turbo run db:push",
