@@ -52,15 +52,6 @@
 			},
 			"type": "string",
 			"unique": true
-		},
-		"description": {
-			"pluginOptions": {
-				"i18n": {
-					"localized": true
-				}
-			},
-			"type": "text",
-			"required": true
 		}
 	}
 }
