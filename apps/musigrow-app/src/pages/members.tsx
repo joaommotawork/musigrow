@@ -21,8 +21,6 @@ const Members: NextPage = ({ locale, membersCollection }: any) => {
 	// The `state` arg is correctly typed as `RootState` already
 	const dispatch = useAppDispatch();
 
-	console.log('membersCollection', membersCollection);
-
 	const membersCollectionItems = (membersCollectionData: any) => {
 		return membersCollectionData.map((member: any) => {
 			return {

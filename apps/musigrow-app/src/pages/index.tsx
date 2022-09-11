@@ -42,8 +42,6 @@ const Home: NextPage = ({ locale, home, newsCollection }: any) => {
 	// The `state` arg is correctly typed as `RootState` already
 	const dispatch = useAppDispatch();
 
-	console.log('HOME', home);
-
 	const newsCollectionItems = (newsCollectionData: any) => {
 		return newsCollectionData.map((item: any) => {
 			return {

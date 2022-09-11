@@ -48,8 +48,6 @@ export const TeamCardTypeOne = ({
 		);
 	};
 
-	console.log('categories', categories);
-
 	return (
 		<div className='w-full min-w-fit'>
 			<div className='flex h-full items-center rounded-lg border border-gray-200 p-4'>

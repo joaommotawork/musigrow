@@ -115,8 +115,6 @@ export async function getStaticPaths() {
 	);
 	const songsCollection = resSongsCollection.data.data;
 
-	console.log('songsCollection', songsCollection);
-
 	const paths = songsCollection.map((item: any) => {
 		return { params: { slug: item.attributes.slug.toString() } };
 	});

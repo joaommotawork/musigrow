@@ -57,8 +57,6 @@ export async function getStaticProps({ locale }: any) {
 	);
 	const newsCollection = resNewsCollection.data.data;
 
-	console.log('newsCollections', newsCollection);
-
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),

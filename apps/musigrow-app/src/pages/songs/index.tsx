@@ -30,8 +30,6 @@ const Songs: NextPage = ({ locale, songsCollection }: any) => {
 		});
 	};
 
-	console.log(songsCollection);
-
 	return (
 		<>
 			<Head>
@@ -53,8 +51,6 @@ export async function getStaticProps({ locale }: any) {
 		`${process.env.STRAPI_URL}/api/songs-collection?locale=${locale}`,
 	);
 	const songsCollection = resNewsCollection.data.data;
-
-	console.log('songsCollections', songsCollection);
 
 	return {
 		props: {

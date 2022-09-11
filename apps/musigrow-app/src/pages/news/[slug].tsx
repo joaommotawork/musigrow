@@ -53,8 +53,6 @@ export async function getStaticPaths() {
 		return { params: { slug: item.attributes.slug.toString() } };
 	});
 
-	console.log('paths', paths);
-
 	return { paths, fallback: true };
 }
 

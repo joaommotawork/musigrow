@@ -11,8 +11,6 @@ const Gallery: NextPage = ({ locale, galleryPage }: any) => {
 	// The `state` arg is correctly typed as `RootState` already
 	const dispatch = useAppDispatch();
 
-	console.log(galleryPage);
-
 	return (
 		<>
 			<Head>
