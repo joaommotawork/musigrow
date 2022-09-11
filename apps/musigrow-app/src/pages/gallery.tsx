@@ -4,11 +4,14 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useAppDispatch } from '@app/hooks';
 import { Headline } from 'musigrow-ui';
+import axios from 'axios';
 
-const Gallery: NextPage = (locale) => {
+const Gallery: NextPage = ({ locale, galleryPage }: any) => {
 	const { t } = useTranslation('common');
 	// The `state` arg is correctly typed as `RootState` already
 	const dispatch = useAppDispatch();
+
+	console.log(galleryPage);
 
 	return (
 		<>
@@ -20,16 +23,32 @@ const Gallery: NextPage = (locale) => {
 				<Headline subHeadlineText={t('gallery.subTitle')}>
 					{t('gallery.title')}
 				</Headline>
+				<div className='grid w-full grid-cols-1 justify-items-center gap-5 overflow-hidden sm:grid-cols-2 lg:grid-cols-3'>
+					{galleryPage.attributes.images.data.map((image: any) => {
+						return (
+							<img
+								alt='gallery'
+								src={image.attributes.url}
+								className='max-h-[275.55px] w-full object-cover object-center'
+							/>
+						);
+					})}
+				</div>
 			</div>
 		</>
 	);
 };
 
 export async function getStaticProps({ locale }: any) {
+	const resGalleryPage = await axios.get(
+		`${process.env.STRAPI_URL}/api/gallery?populate=*`,
+	);
+	const galleryPage = resGalleryPage.data.data;
+
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),
-			// Will be passed to the page component as props
+			galleryPage,
 		},
 	};
 }

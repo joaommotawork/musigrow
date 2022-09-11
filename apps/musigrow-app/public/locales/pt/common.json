@@ -1,1 +1,86 @@
-{}
+{
+	"admin": {
+		"headTitle": "Administrador",
+		"signIn": {
+			"email": "Email",
+			"emailErrorMessage": "Email Obrigatório",
+			"labelButton": "Iniciar Sessão",
+			"password": "Password",
+			"passwordErrorMessage": "Password é Obrigatória",
+			"title": "Administrador"
+		}
+	},
+	"gallery": {
+		"headTitle": "Galeria",
+		"subTitle": "Galeria",
+		"title": "Como nós somos?"
+	},
+	"home": {
+		"headTitle": "Início",
+		"history": {
+			"subTitle": "História",
+			"title": "De onde somos?"
+		},
+		"news": {
+			"learnMore": "Saber Mais",
+			"subTitle": "Notícias",
+			"title": "O que andamos a fazer?"
+		},
+		"slider": {
+			"one": "Orquestra ISTEC"
+		},
+		"statistics": {
+			"members": "Membros",
+			"prizes": "Prêmios",
+			"songs": "Músicas",
+			"years": "Anos"
+		}
+	},
+	"layout": {
+		"footer": {
+			"logo": "Logo Orquestra ISTEC"
+		},
+		"header": {
+			"logo": "Logo Orquestra ISTEC"
+		},
+		"menu": {
+			"close": "Fechar Menu",
+			"gallery": "Galeria",
+			"home": "Início",
+			"members": "Membros",
+			"news": "Notícias",
+			"songs": "Músicas"
+		}
+	},
+	"members": {
+		"headTitle": "Membros",
+		"subTitle": "Membros",
+		"title": "Quem somos nós?",
+		"instruments": {
+			"types": {
+				"strings": "Cordas"
+			}
+		},
+		"vocalRange": {
+			"bass": "Baixo"
+		}
+	},
+	"news": {
+		"headTitle": "Notícias",
+		"learnMore": "Saber Mais",
+		"subTitle": "Notícias",
+		"title": "O que andamos a fazer?"
+	},
+	"notFound": {
+		"headTitle": "Página Não Encontrada",
+		"title": "Página Não Encontrada!"
+	},
+	"songs": {
+		"headTitle": "Músicas",
+		"subTitle": "Músicas",
+		"title": "O que tocamos?",
+		"learnMore": "Saber Mais",
+		"musicSheet": "Partitura",
+		"noLyrics": "Esta música não tem letra."
+	}
+}

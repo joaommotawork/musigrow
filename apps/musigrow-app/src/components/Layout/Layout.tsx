@@ -21,11 +21,12 @@ import {
 } from '@features/reactBurgerMenu/reactBurgerMenuSlice';
 import NProgress from '@components/NProgress/NProgress';
 import reactBurgerMenuStyles from '@styles/reactBurgerMenuStyles';
-import Link from 'next/link';
 
 const Layout = ({ children }: { children: ReactNode }) => {
 	const { t } = useTranslation('common');
 	const router = useRouter();
+	const { asPath, pathname, query } = router;
+
 	const dispatch = useAppDispatch();
 	const [isSSR, setIsSSR] = useState(true);
 	const notifications = useAppSelector((state) => state.notifications);
@@ -52,6 +53,14 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
 	const setDefaultLang = (lang: string) => {
 		cookie.save('NEXT_LOCALE', lang, {});
+		router.push(
+			{
+				pathname,
+				query,
+			},
+			asPath,
+			{ locale: lang },
+		);
 	};
 
 	const menuItemClasses = (selected: boolean) =>
@@ -92,28 +101,22 @@ const Layout = ({ children }: { children: ReactNode }) => {
 					{t('layout.menu.news')}
 				</a>
 				<a
-					id='contact'
+					id='members'
 					onClick={() => router.push('/members')}
 					className={menuItemClasses(router.asPath === '/members')}>
 					{t('layout.menu.members')}
 				</a>
 				<a
-					id='contact'
+					id='gallery'
 					onClick={() => router.push('/gallery')}
 					className={menuItemClasses(router.asPath === '/gallery')}>
 					{t('layout.menu.gallery')}
 				</a>
 				<a
-					id='contact'
+					id='songs'
 					onClick={() => router.push('/songs')}
 					className={menuItemClasses(router.asPath === '/songs')}>
 					{t('layout.menu.songs')}
-				</a>
-				<a
-					id='contact'
-					onClick={() => router.push('/prizes')}
-					className={menuItemClasses(router.asPath === '/prizes')}>
-					{t('layout.menu.prizes')}
 				</a>
 			</Menu>
 			<main id='page-wrap' className='flex h-full flex-col bg-white'>
@@ -133,28 +136,31 @@ const Layout = ({ children }: { children: ReactNode }) => {
 					icons={
 						<div className='flex flex-col items-center justify-center gap-5 text-white md:flex-row'>
 							<div className='flex items-center justify-center gap-5 text-white'>
-								<Link href={router.pathname} locale='en'>
-									<a
-										className={selectedLang('en')}
-										onClick={() => setDefaultLang('en')}>
-										EN
-									</a>
-								</Link>
+								<a
+									className={`${selectedLang(
+										'en',
+									)} cursor-pointer`}
+									onClick={() => setDefaultLang('en')}>
+									EN
+								</a>
 								|
-								<Link href={router.pathname} locale='pt'>
-									<a
-										className={selectedLang('pt')}
-										onClick={() => setDefaultLang('pt')}>
-										PT
-									</a>
-								</Link>
+								<a
+									className={`${selectedLang(
+										'pt',
+									)} cursor-pointer`}
+									onClick={() => setDefaultLang('pt')}>
+									PT
+								</a>
 							</div>
 							<a
 								id='contact'
-								onClick={() => router.push('/admin')}
+								href={`${process.env.STRAPI_URL}/dashboard`}
+								target='_blank'
+								/* onClick={() => router.push('/admin')}
 								className={`${menuItemClasses(
 									router.asPath === '/admin',
-								)} text-white`}>
+								)} text-white`} */
+							>
 								<FaUserAlt className='h-4 w-4' />
 							</a>
 						</div>
@@ -175,7 +181,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 						components={{ Transition: GrowTransition }}
 					/>
 				)}
-				<div className='mt-32 w-full flex-grow px-5 py-10 md:mt-16 lg:mt-20 lg:px-40 2xl:px-80'>
+				<div className='mt-56 w-full flex-grow px-5 py-10 md:mt-16 lg:mt-20 lg:px-40 2xl:px-80'>
 					{children}
 				</div>
 				<Footer

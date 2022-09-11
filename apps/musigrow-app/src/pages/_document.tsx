@@ -4,7 +4,6 @@ export default function Document() {
 	return (
 		<Html>
 			<Head>
-				<meta name='title' content='Orquestra ISTEC' />
 				<meta
 					name='description'
 					content='Official Page of Orquestra ISTEC'
