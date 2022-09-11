@@ -1,0 +1,49 @@
+{
+	"kind": "collectionType",
+	"collectionName": "events_collection",
+	"info": {
+		"singularName": "events",
+		"pluralName": "events-collection",
+		"displayName": "Events",
+		"description": ""
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"name": {
+			"type": "string",
+			"pluginOptions": {},
+			"required": true
+		},
+		"host": {
+			"type": "string",
+			"pluginOptions": {},
+			"required": true
+		},
+		"urlGoogleMaps": {
+			"type": "string",
+			"pluginOptions": {},
+			"required": true
+		},
+		"dateStart": {
+			"type": "datetime",
+			"pluginOptions": {},
+			"required": true
+		},
+		"songs": {
+			"type": "relation",
+			"relation": "oneToMany",
+			"target": "api::songs.songs"
+		},
+		"dateEnd": {
+			"type": "datetime",
+			"required": true
+		},
+		"slug": {
+			"type": "string",
+			"required": true
+		}
+	}
+}

@@ -1,15 +1,4 @@
 module.exports = ({ env }) => ({
-	'slugify': {
-		enabled: true,
-		config: {
-			contentTypes: {
-				news: {
-					field: 'slug',
-					references: 'title',
-				},
-			},
-		},
-	},
 	'duplicate-button': true,
 	'upload': {
 		config: {

@@ -10,6 +10,7 @@
 		"strapi": "strapi"
 	},
 	"dependencies": {
+		"@offset-dev/strapi-calendar": "^0.0.8",
 		"@strapi/plugin-documentation": "^4.3.4",
 		"@strapi/plugin-i18n": "4.3.4",
 		"@strapi/plugin-users-permissions": "4.3.4",
@@ -17,8 +18,7 @@
 		"@strapi/strapi": "4.3.4",
 		"pg": "^8.8.0",
 		"pg-connection-string": "^2.5.0",
-		"strapi-plugin-duplicate-button": "^1.0.4",
-		"strapi-plugin-slugify": "^2.2.3"
+		"strapi-plugin-duplicate-button": "^1.0.4"
 	},
 	"author": {
 		"name": "João Mota"

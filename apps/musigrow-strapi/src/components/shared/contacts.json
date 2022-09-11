@@ -1,0 +1,35 @@
+{
+	"collectionName": "components_shared_contacts",
+	"info": {
+		"displayName": "contacts",
+		"icon": "address-book"
+	},
+	"options": {},
+	"attributes": {
+		"phoneNumber": {
+			"type": "string"
+		},
+		"email": {
+			"type": "email",
+			"required": true
+		},
+		"linkedin": {
+			"type": "string"
+		},
+		"facebook": {
+			"type": "string"
+		},
+		"instagram": {
+			"type": "string"
+		},
+		"spotify": {
+			"type": "string"
+		},
+		"youtube": {
+			"type": "string"
+		},
+		"soundcloud": {
+			"type": "string"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"collectionName": "components_shared_statistics",
+	"info": {
+		"displayName": "statistics",
+		"description": ""
+	},
+	"options": {},
+	"attributes": {
+		"years": {
+			"type": "integer",
+			"required": true
+		},
+		"members": {
+			"type": "integer",
+			"required": true
+		},
+		"prizes": {
+			"type": "integer",
+			"required": true
+		},
+		"songs": {
+			"type": "integer",
+			"required": true
+		}
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"kind": "collectionType",
+	"collectionName": "instruments_collection",
+	"info": {
+		"singularName": "instruments",
+		"pluralName": "instruments-collection",
+		"displayName": "Instruments",
+		"description": ""
+	},
+	"options": {
+		"draftAndPublish": false
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"name": {
+			"type": "enumeration",
+			"enum": [
+				"violin",
+				"viola",
+				"cello",
+				"doubleBass",
+				"flute",
+				"piccolo",
+				"oboe",
+				"bassoon",
+				"clarinet",
+				"bassClarinet",
+				"englishHorn",
+				"contrabassoon",
+				"saxophone",
+				"trumpet",
+				"trombone",
+				"frenchHorn",
+				"tuba",
+				"snareDrum",
+				"timpani",
+				"triangle",
+				"bassDrum",
+				"cymbal",
+				"piano",
+				"gong",
+				"vibraphone"
+			],
+			"required": true
+		},
+		"type": {
+			"type": "enumeration",
+			"enum": ["strings", "woodwinds", "brass", "percussion"],
+			"required": true
+		}
+	}
+}

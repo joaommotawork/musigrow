@@ -1,10 +1,10 @@
 {
 	"kind": "collectionType",
-	"collectionName": "news_collection",
+	"collectionName": "songs_collection",
 	"info": {
-		"singularName": "news",
-		"pluralName": "news-collection",
-		"displayName": "News",
+		"singularName": "songs",
+		"pluralName": "songs-collection",
+		"displayName": "Songs",
 		"description": ""
 	},
 	"options": {
@@ -16,50 +16,56 @@
 		}
 	},
 	"attributes": {
-		"title": {
+		"name": {
 			"pluginOptions": {
 				"i18n": {
-					"localized": true
+					"localized": false
 				}
 			},
 			"type": "string",
 			"required": true
 		},
-		"gallery": {
-			"type": "media",
-			"multiple": true,
+		"lyrics": {
+			"type": "richtext",
 			"required": false,
-			"allowedTypes": ["images"],
 			"pluginOptions": {
 				"i18n": {
 					"localized": false
 				}
 			}
 		},
-		"content": {
-			"pluginOptions": {
-				"i18n": {
-					"localized": true
-				}
-			},
-			"type": "richtext",
-			"required": true
-		},
-		"category": {
+		"youtubeVideoId": {
+			"type": "string",
 			"pluginOptions": {
 				"i18n": {
 					"localized": false
 				}
-			},
-			"type": "enumeration",
-			"enum": ["events", "general"],
-			"required": true,
-			"default": "events"
+			}
 		},
-		"event": {
-			"type": "relation",
-			"relation": "oneToOne",
-			"target": "api::events.events"
+		"urlMusicSheet": {
+			"type": "string",
+			"pluginOptions": {
+				"i18n": {
+					"localized": false
+				}
+			}
+		},
+		"author": {
+			"type": "string",
+			"required": true,
+			"pluginOptions": {
+				"i18n": {
+					"localized": false
+				}
+			}
+		},
+		"description": {
+			"type": "string",
+			"pluginOptions": {
+				"i18n": {
+					"localized": true
+				}
+			}
 		},
 		"slug": {
 			"pluginOptions": {
