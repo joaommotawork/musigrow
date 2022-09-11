@@ -6,7 +6,7 @@
 	"module": "lib/index.esm.js",
 	"types": "lib/index.d.ts",
 	"scripts": {
-		"dev": "start-storybook -p 6006",
+		"dev": "start-storybook -p 6006 --no-open",
 		"build-storybook": "build-storybook",
 		"build": "rollup -c",
 		"lint": "eslint src/**/*.{js,jsx,ts,tsx}",

@@ -34,7 +34,7 @@ Default.args = {
 				/>
 			),
 			children: 'Team Member',
-			category: 'Category',
+			categories: [{ name: 'Category' }],
 			description: 'Description',
 			contacts: (
 				<>
@@ -58,7 +58,7 @@ Default.args = {
 				/>
 			),
 			children: 'Team Member',
-			category: 'Category',
+			categories: [{ name: 'Category' }],
 			description: 'Description',
 			contacts: (
 				<>
@@ -82,7 +82,23 @@ Default.args = {
 				/>
 			),
 			children: 'Team Member',
-			category: 'Category',
+			categories: [
+				{
+					name: 'Category',
+					accentColorBackground: 'bg-blue-50',
+					accentColorText: 'text-blue-500',
+				},
+				{
+					name: 'Category',
+					accentColorBackground: 'bg-red-50',
+					accentColorText: 'text-red-500',
+				},
+				{
+					name: 'Category',
+					accentColorBackground: 'bg-green-50',
+					accentColorText: 'text-green-500',
+				},
+			],
 			description: 'Description',
 			contacts: (
 				<>

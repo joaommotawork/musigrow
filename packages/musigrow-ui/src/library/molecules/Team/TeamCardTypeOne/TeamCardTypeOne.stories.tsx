@@ -36,7 +36,7 @@ Default.args = {
 		/>
 	),
 	children: 'Team Member',
-	category: 'Category',
+	categories: [{ name: 'Category' }],
 	description: 'Description',
 	contacts: (
 		<>

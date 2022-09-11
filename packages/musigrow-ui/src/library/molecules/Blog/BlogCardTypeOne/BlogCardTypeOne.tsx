@@ -27,7 +27,7 @@ export const BlogCardTypeOne = ({
 	accentColorText = 'text-red-500',
 }: BlogCardTypeOneProps) => {
 	return (
-		<div className='max-w-xs overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60'>
+		<div className='overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60'>
 			{image}
 			<div className='flex flex-col gap-2 p-6'>
 				{category && (
