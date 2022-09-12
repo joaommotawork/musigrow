@@ -17,9 +17,9 @@ export const HeaderTypeOne = ({
 	menuBarsOnClick,
 }: HeaderTypeOneProps) => {
 	return (
-		<header className='fixed top-0 z-10 flex w-full flex-col items-center justify-center bg-white p-5 dark:bg-black md:flex-row md:justify-between lg:px-40 2xl:px-80'>
+		<header className='fixed top-0 z-10 flex w-full flex-row items-center justify-between bg-white p-5 dark:bg-black lg:px-40 2xl:px-80'>
 			<a
-				className='title-font mb-4 flex h-12 w-48 cursor-pointer items-center justify-center font-medium text-black md:mb-0'
+				className='title-font flex h-12 w-48 cursor-pointer items-center justify-center font-medium text-black'
 				onClick={logoOnClick}>
 				{image}
 			</a>

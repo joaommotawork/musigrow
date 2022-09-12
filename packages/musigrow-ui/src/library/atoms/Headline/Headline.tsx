@@ -1,5 +1,5 @@
 export interface HeadlineProps {
-	children: string;
+	children?: string;
 	subHeadlineText?: string;
 	accentColorBackground?: string;
 	accentColorText?: string;
@@ -19,9 +19,11 @@ export const Headline = ({
 					{subHeadlineText}
 				</h2>
 			)}
-			<h1 className='title-font mb-2 text-2xl font-medium text-black sm:text-3xl'>
-				{children}
-			</h1>
+			{children && (
+				<h1 className='title-font mb-2 text-2xl font-medium text-black sm:text-3xl'>
+					{children}
+				</h1>
+			)}
 			<div className={`h-1 w-20 rounded ${accentColorBackground}`}></div>
 		</div>
 	);
