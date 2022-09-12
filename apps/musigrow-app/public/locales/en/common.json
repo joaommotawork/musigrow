@@ -48,25 +48,42 @@
 		"news": {
 			"title": "What have we been doing?",
 			"subTitle": "News",
-			"learnMore": "Learn More"
+			"learnMore": "Learn More",
+			"categories": {
+				"general": "General",
+				"events": "Events"
+			}
 		}
 	},
 	"news": {
 		"headTitle": "News",
 		"title": "What have we been doing?",
 		"subTitle": "News",
-		"learnMore": "Learn More"
+		"learnMore": "Learn More",
+		"songs": "Songs",
+		"categories": {
+			"general": "General",
+			"events": "Events"
+		}
 	},
 	"members": {
 		"headTitle": "Members",
 		"title": "Who are we?",
 		"subTitle": "Members",
 		"vocalRange": {
-			"bass": "Bass"
+			"bass": "Bass",
+			"baritone": "Baritone",
+			"tenor": "Tenor",
+			"contralto": "Contralto",
+			"mezzoSoprano": "Mezzo-Soprano",
+			"soprano": "Soprano"
 		},
 		"instruments": {
 			"types": {
-				"strings": "Strings"
+				"strings": "Strings",
+				"woodwinds": "Woodwinds",
+				"brass": "Brass",
+				"percussion": "Percussion"
 			}
 		}
 	},

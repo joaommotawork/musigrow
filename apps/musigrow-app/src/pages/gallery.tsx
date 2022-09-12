@@ -39,7 +39,7 @@ const Gallery: NextPage = ({ locale, galleryPage }: any) => {
 
 export async function getStaticProps({ locale }: any) {
 	const resGalleryPage = await axios.get(
-		`${process.env.STRAPI_URL}/api/gallery?populate=*`,
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/gallery?populate=*`,
 	);
 	const galleryPage = resGalleryPage.data.data;
 

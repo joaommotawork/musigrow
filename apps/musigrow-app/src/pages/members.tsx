@@ -32,12 +32,20 @@ const Members: NextPage = ({ locale, membersCollection }: any) => {
 					/>
 				),
 				children: `${member.attributes.firstName} ${member.attributes.lastName}`,
-				category: t(
-					`members.instruments.types.${member.attributes.instruments.data[0].attributes.type}`,
-				),
-				description: t(
-					`members.vocalRange.${member.attributes.vocalRange}`,
-				),
+				categories: [
+					{
+						name: t(
+							`members.instruments.types.${member.attributes.instruments.data[0].attributes.type}`,
+						),
+					},
+					{
+						name: t(
+							`members.vocalRange.${member.attributes.vocalRange}`,
+						),
+						accentColorBackground: 'bg-blue-50',
+						accentColorText: 'text-blue-500',
+					},
+				],
 				contacts: (
 					<>
 						{member.attributes.contacts.email && (
@@ -122,7 +130,7 @@ const Members: NextPage = ({ locale, membersCollection }: any) => {
 
 export async function getStaticProps({ locale }: any) {
 	const resMembersCollection = await axios.get(
-		`${process.env.STRAPI_URL}/api/members-collection?populate=*`,
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/members-collection?populate=*&sort=firstName:ASC`,
 	);
 	const membersCollection = resMembersCollection.data.data;
 

@@ -47,10 +47,10 @@ const Songs: NextPage = ({ locale, songsCollection }: any) => {
 };
 
 export async function getStaticProps({ locale }: any) {
-	const resNewsCollection = await axios.get(
-		`${process.env.STRAPI_URL}/api/songs-collection?locale=${locale}`,
+	const resSongsCollection = await axios.get(
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/songs-collection?locale=${locale}`,
 	);
-	const songsCollection = resNewsCollection.data.data;
+	const songsCollection = resSongsCollection.data.data;
 
 	return {
 		props: {

@@ -111,7 +111,7 @@ const Songs: NextPage = ({ locale, songs }: any) => {
 
 export async function getStaticPaths() {
 	const resSongsCollection = await axios.get(
-		`${process.env.STRAPI_URL}/api/songs-collection?locale=pt`,
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/songs-collection?locale=pt`,
 	);
 	const songsCollection = resSongsCollection.data.data;
 
@@ -123,10 +123,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ locale, params }: any) {
-	const resSongs = await axios.get(
-		`${process.env.STRAPI_URL}/api/songs-collection?filters\[slug][$contains]=${params.slug}&locale=${locale}&populate=gallery`,
+	const resSongsCollection = await axios.get(
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/songs-collection?filters\[slug][$contains]=${params.slug}&locale=${locale}&populate=gallery`,
 	);
-	const songs = resSongs.data.data;
+	const songs = resSongsCollection.data.data;
 
 	return {
 		props: {

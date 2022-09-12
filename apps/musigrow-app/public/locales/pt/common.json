@@ -24,7 +24,11 @@
 		"news": {
 			"learnMore": "Saber Mais",
 			"subTitle": "Notícias",
-			"title": "O que andamos a fazer?"
+			"title": "O que andamos a fazer?",
+			"categories": {
+				"events": "Eventos",
+				"general": "Geral"
+			}
 		},
 		"slider": {
 			"one": "Orquestra ISTEC"
@@ -58,18 +62,31 @@
 		"title": "Quem somos nós?",
 		"instruments": {
 			"types": {
-				"strings": "Cordas"
+				"strings": "Cordas",
+				"brass": "Latão",
+				"percussion": "Percussão",
+				"woodwinds": "Sopros"
 			}
 		},
 		"vocalRange": {
-			"bass": "Baixo"
+			"bass": "Baixo",
+			"baritone": "Barítono",
+			"contralto": "Contralto",
+			"mezzoSoprano": "Mezzo-Soprano",
+			"soprano": "Soprano",
+			"tenor": "Tenor"
 		}
 	},
 	"news": {
 		"headTitle": "Notícias",
 		"learnMore": "Saber Mais",
 		"subTitle": "Notícias",
-		"title": "O que andamos a fazer?"
+		"title": "O que andamos a fazer?",
+		"songs": "Músicas",
+		"categories": {
+			"events": "Eventos",
+			"general": "Geral"
+		}
 	},
 	"notFound": {
 		"headTitle": "Página Não Encontrada",

@@ -22,7 +22,7 @@ const News: NextPage = ({ locale, newsCollection }: any) => {
 						alt='blog'
 					/>
 				),
-				category: item.attributes.category,
+				category: t(`news.categories.${item.attributes.category}`),
 				title: item.attributes.title,
 				description: item.attributes.content,
 				callToActionText: t('news.learnMore'),
@@ -31,6 +31,14 @@ const News: NextPage = ({ locale, newsCollection }: any) => {
 						'/news/[slug]',
 						`/news/${item.attributes.slug}`,
 					),
+				accentColorBackground:
+					item.attributes.category === 'events'
+						? 'bg-blue-50'
+						: undefined,
+				accentColorText:
+					item.attributes.category === 'events'
+						? 'text-blue-500'
+						: undefined,
 			};
 		});
 	};
@@ -53,7 +61,7 @@ const News: NextPage = ({ locale, newsCollection }: any) => {
 
 export async function getStaticProps({ locale }: any) {
 	const resNewsCollection = await axios.get(
-		`${process.env.STRAPI_URL}/api/news-collection?populate=gallery&locale=${locale}`,
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/news-collection?populate=gallery&locale=${locale}&sort=createdAt:DESC`,
 	);
 	const newsCollection = resNewsCollection.data.data;
 

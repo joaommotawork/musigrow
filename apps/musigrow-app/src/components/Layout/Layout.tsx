@@ -21,11 +21,14 @@ import {
 } from '@features/reactBurgerMenu/reactBurgerMenuSlice';
 import NProgress from '@components/NProgress/NProgress';
 import reactBurgerMenuStyles from '@styles/reactBurgerMenuStyles';
+import { useMediaQuery } from 'react-responsive';
 
 const Layout = ({ children }: { children: ReactNode }) => {
 	const { t } = useTranslation('common');
 	const router = useRouter();
 	const { asPath, pathname, query } = router;
+
+	const isMobile = useMediaQuery({ query: '(min-width: 769px)' });
 
 	const dispatch = useAppDispatch();
 	const [isSSR, setIsSSR] = useState(true);
@@ -69,6 +72,37 @@ const Layout = ({ children }: { children: ReactNode }) => {
 			'text-red-500': selected,
 		});
 
+	const iconsMenu = () => {
+		return (
+			<div className='flex flex-col items-center justify-center gap-5 text-white md:flex-row'>
+				<div className='flex items-center justify-center gap-5 text-white'>
+					<a
+						className={`${selectedLang('en')} cursor-pointer`}
+						onClick={() => setDefaultLang('en')}>
+						EN
+					</a>
+					|
+					<a
+						className={`${selectedLang('pt')} cursor-pointer`}
+						onClick={() => setDefaultLang('pt')}>
+						PT
+					</a>
+				</div>
+				<a
+					id='contact'
+					href={`${process.env.NEXT_PUBLIC_STRAPI_URL}/dashboard`}
+					target='_blank'
+					/* onClick={() => router.push('/admin')}
+								className={`${menuItemClasses(
+									router.asPath === '/admin',
+								)} text-white`} */
+				>
+					<FaUserAlt className='h-4 w-4' />
+				</a>
+			</div>
+		);
+	};
+
 	return (
 		<div
 			id='outer-container'
@@ -81,7 +115,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
 				customCrossIcon={false}
 				onClose={() => dispatch(closeMenu())}
 				styles={reactBurgerMenuStyles}
-				className='relative flex flex-col text-3xl uppercase text-white outline-none'>
+				className={`relative flex flex-col text-3xl uppercase text-white outline-none ${
+					!isMobile && '!w-full'
+				}`}>
 				<button
 					className='mb-10 outline-none'
 					aria-label={t('layout.menu.close')}
@@ -118,6 +154,14 @@ const Layout = ({ children }: { children: ReactNode }) => {
 					className={menuItemClasses(router.asPath === '/songs')}>
 					{t('layout.menu.songs')}
 				</a>
+
+				{!isMobile ? (
+					<div className='mt-10 text-base outline-none'>
+						{iconsMenu()}
+					</div>
+				) : (
+					<></>
+				)}
 			</Menu>
 			<main id='page-wrap' className='flex h-full flex-col bg-white'>
 				<Header
@@ -133,38 +177,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 						router.push('/');
 					}}
 					menuBarsOnClick={() => dispatch(openMenu())}
-					icons={
-						<div className='flex flex-col items-center justify-center gap-5 text-white md:flex-row'>
-							<div className='flex items-center justify-center gap-5 text-white'>
-								<a
-									className={`${selectedLang(
-										'en',
-									)} cursor-pointer`}
-									onClick={() => setDefaultLang('en')}>
-									EN
-								</a>
-								|
-								<a
-									className={`${selectedLang(
-										'pt',
-									)} cursor-pointer`}
-									onClick={() => setDefaultLang('pt')}>
-									PT
-								</a>
-							</div>
-							<a
-								id='contact'
-								href={`${process.env.STRAPI_URL}/dashboard`}
-								target='_blank'
-								/* onClick={() => router.push('/admin')}
-								className={`${menuItemClasses(
-									router.asPath === '/admin',
-								)} text-white`} */
-							>
-								<FaUserAlt className='h-4 w-4' />
-							</a>
-						</div>
-					}
+					icons={isMobile ? iconsMenu() : <></>}
 				/>
 				<NProgress />
 				{!isSSR && (
@@ -181,7 +194,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 						components={{ Transition: GrowTransition }}
 					/>
 				)}
-				<div className='mt-56 w-full flex-grow px-5 py-10 md:mt-16 lg:mt-20 lg:px-40 2xl:px-80'>
+				<div className='mt-20 w-full flex-grow px-5 py-10 md:mt-16 lg:mt-20 lg:px-40 2xl:px-80'>
 					{children}
 				</div>
 				<Footer

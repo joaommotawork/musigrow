@@ -36,7 +36,13 @@ import { useAppDispatch } from '@app/hooks';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 
-const Home: NextPage = ({ locale, home, newsCollection }: any) => {
+const Home: NextPage = ({
+	locale,
+	home,
+	newsCollection,
+	membersCollectionTotal,
+	songsCollectionTotal,
+}: any) => {
 	const { t } = useTranslation('common');
 	const router = useRouter();
 	// The `state` arg is correctly typed as `RootState` already
@@ -52,7 +58,7 @@ const Home: NextPage = ({ locale, home, newsCollection }: any) => {
 						alt='blog'
 					/>
 				),
-				category: item.attributes.category,
+				category: t(`home.news.categories.${item.attributes.category}`),
 				title: item.attributes.title,
 				description: item.attributes.content,
 				callToActionText: t('home.news.learnMore'),
@@ -61,6 +67,14 @@ const Home: NextPage = ({ locale, home, newsCollection }: any) => {
 						'/news/[slug]',
 						`/news/${item.attributes.slug}`,
 					),
+				accentColorBackground:
+					item.attributes.category === 'events'
+						? 'bg-blue-50'
+						: undefined,
+				accentColorText:
+					item.attributes.category === 'events'
+						? 'text-blue-500'
+						: undefined,
 			};
 		});
 	};
@@ -131,7 +145,7 @@ const Home: NextPage = ({ locale, home, newsCollection }: any) => {
 						},
 						{
 							children: t('home.statistics.members'),
-							count: home.attributes.statistics.members,
+							count: membersCollectionTotal,
 							icon: <FaUserTie className='h-10 w-10' />,
 							accentColorText: 'text-black',
 						},
@@ -143,7 +157,7 @@ const Home: NextPage = ({ locale, home, newsCollection }: any) => {
 						},
 						{
 							children: t('home.statistics.songs'),
-							count: home.attributes.statistics.songs,
+							count: songsCollectionTotal,
 							icon: <FaMusic className='h-10 w-10' />,
 							accentColorText: 'text-black',
 						},
@@ -230,19 +244,32 @@ const Home: NextPage = ({ locale, home, newsCollection }: any) => {
 
 export async function getStaticProps({ locale }: any) {
 	const resHome = await axios.get(
-		`${process.env.STRAPI_URL}/api/home?populate=statistics,contacts&locale=${locale}`,
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/home?populate=statistics,contacts&locale=${locale}`,
 	);
 	const home = resHome.data.data;
 	const resNewsCollection = await axios.get(
-		`${process.env.STRAPI_URL}/api/news-collection?populate=gallery&locale=${locale}&_sort=date:DESC&_start=0&_limit=4`,
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/news-collection?populate=gallery&locale=${locale}&sort=createdAt:DESC&pagination[pageSize]=4`,
 	);
 	const newsCollection = resNewsCollection.data.data;
+
+	const resMembersCollection = await axios.get(
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/members-collection?populate=*`,
+	);
+	const membersCollectionTotal =
+		resMembersCollection.data.meta.pagination.total;
+
+	const resSongsCollection = await axios.get(
+		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/songs-collection?locale=${locale}`,
+	);
+	const songsCollectionTotal = resSongsCollection.data.meta.pagination.total;
 
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),
 			home,
 			newsCollection,
+			membersCollectionTotal,
+			songsCollectionTotal,
 		},
 		revalidate: 60,
 	};
