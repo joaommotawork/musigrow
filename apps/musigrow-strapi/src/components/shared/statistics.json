@@ -10,15 +10,7 @@
 			"type": "integer",
 			"required": true
 		},
-		"members": {
-			"type": "integer",
-			"required": true
-		},
 		"prizes": {
-			"type": "integer",
-			"required": true
-		},
-		"songs": {
 			"type": "integer",
 			"required": true
 		}

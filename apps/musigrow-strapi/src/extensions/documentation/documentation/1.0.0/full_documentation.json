@@ -14,7 +14,7 @@
 			"name": "Apache 2.0",
 			"url": "https://www.apache.org/licenses/LICENSE-2.0.html"
 		},
-		"x-generation-date": "2022-09-11T17:02:11.153Z"
+		"x-generation-date": "2022-09-11T23:42:00.088Z"
 	},
 	"x-strapi-config": {
 		"path": "/documentation",
@@ -2972,13 +2972,7 @@
 							"years": {
 								"type": "integer"
 							},
-							"members": {
-								"type": "integer"
-							},
 							"prizes": {
-								"type": "integer"
-							},
-							"songs": {
 								"type": "integer"
 							}
 						}
@@ -3041,13 +3035,7 @@
 									"years": {
 										"type": "integer"
 									},
-									"members": {
-										"type": "integer"
-									},
 									"prizes": {
-										"type": "integer"
-									},
-									"songs": {
 										"type": "integer"
 									}
 								}
@@ -3113,13 +3101,7 @@
 							"years": {
 								"type": "integer"
 							},
-							"members": {
-								"type": "integer"
-							},
 							"prizes": {
-								"type": "integer"
-							},
-							"songs": {
 								"type": "integer"
 							}
 						}
@@ -3498,13 +3480,7 @@
 												"years": {
 													"type": "integer"
 												},
-												"members": {
-													"type": "integer"
-												},
 												"prizes": {
-													"type": "integer"
-												},
-												"songs": {
 													"type": "integer"
 												}
 											}
@@ -3909,13 +3885,7 @@
 											"years": {
 												"type": "integer"
 											},
-											"members": {
-												"type": "integer"
-											},
 											"prizes": {
-												"type": "integer"
-											},
-											"songs": {
 												"type": "integer"
 											}
 										}
