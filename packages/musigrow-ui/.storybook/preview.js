@@ -1,5 +1,4 @@
 import React from 'react';
-import '@vime/core/themes/default.css';
 import '@styles/main.css';
 import '@storybook/addon-actions/register';
 import { addDecorator } from '@storybook/react';

@@ -2603,16 +2603,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:^1.6.6":
-  version: 1.6.6
-  resolution: "@headlessui/react@npm:1.6.6"
-  peerDependencies:
-    react: ^16 || ^17 || ^18
-    react-dom: ^16 || ^17 || ^18
-  checksum: 6ebb34bde0bd2a5045ae29a2bac1dc166f7163c9ad98aabe5abb580c3c770d0b3040d5992045f9e68b6c8e8eca5bf7eca71276ff9b1696a9fb88a9380d8fcf96
-  languageName: node
-  linkType: hard
-
 "@hookform/error-message@npm:^2.0.0":
   version: 2.0.0
   resolution: "@hookform/error-message@npm:2.0.0"
@@ -3963,13 +3953,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-dnd/asap@npm:^5.0.1":
-  version: 5.0.2
-  resolution: "@react-dnd/asap@npm:5.0.2"
-  checksum: 18f040e53512983f11c542ef21e6e4cac605d585a10cd764b13bc1b2f3ac7490e0fa40503adc348d8387aa45bc8e7eebe9cb33003b960a30bb5fde666ff2adde
-  languageName: node
-  linkType: hard
-
 "@react-dnd/invariant@npm:^2.0.0":
   version: 2.0.0
   resolution: "@react-dnd/invariant@npm:2.0.0"
@@ -3977,24 +3960,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-dnd/invariant@npm:^4.0.1":
-  version: 4.0.2
-  resolution: "@react-dnd/invariant@npm:4.0.2"
-  checksum: 594f6d78896c19bb8f023e101334fd91a9fdff686117bd8e830ba53737ec0a6042dab66971d3d63c7afbc622103909aff7a64c5c6767e0aa8d9561fd42705016
-  languageName: node
-  linkType: hard
-
 "@react-dnd/shallowequal@npm:^2.0.0":
   version: 2.0.0
   resolution: "@react-dnd/shallowequal@npm:2.0.0"
   checksum: b5bbdc795d65945bb7ba2322bed5cf8d4c6fe91dced98c3b10e3d16822c438f558751135ff296f8d1aa1eaa9d0037dacab2b522ca5eb812175123b9996966dcb
-  languageName: node
-  linkType: hard
-
-"@react-dnd/shallowequal@npm:^4.0.1":
-  version: 4.0.2
-  resolution: "@react-dnd/shallowequal@npm:4.0.2"
-  checksum: 7f21d691bddbfd4d2830948cbeefecca1600b2b46bcb1934926795f07ae8a1fa60a3dfd3a2112be5ef682c3820c80a99711e9fa15843f7e300acb25a4ecb70ab
   languageName: node
   linkType: hard
 
@@ -4168,13 +4137,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@seznam/compose-react-refs@npm:^1.0.4":
-  version: 1.0.6
-  resolution: "@seznam/compose-react-refs@npm:1.0.6"
-  checksum: f9b1840385a6866a564897d8a2aad3a3dcdde1ccb5bef8476616ef447b689c75cdc5f47bf40e0d2e2d3b37c8e934ec13eeb9d09388fb98bb280a897788d1f478
-  languageName: node
-  linkType: hard
-
 "@simov/deep-extend@npm:^1.0.0":
   version: 1.0.0
   resolution: "@simov/deep-extend@npm:1.0.0"
@@ -4231,15 +4193,6 @@ __metadata:
   dependencies:
     "@sinonjs/commons": ^1.7.0
   checksum: 7d3aef54e17c1073101cb64d953157c19d62a40e261a30923fa1ee337b049c5f29cc47b1f0c477880f42b5659848ba9ab897607ac8ea4acd5c30ddcfac57fca6
-  languageName: node
-  linkType: hard
-
-"@stencil/core@npm:2.5.2":
-  version: 2.5.2
-  resolution: "@stencil/core@npm:2.5.2"
-  bin:
-    stencil: bin/stencil
-  checksum: c96dcaae047f4c9b36412246315c1fbd0e1478f2dcd669ff04c29c560be3a20b4d25694a890b864e2100d5371c7d848d3ed377b0438f955ad4beefdf1e5a0b82
   languageName: node
   linkType: hard
 
@@ -6570,13 +6523,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/fscreen@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@types/fscreen@npm:1.0.1"
-  checksum: 06ef89c263409081639bd618ca170a66bf6c8e332ae01ed453fdf3d5e6cf41d1abd5c58a0747c1d300b64fa7cdea93abf7a92d5cb5f62602c002308011d2e1c4
-  languageName: node
-  linkType: hard
-
 "@types/glob@npm:*, @types/glob@npm:^7.1.1, @types/glob@npm:^7.1.3":
   version: 7.2.0
   resolution: "@types/glob@npm:7.2.0"
@@ -7475,32 +7421,6 @@ __metadata:
   dependencies:
     "@ucast/core": ^1.4.1
   checksum: 27dddf9d24fcbe18bab5bbcb050b43116150afd3fad1e5359eb9b381095c0c5655934dcaf05adc25f247fe8eee285541a190020b8c3ca1b85ba63f5f046ec8a4
-  languageName: node
-  linkType: hard
-
-"@vime/core@npm:^5.3.1":
-  version: 5.3.1
-  resolution: "@vime/core@npm:5.3.1"
-  dependencies:
-    "@stencil/core": 2.5.2
-    "@types/fscreen": ^1.0.1
-    fscreen: ^1.2.0
-    mitt: ^3.0.0
-    stencil-wormhole: ^3.4.1
-  checksum: f50cdddbe19ce0e034f5c026559af568e07bef0e37128fb338cdaf0ce87cd57e443fe1f2e56baa82a7ceb21e7358026ef426196dd8e704763ec58562bf170c3a
-  languageName: node
-  linkType: hard
-
-"@vime/react@npm:^5.3.1":
-  version: 5.3.1
-  resolution: "@vime/react@npm:5.3.1"
-  dependencies:
-    "@seznam/compose-react-refs": ^1.0.4
-  peerDependencies:
-    "@vime/core": 5.3.1
-    react: ^17.0.0
-    react-dom: ^17.0.0
-  checksum: 17265eff183967bd7f20a53877bfa5d771d3cd35da6bb9f37e461b04aea73e7544b66638264f33da6d9cab0efa58caa6a113e45f7394e5a4825927377edb1385
   languageName: node
   linkType: hard
 
@@ -8733,13 +8653,6 @@ __metadata:
   bin:
     atob: bin/atob.js
   checksum: dfeeeb70090c5ebea7be4b9f787f866686c645d9f39a0d184c817252d0cf08455ed25267d79c03254d3be1f03ac399992a792edcd5ffb9c91e097ab5ef42833a
-  languageName: node
-  linkType: hard
-
-"atropos@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "atropos@npm:1.0.2"
-  checksum: b4bd3f76807f0a0c9001fd9216411df5988c47ffebdb6b6137ec0f1537b11d069600c9d795d75f0154b61a89c1e58bad2fb370138c39c3c3b0ccceff003cdd1c
   languageName: node
   linkType: hard
 
@@ -12185,17 +12098,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dnd-core@npm:^16.0.1":
-  version: 16.0.1
-  resolution: "dnd-core@npm:16.0.1"
-  dependencies:
-    "@react-dnd/asap": ^5.0.1
-    "@react-dnd/invariant": ^4.0.1
-    redux: ^4.2.0
-  checksum: b7d3ef4664f433af796f440ddd27ad9d7fef0205f26c4b7c0af6ebf612ffa9b33e64d095d3e79190c4baaed34aa36570f321ebe0d2cc8ff1031ff158a0907b3f
-  languageName: node
-  linkType: hard
-
 "dns-equal@npm:^1.0.0":
   version: 1.0.0
   resolution: "dns-equal@npm:1.0.0"
@@ -14171,13 +14073,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"filepond@npm:^4.30.4":
-  version: 4.30.4
-  resolution: "filepond@npm:4.30.4"
-  checksum: ec1c06a11ceda231e5589f52307fa2f34b9c67c14b22c2be7adde227159f32e9ed1aa0e0a32fbca4e08a837b6714084e9f629c097a669fc1c3076be8c5f3c295
-  languageName: node
-  linkType: hard
-
 "fill-range@npm:^4.0.0":
   version: 4.0.0
   resolution: "fill-range@npm:4.0.0"
@@ -14755,13 +14650,6 @@ __metadata:
   version: 1.0.0
   resolution: "fs.realpath@npm:1.0.0"
   checksum: 99ddea01a7e75aa276c250a04eedeffe5662bce66c65c07164ad6264f9de18fb21be9433ead460e54cff20e31721c811f4fb5d70591799df5f85dce6d6746fd0
-  languageName: node
-  linkType: hard
-
-"fscreen@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "fscreen@npm:1.2.0"
-  checksum: ac50f9ac52a157b8fe6aaecdf9efa7c1cfa90b42a76c3bc6b85372fab05c5a9cd72c1b7f4c2e273eba1a0e630e381fd72ae135fcc57acd05a0943d5d0c21b451
   languageName: node
   linkType: hard
 
@@ -20669,13 +20557,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mitt@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "mitt@npm:3.0.0"
-  checksum: f7be5049d27d18b1dbe9408452d66376fa60ae4a79fe9319869d1b90ae8cbaedadc7e9dab30b32d781411256d468be5538996bb7368941c09009ef6bbfa6bfc7
-  languageName: node
-  linkType: hard
-
 "mixin-deep@npm:^1.2.0":
   version: 1.3.2
   resolution: "mixin-deep@npm:1.3.2"
@@ -20951,9 +20832,7 @@ __metadata:
   dependencies:
     "@axe-core/react": ^4.4.3
     "@babel/core": ^7.18.10
-    "@headlessui/react": ^1.6.6
     "@hookform/error-message": ^2.0.0
-    "@lottiefiles/react-lottie-player": ^3.4.7
     "@mdx-js/react": ^1.6.22
     "@rollup/plugin-commonjs": ^22.0.1
     "@rollup/plugin-node-resolve": ^13.3.0
@@ -20992,33 +20871,23 @@ __metadata:
     "@types/react-test-renderer": ^18.0.0
     "@types/rollup-plugin-peer-deps-external": ^2
     "@types/uuid": ^8
-    "@vime/core": ^5.3.1
-    "@vime/react": ^5.3.1
-    atropos: ^1.0.2
     autoprefixer: ^10.4.8
     babel-loader: ^8.2.5
     chromatic: ^6.7.3
     classnames: ^2.3.1
     cypress: ^10.4.0
-    date-fns: ^2.29.1
     eslint: ^8.21.0
-    filepond: ^4.30.4
     framer-motion: ^7.0.0
     jest: ^28.1.3
     jest-axe: ^6.0.0
     jest-extended: ^3.0.2
     postcss: ^8.4.14
     react: ^18.2.0
-    react-content-loader: ^6.2.0
     react-countup: ^6.3.0
-    react-dnd: ^16.0.1
-    react-dnd-touch-backend: ^16.0.1
     react-dom: ^18.2.0
-    react-filepond: ^7.1.2
     react-hook-form: ^7.34.0
     react-icons: ^4.4.0
     react-responsive: ^9.0.0-beta.10
-    react-spinners: ^0.13.4
     react-test-renderer: ^18.2.0
     rollup: ^2.77.2
     rollup-plugin-peer-deps-external: ^2.2.4
@@ -24278,15 +24147,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-content-loader@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "react-content-loader@npm:6.2.0"
-  peerDependencies:
-    react: ">=16.0.0"
-  checksum: a6c33ae62c3e2907a4f7f05fb1f14518927eb06608120db32064b9b32993535bb46cee92766fef4dd920658eb27662aa7bd593b1fa5ab4606c2bddd6124bfb58
-  languageName: node
-  linkType: hard
-
 "react-cookies@npm:^0.1.1":
   version: 0.1.1
   resolution: "react-cookies@npm:0.1.1"
@@ -24329,16 +24189,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dnd-touch-backend@npm:^16.0.1":
-  version: 16.0.1
-  resolution: "react-dnd-touch-backend@npm:16.0.1"
-  dependencies:
-    "@react-dnd/invariant": ^4.0.1
-    dnd-core: ^16.0.1
-  checksum: 5362c5f4266e3655d02c716f341dc55c61fae53e12eb3b239245bafb7a3f3cdb953e27e187e8dcb9d86c01bc738853d764d7c85b87104a49a8a8f1ecc4d35755
-  languageName: node
-  linkType: hard
-
 "react-dnd@npm:^14.0.2":
   version: 14.0.5
   resolution: "react-dnd@npm:14.0.5"
@@ -24361,31 +24211,6 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 464e231de8c2b79546049a1600b67b1df0b7f762f23c688d3e9aeddbf334b1e64931ef91d0129df3c8be255f0af76e89426729dbcbefe4bdc09b0f665d2da368
-  languageName: node
-  linkType: hard
-
-"react-dnd@npm:^16.0.1":
-  version: 16.0.1
-  resolution: "react-dnd@npm:16.0.1"
-  dependencies:
-    "@react-dnd/invariant": ^4.0.1
-    "@react-dnd/shallowequal": ^4.0.1
-    dnd-core: ^16.0.1
-    fast-deep-equal: ^3.1.3
-    hoist-non-react-statics: ^3.3.2
-  peerDependencies:
-    "@types/hoist-non-react-statics": ">= 3.3.1"
-    "@types/node": ">= 12"
-    "@types/react": ">= 16"
-    react: ">= 16.14"
-  peerDependenciesMeta:
-    "@types/hoist-non-react-statics":
-      optional: true
-    "@types/node":
-      optional: true
-    "@types/react":
-      optional: true
-  checksum: e8da2186aaafcd5bb41c090a995c963a7c3c73c20991667a2cfc0c800d7f7f73913414b2e61c437cdb6221bb2151bd5174088b8b42c17056a896fc4d1da5729f
   languageName: node
   linkType: hard
 
@@ -24479,17 +24304,6 @@ __metadata:
   version: 3.2.0
   resolution: "react-fast-compare@npm:3.2.0"
   checksum: 8ef272c825ae329f61633ce4ce7f15aa5b84e5214d88bc0823880236e03e985a13195befa2c7a4eda7db3b017dc7985729152d88445823f652403cf36c2b86aa
-  languageName: node
-  linkType: hard
-
-"react-filepond@npm:^7.1.2":
-  version: 7.1.2
-  resolution: "react-filepond@npm:7.1.2"
-  peerDependencies:
-    filepond: ">=3.7.x < 5.x"
-    react: 16 - 18
-    react-dom: 16 - 18
-  checksum: 5aaa41dff2c3b3330442c521c3d73505b73bc14a3989c3e62f5e48de52d07904e1146280ec926fd805d7571b9ec14eec71769e55205f80ed0154094c48242b8f
   languageName: node
   linkType: hard
 
@@ -24845,16 +24659,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-spinners@npm:^0.13.4":
-  version: 0.13.4
-  resolution: "react-spinners@npm:0.13.4"
-  peerDependencies:
-    react: ^16.0.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: ae9430bc8a2fede2ffdcac57c3586c56c5b459e1ba3ee60058c4eaf9b7cbdd87cf07c15927cfe0a171fc7460553385b69d961dc8448356bc558fd44db02eee63
-  languageName: node
-  linkType: hard
-
 "react-syntax-highlighter@npm:^15.4.5":
   version: 15.5.0
   resolution: "react-syntax-highlighter@npm:15.5.0"
@@ -25175,7 +24979,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux@npm:^4.0.0, redux@npm:^4.0.1, redux@npm:^4.1.1, redux@npm:^4.1.2, redux@npm:^4.2.0":
+"redux@npm:^4.0.0, redux@npm:^4.0.1, redux@npm:^4.1.1, redux@npm:^4.1.2":
   version: 4.2.0
   resolution: "redux@npm:4.2.0"
   dependencies:
@@ -27090,13 +26894,6 @@ __metadata:
   version: 3.2.1
   resolution: "std-env@npm:3.2.1"
   checksum: c046af2573ba6e02c9ffcfd5a2c3f94f160404915941be177b93d6d1695078e487293fed6ab4fa95680e75a331eccf0f6dbe0b86babda15056c594e600a99dc4
-  languageName: node
-  linkType: hard
-
-"stencil-wormhole@npm:^3.4.1":
-  version: 3.4.1
-  resolution: "stencil-wormhole@npm:3.4.1"
-  checksum: d509b9704b2350db09785306828d19642ea7a51d480acd61678649481fab159b285bc4fc476014b0708645d0b6053856fef48e68c9c49af8e98c8061918f423d
   languageName: node
   linkType: hard
 
