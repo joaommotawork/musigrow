@@ -9,7 +9,7 @@ const NotFound: NextPage = (locale) => {
 	return (
 		<>
 			<Head>
-				<title>{t('notFound.headTitle')} | Orquestra ISTEC</title>
+				<title>{`${t('notFound.headTitle')} | Orquestra ISTEC`}</title>
 			</Head>
 
 			<section className='flex h-full w-full flex-col items-center justify-center uppercase'>

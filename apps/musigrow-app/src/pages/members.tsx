@@ -113,7 +113,7 @@ const Members: NextPage = ({ locale, membersCollection }: any) => {
 	return (
 		<>
 			<Head>
-				<title>{t('members.headTitle')} | Orquestra ISTEC</title>
+				<title>{`${t('members.headTitle')} | Orquestra ISTEC`}</title>
 			</Head>
 
 			<div className='flex w-full flex-col gap-5'>

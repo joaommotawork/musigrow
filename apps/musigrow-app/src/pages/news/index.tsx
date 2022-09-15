@@ -46,7 +46,7 @@ const News: NextPage = ({ locale, newsCollection }: any) => {
 	return (
 		<>
 			<Head>
-				<title>{t('news.headTitle')} | Orquestra ISTEC</title>
+				<title>{`${t('news.headTitle')} | Orquestra ISTEC`}</title>
 			</Head>
 
 			<div className='flex w-full flex-col gap-5'>

@@ -14,7 +14,7 @@ const Gallery: NextPage = ({ locale, galleryPage }: any) => {
 	return (
 		<>
 			<Head>
-				<title>{t('gallery.headTitle')} | Orquestra ISTEC</title>
+				<title>{`${t('gallery.headTitle')} | Orquestra ISTEC`}</title>
 			</Head>
 
 			<div className='flex w-full flex-col gap-5'>

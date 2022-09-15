@@ -84,7 +84,7 @@ const Home: NextPage = ({
 	return (
 		<>
 			<Head>
-				<title>{t('home.headTitle')} | Orquestra ISTEC</title>
+				<title>{`${t('home.headTitle')} | Orquestra ISTEC`}</title>
 			</Head>
 			<div className='flex w-full flex-col gap-5'>
 				<Swiper

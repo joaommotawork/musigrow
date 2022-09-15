@@ -34,7 +34,7 @@ const Songs: NextPage = ({ locale, songs }: any) => {
 	return (
 		<>
 			<Head>
-				<title>{t('songs.headTitle')} | Orquestra ISTEC</title>
+				<title>{`${t('songs.headTitle')} | Orquestra ISTEC`}</title>
 			</Head>
 
 			<div className='flex w-full flex-col gap-5'>
