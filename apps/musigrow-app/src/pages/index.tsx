@@ -54,25 +54,27 @@ const Home: NextPage = ({
 				image: (
 					<img
 						className='w-full object-cover object-center md:h-36 lg:h-48'
-						src={item.attributes.gallery.data[0].attributes.url}
+						src={item?.attributes?.gallery.data[0].attributes?.url}
 						alt='blog'
 					/>
 				),
-				category: t(`home.news.categories.${item.attributes.category}`),
-				title: item.attributes.title,
-				description: item.attributes.content,
+				category: t(
+					`home.news.categories.${item?.attributes?.category}`,
+				),
+				title: item?.attributes?.title,
+				description: item?.attributes?.content,
 				callToActionText: t('home.news.learnMore'),
 				callToActionOnClick: () =>
 					router.push(
 						'/news/[slug]',
-						`/news/${item.attributes.slug}`,
+						`/news/${item?.attributes?.slug}`,
 					),
 				accentColorBackground:
-					item.attributes.category === 'events'
+					item?.attributes?.category === 'events'
 						? 'bg-blue-50'
 						: undefined,
 				accentColorText:
-					item.attributes.category === 'events'
+					item?.attributes?.category === 'events'
 						? 'text-blue-500'
 						: undefined,
 			};
@@ -139,7 +141,7 @@ const Home: NextPage = ({
 					items={[
 						{
 							children: t('home.statistics.years'),
-							count: home.attributes.statistics.years,
+							count: home?.attributes?.statistics.years,
 							icon: <FaRegHourglass className='h-10 w-10' />,
 							accentColorText: 'text-black',
 						},
@@ -151,7 +153,7 @@ const Home: NextPage = ({
 						},
 						{
 							children: t('home.statistics.prizes'),
-							count: home.attributes.statistics.prizes,
+							count: home?.attributes?.statistics.prizes,
 							icon: <FaTrophy className='h-10 w-10' />,
 							accentColorText: 'text-black',
 						},
@@ -167,7 +169,7 @@ const Home: NextPage = ({
 					{t('home.history.title')}
 				</Headline>
 				<section className='py-1 text-justify indent-8 md:py-5'>
-					{home.attributes.history}
+					{home?.attributes?.history}
 				</section>
 				<Headline subHeadlineText={t('home.news.subTitle')}>
 					{t('home.news.title')}
@@ -190,47 +192,47 @@ const Home: NextPage = ({
 							loading='lazy'
 						/>
 					}
-					title={home.attributes.findUsTitle}
-					description={<>{home.attributes.findUsDescription}</>}
+					title={home?.attributes?.findUsTitle}
+					description={<>{home?.attributes?.findUsDescription}</>}
 					contacts={
 						<>
 							<a
-								href={`mailto:${home.attributes.contacts.email}`}
+								href={`mailto:${home?.attributes?.contacts.email}`}
 								target='_blank'>
 								<FaEnvelope className='h-8 w-8 cursor-pointer' />
 							</a>
 							<a
-								href={`https://wa.me/${home.attributes.contacts.phoneNumber}`}
+								href={`https://wa.me/${home?.attributes?.contacts.phoneNumber}`}
 								target='_blank'>
 								<FaWhatsapp className='h-8 w-8 cursor-pointer' />
 							</a>
 							<a
-								href={`https://pt.linkedin.com/in/${home.attributes.contacts.linkedin}`}
+								href={`https://pt.linkedin.com/in/${home?.attributes?.contacts.linkedin}`}
 								target='_blank'>
 								<FaLinkedin className='h-8 w-8 cursor-pointer' />
 							</a>
 							<a
-								href={`https://pt-pt.facebook.com/${home.attributes.contacts.facebook}`}
+								href={`https://pt-pt.facebook.com/${home?.attributes?.contacts.facebook}`}
 								target='_blank'>
 								<FaFacebook className='h-8 w-8 cursor-pointer' />
 							</a>
 							<a
-								href={`https://www.instagram.com/${home.attributes.contacts.instagram}`}
+								href={`https://www.instagram.com/${home?.attributes?.contacts.instagram}`}
 								target='_blank'>
 								<FaInstagram className='h-8 w-8 cursor-pointer' />
 							</a>
 							<a
-								href={`https://spotify.com/${home.attributes.contacts.spotify}`}
+								href={`https://spotify.com/${home?.attributes?.contacts.spotify}`}
 								target='_blank'>
 								<FaSpotify className='h-8 w-8 cursor-pointer' />
 							</a>
 							<a
-								href={`https://www.youtube.com/channel/${home.attributes.contacts.youtube}`}
+								href={`https://www.youtube.com/channel/${home?.attributes?.contacts.youtube}`}
 								target='_blank'>
 								<FaYoutube className='h-8 w-8 cursor-pointer' />
 							</a>
 							<a
-								href={`https://www.soundcloud.com/${home.attributes.contacts.soundcloud}`}
+								href={`https://www.soundcloud.com/${home?.attributes?.contacts.soundcloud}`}
 								target='_blank'>
 								<FaSoundcloud className='h-8 w-8 cursor-pointer' />
 							</a>
@@ -247,6 +249,7 @@ export async function getStaticProps({ locale }: any) {
 		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/home?populate=statistics,contacts&locale=${locale}`,
 	);
 	const home = resHome.data.data;
+
 	const resNewsCollection = await axios.get(
 		`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/news-collection?populate=gallery&locale=${locale}&sort=createdAt:DESC&pagination[pageSize]=4`,
 	);

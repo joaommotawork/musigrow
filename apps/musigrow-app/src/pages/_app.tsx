@@ -3,10 +3,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { appWithTranslation } from 'next-i18next';
 import { GoogleAnalytics, usePageViews, event } from 'nextjs-google-analytics';
-import { SessionProvider } from 'next-auth/react';
 import { setupStore } from '@app/store';
 import Layout from '@components/Layout/Layout';
-import '@vime/core/themes/default.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -48,13 +46,11 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 				/>
 			</Head>
 			<GoogleAnalytics />
-			<SessionProvider session={session}>
-				<Provider store={setupStore()}>
-					<Layout>
-						<Component {...pageProps} />
-					</Layout>
-				</Provider>
-			</SessionProvider>
+			<Provider store={setupStore()}>
+				<Layout>
+					<Component {...pageProps} />
+				</Layout>
+			</Provider>
 		</>
 	);
 }
