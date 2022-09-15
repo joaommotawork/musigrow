@@ -48,6 +48,7 @@ export async function getStaticProps({ locale }: any) {
 			...(await serverSideTranslations(locale, ['common'])),
 			galleryPage,
 		},
+		revalidate: 60,
 	};
 }
 
