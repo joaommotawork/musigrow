@@ -27,7 +27,7 @@ export const BlogCardTypeOne = ({
 	accentColorText = 'text-red-500',
 }: BlogCardTypeOneProps) => {
 	return (
-		<div className='overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60'>
+		<div className='flex flex-col overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60'>
 			{image}
 			<div className='flex flex-col gap-2 p-6'>
 				{category && (
@@ -41,6 +41,8 @@ export const BlogCardTypeOne = ({
 					{title}
 				</h1>
 				<p className='leading-relaxed line-clamp-3'>{description}</p>
+			</div>
+			<div className='mt-auto px-6 pb-6'>
 				<TextLink
 					textOnClick={callToActionOnClick}
 					icon={<FaArrowRight />}
