@@ -4,18 +4,11 @@ import {
 	PreloadedState,
 } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import { reducer as notificationsReducer } from 'reapop';
-import counterReducer from '@features/counter/counterSlice';
 import reactBurgerMenuReducer from '@features/reactBurgerMenu/reactBurgerMenuSlice';
-import { pokemonApi } from '@services/pokemon';
 
 // Create the root reducer independently to obtain the RootState type
 const rootReducer = combineReducers({
-	notifications: notificationsReducer(),
-	counter: counterReducer,
 	reactBurgerMenu: reactBurgerMenuReducer,
-	// Add the generated reducer as a specific top-level slice
-	[pokemonApi.reducerPath]: pokemonApi.reducer,
 });
 
 export function setupStore(preloadedState?: PreloadedState<RootState>) {
@@ -23,10 +16,7 @@ export function setupStore(preloadedState?: PreloadedState<RootState>) {
 		reducer: rootReducer,
 		// Adding the api middleware enables caching, invalidation, polling,
 		// and other useful features of `rtk-query`.
-		middleware: (getDefaultMiddleware) => [
-			...getDefaultMiddleware(),
-			pokemonApi.middleware,
-		],
+		middleware: (getDefaultMiddleware) => [...getDefaultMiddleware()],
 		preloadedState,
 	});
 }

@@ -1,16 +1,10 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import cookie from 'react-cookies';
 import { useTranslation } from 'next-i18next';
 // @ts-ignore
 import Menu from 'react-burger-menu/lib/menus/scaleRotate';
-import NotificationsSystem, {
-	bootstrapTheme,
-	dismissNotification,
-	GrowTransition,
-	setUpNotifications,
-} from 'reapop';
 import { FaTimes, FaUserAlt } from 'react-icons/fa';
 import classNames from 'classnames';
 import { FooterTypeOne as Footer, HeaderTypeOne as Header } from 'musigrow-ui';
@@ -31,24 +25,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 	const isMobile = useMediaQuery({ query: '(min-width: 769px)' });
 
 	const dispatch = useAppDispatch();
-	const [isSSR, setIsSSR] = useState(true);
-	const notifications = useAppSelector((state) => state.notifications);
 	const isOpen = useAppSelector((state) => state.reactBurgerMenu.isOpen);
-
-	useEffect(() => {
-		setIsSSR(false);
-	}, []);
-	// 1. Retrieve the notifications to display.
-
-	setUpNotifications({
-		defaultProps: {
-			position: 'bottom-right',
-			dismissAfter: 5000,
-			dismissible: true,
-			showDismissButton: true,
-			allowHTML: true,
-		},
-	});
 
 	const selectedLang = (lang: string) => {
 		return router.locale === lang ? 'text-red-500' : '';
@@ -72,9 +49,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
 			'text-red-500': selected,
 		});
 
-	const iconsMenu = () => {
+	const IconsMenu = () => {
 		return (
-			<div className='flex flex-col items-center justify-center gap-5 text-white md:flex-row'>
+			<span className='flex flex-col items-center justify-center gap-5 text-white md:flex-row'>
 				<div className='flex items-center justify-center gap-5 text-white'>
 					<a
 						className={`${selectedLang('en')} cursor-pointer`}
@@ -91,15 +68,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
 				<a
 					id='contact'
 					href={`${process.env.NEXT_PUBLIC_STRAPI_URL}/dashboard`}
-					target='_blank'
-					/* onClick={() => router.push('/admin')}
-								className={`${menuItemClasses(
-									router.asPath === '/admin',
-								)} text-white`} */
-				>
+					target='_blank'>
 					<FaUserAlt className='h-4 w-4' />
 				</a>
-			</div>
+			</span>
 		);
 	};
 
@@ -156,9 +128,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
 				</a>
 
 				{!isMobile ? (
-					<div className='mt-10 text-base outline-none'>
-						{iconsMenu()}
-					</div>
+					<span className='mt-10 text-base outline-none'>
+						<IconsMenu />
+					</span>
 				) : (
 					<></>
 				)}
@@ -177,23 +149,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
 						router.push('/');
 					}}
 					menuBarsOnClick={() => dispatch(openMenu())}
-					icons={isMobile ? iconsMenu() : <></>}
+					icons={isMobile ? <IconsMenu /> : <></>}
 				/>
 				<NProgress />
-				{!isSSR && (
-					<NotificationsSystem
-						smallScreenBreakpoint={500}
-						// 2. Pass the notifications you want Reapop to display.
-						notifications={notifications}
-						// 3. Pass the function used to dismiss a notification.
-						dismissNotification={(id) =>
-							dispatch(dismissNotification(id))
-						}
-						// 4. Pass a builtIn theme or a custom theme.
-						theme={bootstrapTheme}
-						components={{ Transition: GrowTransition }}
-					/>
-				)}
 				<div className='mt-20 w-full flex-grow px-5 py-10 md:mt-16 lg:mt-20 lg:px-40 2xl:px-80'>
 					{children}
 				</div>

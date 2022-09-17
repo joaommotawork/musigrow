@@ -20188,7 +20188,6 @@ __metadata:
     react-responsive: ^9.0.0-beta.10
     react-test-renderer: ^18.2.0
     react-youtube: ^9.0.3
-    reapop: ^4.0.5
     remark-emoji: ^3.0.2
     remark-gfm: ^3.0.1
     swiper: ^8.3.2
@@ -23851,21 +23850,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-transition-group@npm:4.4.2":
-  version: 4.4.2
-  resolution: "react-transition-group@npm:4.4.2"
-  dependencies:
-    "@babel/runtime": ^7.5.5
-    dom-helpers: ^5.0.1
-    loose-envify: ^1.4.0
-    prop-types: ^15.6.2
-  peerDependencies:
-    react: ">=16.6.0"
-    react-dom: ">=16.6.0"
-  checksum: b67bf5b3e86dbab72d658b9a52a3589e5960583ab28c7c66272427d8fe30d4c7de422d5046ae96bd2683cdf80cc3264b2516f5ce80cae1dbe6cf3ca6dda392c5
-  languageName: node
-  linkType: hard
-
 "react-transition-group@npm:^4.3.0, react-transition-group@npm:^4.4.5":
   version: 4.4.5
   resolution: "react-transition-group@npm:4.4.5"
@@ -24043,17 +24027,6 @@ __metadata:
   dependencies:
     picomatch: ^2.2.1
   checksum: 1ced032e6e45670b6d7352d71d21ce7edf7b9b928494dcaba6f11fba63180d9da6cd7061ebc34175ffda6ff529f481818c962952004d273178acd70f7059b320
-  languageName: node
-  linkType: hard
-
-"reapop@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "reapop@npm:4.0.5"
-  dependencies:
-    react-transition-group: 4.4.2
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0
-  checksum: deb9fc4a2719ddffed1226d469565cc8fa3494b6a303384d91ba699efcc30f59ae57c708c6d22f60ca8e5ab5a86616f3601eab70fa4f648d73a96c47617085f3
   languageName: node
   linkType: hard
 

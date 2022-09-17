@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { appWithTranslation } from 'next-i18next';
 import { GoogleAnalytics, usePageViews } from 'nextjs-google-analytics';
 import { setupStore } from '@app/store';
-import Layout from '@components/Layout/Layout';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,6 +11,11 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-coverflow';
 import '@styles/globals.css';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+
+const DynamicLayout = dynamic(() => import('@components/Layout/Layout'), {
+	ssr: false,
+});
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
 	const ReactDOM = require('react-dom');
@@ -32,9 +36,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 			</Head>
 			<GoogleAnalytics />
 			<Provider store={setupStore()}>
-				<Layout>
+				<DynamicLayout>
 					<Component {...pageProps} />
-				</Layout>
+				</DynamicLayout>
 			</Provider>
 		</>
 	);
