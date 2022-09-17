@@ -32,11 +32,7 @@
 		"deploy:ui": "turbo run deploy --filter=musigrow-ui",
 		"deploy:app": "turbo run deploy --filter=musigrow-app",
 		"deploy:strapi": "turbo run deploy --filter=musigrow-strapi",
-		"heroku-postbuild": "yarn build:strapi",
-		"generate": "turbo run generate",
-		"db:migrate:deploy": "turbo run db:migrate:deploy",
-		"db:push": "turbo run db:push",
-		"db:seed": "turbo run db:seed"
+		"heroku-postbuild": "yarn build:strapi"
 	},
 	"keywords": [],
 	"author": {
