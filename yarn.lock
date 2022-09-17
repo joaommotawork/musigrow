@@ -3104,17 +3104,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lottiefiles/react-lottie-player@npm:^3.4.7":
-  version: 3.4.7
-  resolution: "@lottiefiles/react-lottie-player@npm:3.4.7"
-  dependencies:
-    lottie-web: ^5.7.8
-  peerDependencies:
-    react: 16 - 18
-  checksum: cffabececafbe3cbf09b54c5d2c45fdeed32cf7156fa5cae1ba2f4218048cbef239c23ed19e36b94a1b4b41c4518f77269865b9f7111ab2f4bf1ba2b59f4ef76
-  languageName: node
-  linkType: hard
-
 "@mdx-js/mdx@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/mdx@npm:1.6.22"
@@ -11225,13 +11214,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.29.1":
-  version: 2.29.1
-  resolution: "date-fns@npm:2.29.1"
-  checksum: 9d07f77dffc1eb8c213391bde39f2963ffe7c0019d9edde14487882d627224f3a39b963e6e99d0cc58afff220a6a1a7e8864d2789958f4eaa77714de94d4d076
-  languageName: node
-  linkType: hard
-
 "dayjs@npm:^1.10.4":
   version: 1.11.4
   resolution: "dayjs@npm:1.11.4"
@@ -18680,13 +18662,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lottie-web@npm:^5.7.8":
-  version: 5.9.6
-  resolution: "lottie-web@npm:5.9.6"
-  checksum: aed6a1d0c24eefb6c42a42aae18f29737746551cfdc86319f1b9675f5bc276ba26971e8d2b0e1498df880571fe4bfe2fc87885a1d4f8a318d5e4e5b939b7a474
-  languageName: node
-  linkType: hard
-
 "loud-rejection@npm:^1.0.0":
   version: 1.6.0
   resolution: "loud-rejection@npm:1.6.0"
@@ -20173,7 +20148,6 @@ __metadata:
   resolution: "musigrow-app@workspace:apps/musigrow-app"
   dependencies:
     "@axe-core/react": ^4.4.3
-    "@lottiefiles/react-lottie-player": ^3.4.7
     "@reduxjs/toolkit": ^1.8.3
     "@testing-library/cypress": ^8.0.3
     "@testing-library/react": ^13.3.0
@@ -20191,7 +20165,6 @@ __metadata:
     axios: ^0.27.2
     classnames: ^2.3.1
     cypress: ^10.4.0
-    date-fns: ^2.29.1
     eslint: 8.21.0
     eslint-config-next: 12.2.4
     framer-motion: ^7.0.0
