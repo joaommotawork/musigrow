@@ -2573,17 +2573,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/error-message@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@hookform/error-message@npm:2.0.0"
-  peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-    react-hook-form: ^7.0.0
-  checksum: 84aa3a6cb5cc729581850dcbe2bb5dfa43431c148782b4e8676757f808cd81e220fbc4e709c4eee381b0168a991c3a3f5306acae2a09a9760859c9a188d591ec
-  languageName: node
-  linkType: hard
-
 "@humanwhocodes/config-array@npm:^0.10.4":
   version: 0.10.4
   resolution: "@humanwhocodes/config-array@npm:0.10.4"
@@ -20220,7 +20209,6 @@ __metadata:
   dependencies:
     "@axe-core/react": ^4.4.3
     "@babel/core": ^7.18.10
-    "@hookform/error-message": ^2.0.0
     "@mdx-js/react": ^1.6.22
     "@rollup/plugin-commonjs": ^22.0.1
     "@rollup/plugin-node-resolve": ^13.3.0
@@ -20273,7 +20261,6 @@ __metadata:
     react: ^18.2.0
     react-countup: ^6.3.0
     react-dom: ^18.2.0
-    react-hook-form: ^7.34.0
     react-icons: ^4.4.0
     react-responsive: ^9.0.0-beta.10
     react-test-renderer: ^18.2.0
@@ -23467,15 +23454,6 @@ __metadata:
   peerDependencies:
     react: ">=16.3.0"
   checksum: a4998479dab7fc1c2799eddefb1870a9d881b5f71cfdf97979a9882e42f4bb50402d55335f308f461e735e01a06f46b16cc7b4e6bcb22c7a4a6f85a753c5c106
-  languageName: node
-  linkType: hard
-
-"react-hook-form@npm:^7.34.0":
-  version: 7.34.0
-  resolution: "react-hook-form@npm:7.34.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17 || ^18
-  checksum: 2b4a6f6ca5b3f729b88aa14a1a8c47ba86405d9c5fef2560b1dc85ac6fe1b105326571b8e1e857f8d8f3449636062d2d6201809918b5bb37f6f8f0b9c6cd6e2c
   languageName: node
   linkType: hard
 

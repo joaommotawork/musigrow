@@ -1,4 +1,3 @@
-export * from './Auth/SignIn/SignIn';
 export * from './Blog/BlogCardTypeOne/BlogCardTypeOne';
 export * from './Contact/ContactTypeOne/ContactTypeOne';
 export * from './Feature/FeatureCardTypeOne/FeatureCardTypeOne';
