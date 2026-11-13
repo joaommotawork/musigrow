@@ -1,0 +1,6 @@
+language js
+
+`export const $n = $v` as $exp where {
+	$n <: r"[a-z_].*",
+	register_diagnostic(span=$exp, message="Story names should be PascalCase (storybook/prefer-pascal-case).", severity="warn")
+}

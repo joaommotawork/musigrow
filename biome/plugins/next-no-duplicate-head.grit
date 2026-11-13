@@ -1,0 +1,9 @@
+language js
+
+file($body) where {
+	$body <: contains `"next/document"`,
+	$body <: contains bubble `return $jsx` as $ret where {
+		$jsx <: r"(?s).*<Head[\s>/].*<Head[\s>/].*",
+		register_diagnostic(span=$ret, message="Do not include multiple instances of `<Head/>` (@next/next/no-duplicate-head).", severity="error")
+	}
+}

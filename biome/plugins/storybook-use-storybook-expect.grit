@@ -1,0 +1,10 @@
+language js
+
+or {
+	`import { $s } from "@jest/globals"`,
+	`import $d from "@jest/globals"`,
+	`import { $s } from "expect"`,
+	`import $d from "expect"`
+} as $imp where {
+	register_diagnostic(span=$imp, message="Use expect from @storybook/jest in stories (storybook/use-storybook-expect).", severity="error")
+}

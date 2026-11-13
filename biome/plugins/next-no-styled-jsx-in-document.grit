@@ -1,0 +1,10 @@
+language js
+
+file($body) where {
+	$body <: contains `"next/document"`,
+	$body <: contains bubble JsxOpeningElement(name=$n) as $el where {
+		$n <: r"style",
+		$el <: contains JsxAttribute(name=$a) where { $a <: r"jsx" },
+		register_diagnostic(span=$el, message="`styled-jsx` should not be used in `pages/_document` (@next/next/no-styled-jsx-in-document).", severity="warn")
+	}
+}

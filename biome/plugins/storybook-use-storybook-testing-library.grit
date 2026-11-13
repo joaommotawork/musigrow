@@ -1,0 +1,10 @@
+language js
+
+or {
+	`import { $s } from "@testing-library/react"`,
+	`import { $s } from "@testing-library/dom"`,
+	`import { $s } from "@testing-library/user-event"`,
+	`import $d from "@testing-library/user-event"`
+} as $imp where {
+	register_diagnostic(span=$imp, message="Use @storybook/testing-library in stories (storybook/use-storybook-testing-library).", severity="error")
+}

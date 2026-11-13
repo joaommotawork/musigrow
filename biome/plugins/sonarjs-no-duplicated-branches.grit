@@ -1,0 +1,8 @@
+language js
+
+or {
+	`if ($c) { $a } else { $a }`,
+	`$c ? $a : $a`
+} as $node where {
+	register_diagnostic(span=$node, message="Both branches have the same implementation (sonarjs/no-all-duplicated-branches).", severity="error")
+}

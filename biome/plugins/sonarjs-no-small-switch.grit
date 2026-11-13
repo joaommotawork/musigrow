@@ -1,0 +1,6 @@
+language js
+
+JsSwitchStatement() as $sw where {
+	$sw <: not r"(?s)(?:.*?\b(?:case\b|default\s*:)){3}.*",
+	register_diagnostic(span=$sw, message="Use if/else instead of a switch with fewer than 3 cases (sonarjs/no-small-switch).", severity="error")
+}

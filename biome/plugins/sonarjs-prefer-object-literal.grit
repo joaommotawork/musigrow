@@ -1,0 +1,9 @@
+language js
+
+JsExpressionStatement() as $stmt where {
+	$stmt <: contains `$x.$p = $v`,
+	$stmt <: after JsVariableStatement() as $decl where {
+		$decl <: contains `const $x = {}`
+	},
+	register_diagnostic(span=$stmt, message="Declare the properties in the object literal instead (sonarjs/prefer-object-literal).", severity="error")
+}

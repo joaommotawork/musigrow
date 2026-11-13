@@ -1,0 +1,9 @@
+language js
+
+file($body) where {
+	$body <: not contains or {
+		`export const $n = $v`,
+		`export function $n($p) { $b }`
+	},
+	register_diagnostic(span=$body, message="Story files must export at least one story (storybook/story-exports).", severity="error")
+}

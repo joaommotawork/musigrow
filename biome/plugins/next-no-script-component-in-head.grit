@@ -1,0 +1,12 @@
+language js
+
+file($body) where {
+	$body <: contains `import $_ from "next/head"`,
+	$body <: contains bubble `<Head>$kids</Head>` as $head where {
+		$kids <: contains or {
+			`<Script $_ />`,
+			`<Script $_>$_</Script>`
+		},
+		register_diagnostic(span=$head, message="`next/script` should not be used inside `next/head` (@next/next/no-script-component-in-head).", severity="error")
+	}
+}

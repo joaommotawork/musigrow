@@ -1,0 +1,10 @@
+language js
+
+or {
+	`function $name($params) { $body }`,
+	`($params) => { $body }`,
+	`function ($params) { $body }`
+} as $fn where {
+	$body <: r"(?s)(?:.*[;}]\s*)?return;\s*",
+	register_diagnostic(span=$fn, message="Remove the redundant return; at the end of the function (sonarjs/no-redundant-jump).", severity="error")
+}

@@ -1,0 +1,6 @@
+language js
+
+`title: $t` as $prop where {
+	$t <: r"[\"'`][^\"'`]*\|[^\"'`]*[\"'`]",
+	register_diagnostic(span=$prop, message="Use / instead of | as the story hierarchy separator (storybook/hierarchy-separator).", severity="warn")
+}

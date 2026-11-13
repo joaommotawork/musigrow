@@ -1,0 +1,14 @@
+language js
+
+or {
+	`memo($fn)`,
+	`React.memo($fn)`,
+	`forwardRef($fn)`,
+	`React.forwardRef($fn)`
+} as $call where {
+	$fn <: or {
+		`($p) => $b`,
+		`function ($p) { $b }`
+	},
+	register_diagnostic(span=$call, message="Component definition is missing a display name; pass a named function (react/display-name).", severity="error")
+}

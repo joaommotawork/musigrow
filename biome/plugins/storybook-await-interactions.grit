@@ -1,0 +1,11 @@
+language js
+
+or {
+	`userEvent.$m($args)`,
+	`waitFor($args)`,
+	`within($args).$q($a)`
+} as $call where {
+	$call <: not within `await $_`,
+	$call <: r"(?s)(?:userEvent|waitFor|within\([^)]*\)\.find).*",
+	register_diagnostic(span=$call, message="Await Storybook interactions so play functions run in order (storybook/await-interactions).", severity="error")
+}

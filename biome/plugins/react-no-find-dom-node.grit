@@ -1,0 +1,8 @@
+language js
+
+or {
+	`findDOMNode($args)`,
+	`$obj.findDOMNode($args)`
+} as $call where {
+	register_diagnostic(span=$call, message="Do not use findDOMNode (react/no-find-dom-node).", severity="error")
+}

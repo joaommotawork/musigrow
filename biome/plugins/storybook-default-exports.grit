@@ -1,0 +1,6 @@
+language js
+
+file($body) where {
+	$body <: not r"(?s).*\bexport\s+default\b.*",
+	register_diagnostic(span=$body, message="Story files must have a default export with the component meta (storybook/default-exports).", severity="error")
+}

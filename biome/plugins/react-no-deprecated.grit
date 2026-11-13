@@ -1,0 +1,16 @@
+language js
+
+or {
+	`ReactDOM.render($args)`,
+	`ReactDOM.hydrate($args)`,
+	`ReactDOM.unmountComponentAtNode($args)`,
+	`ReactDOMServer.renderToNodeStream($args)`,
+	`ReactDOMServer.renderToStaticNodeStream($args)`,
+	`React.createClass($args)`,
+	`React.PropTypes`,
+	`componentWillMount() { $body }`,
+	`componentWillReceiveProps($p) { $body }`,
+	`componentWillUpdate($p) { $body }`
+} as $use where {
+	register_diagnostic(span=$use, message="This React API is deprecated (react/no-deprecated).", severity="error")
+}

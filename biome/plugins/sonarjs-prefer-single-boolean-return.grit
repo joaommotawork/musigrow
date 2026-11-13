@@ -1,0 +1,10 @@
+language js
+
+or {
+	`if ($c) { return true; } else { return false; }`,
+	`if ($c) { return false; } else { return true; }`,
+	`if ($c) return true; else return false;`,
+	`if ($c) return false; else return true;`
+} as $stmt where {
+	register_diagnostic(span=$stmt, message="Return the condition directly instead of wrapping it in if/else (sonarjs/prefer-single-boolean-return).", severity="error")
+}
