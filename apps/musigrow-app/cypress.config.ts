@@ -1,7 +1,7 @@
-import { defineConfig } from 'cypress';
+import { defineConfig } from "cypress";
 
 export default defineConfig({
-	projectId: 'th1scb',
+	projectId: "th1scb",
 
 	e2e: {
 		setupNodeEvents(on, config) {
@@ -11,8 +11,8 @@ export default defineConfig({
 
 	component: {
 		devServer: {
-			framework: 'next',
-			bundler: 'webpack',
+			framework: "next",
+			bundler: "webpack",
 		},
 	},
 });

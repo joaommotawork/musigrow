@@ -38,4 +38,4 @@
 
 // cy.findBy* commands will now be available.
 // This calls Cypress.Commands.add under the hood
-import '@testing-library/cypress/add-commands';
+import "@testing-library/cypress/add-commands";

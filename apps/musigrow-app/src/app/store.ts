@@ -1,10 +1,10 @@
+import reactBurgerMenuReducer from "@features/reactBurgerMenu/reactBurgerMenuSlice";
 import {
 	combineReducers,
 	configureStore,
 	PreloadedState,
-} from '@reduxjs/toolkit';
-import { setupListeners } from '@reduxjs/toolkit/query';
-import reactBurgerMenuReducer from '@features/reactBurgerMenu/reactBurgerMenuSlice';
+} from "@reduxjs/toolkit";
+import { setupListeners } from "@reduxjs/toolkit/query";
 
 // Create the root reducer independently to obtain the RootState type
 const rootReducer = combineReducers({
@@ -27,4 +27,4 @@ setupListeners(setupStore().dispatch);
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;
-export type AppDispatch = AppStore['dispatch'];
+export type AppDispatch = AppStore["dispatch"];

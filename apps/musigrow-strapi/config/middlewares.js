@@ -1,41 +1,31 @@
 module.exports = [
-	'strapi::errors',
+	"strapi::errors",
 	{
-		name: 'strapi::security',
+		name: "strapi::security",
 		config: {
 			contentSecurityPolicy: {
 				useDefaults: true,
 				directives: {
-					'connect-src': ["'self'", 'https:'],
-					'script-src': [
+					"connect-src": ["'self'", "https:"],
+					"script-src": [
 						"'self'",
 						"'unsafe-inline'",
-						'blob:',
-						'cdn.jsdelivr.net',
+						"blob:",
+						"cdn.jsdelivr.net",
 					],
-					'img-src': [
-						"'self'",
-						'data:',
-						'blob:',
-						'res.cloudinary.com',
-					],
-					'media-src': [
-						"'self'",
-						'data:',
-						'blob:',
-						'res.cloudinary.com',
-					],
-					'upgradeInsecureRequests': null,
+					"img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+					"media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+					upgradeInsecureRequests: null,
 				},
 			},
 		},
 	},
-	'strapi::cors',
-	'strapi::poweredBy',
-	'strapi::logger',
-	'strapi::query',
-	'strapi::body',
-	'strapi::session',
-	'strapi::favicon',
-	'strapi::public',
+	"strapi::cors",
+	"strapi::poweredBy",
+	"strapi::logger",
+	"strapi::query",
+	"strapi::body",
+	"strapi::session",
+	"strapi::favicon",
+	"strapi::public",
 ];

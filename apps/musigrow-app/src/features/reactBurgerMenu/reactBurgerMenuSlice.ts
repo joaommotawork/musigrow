@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface ReactBurgerMenuState {
 	isOpen: boolean;
@@ -9,7 +9,7 @@ const initialState: ReactBurgerMenuState = {
 };
 
 export const reactBurgerMenuSlice = createSlice({
-	name: 'reactBurgerMenu',
+	name: "reactBurgerMenu",
 	initialState,
 	reducers: {
 		openMenu: (state) => {

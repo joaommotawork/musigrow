@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /**
  *  songs controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController('api::songs.songs');
+module.exports = createCoreController("api::songs.songs");

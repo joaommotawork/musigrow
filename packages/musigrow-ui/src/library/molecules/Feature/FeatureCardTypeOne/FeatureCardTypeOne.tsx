@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { TextLink } from '@library/atoms';
-import { FaArrowRight } from 'react-icons/fa';
+import { TextLink } from "@library/atoms";
+import { ReactNode } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 export interface FeatureCardTypeOneProps {
 	title: string;
@@ -22,36 +22,36 @@ export const FeatureCardTypeOne = ({
 	icon,
 	callToActionText,
 	callToActionOnClick,
-	accentColorBackground = 'bg-red-50',
-	accentColorText = 'text-red-500',
+	accentColorBackground = "bg-red-50",
+	accentColorText = "text-red-500",
 }: FeatureCardTypeOneProps) => {
 	return (
-		<div className='w-full min-w-fit'>
-			<div className='flex h-full items-center rounded-lg border border-gray-200 p-4'>
+		<div className="w-full min-w-fit">
+			<div className="flex h-full items-center rounded-lg border border-gray-200 p-4">
 				{icon && (
 					<div
-						className={`inline-flex h-16 w-16 flex-shrink-0 items-center justify-center ${accentColorText} ${accentColorBackground} mr-8 rounded-full`}>
+						className={`inline-flex h-16 w-16 flex-shrink-0 items-center justify-center ${accentColorText} ${accentColorBackground} mr-8 rounded-full`}
+					>
 						{icon}
 					</div>
 				)}
-				<div className='flex flex-grow flex-col gap-1'>
-					<h2 className='title-font text-lg font-medium text-gray-900'>
+				<div className="flex flex-grow flex-col gap-1">
+					<h2 className="title-font text-lg font-medium text-gray-900">
 						{title}
 					</h2>
 					{author && (
-						<h2 className='title-font text-lg font-black text-gray-900'>
+						<h2 className="title-font text-lg font-black text-gray-900">
 							{author}
 						</h2>
 					)}
 					{description && (
-						<p className='text-base leading-relaxed'>
-							{description}
-						</p>
+						<p className="text-base leading-relaxed">{description}</p>
 					)}
 					<TextLink
 						textOnClick={callToActionOnClick}
 						icon={<FaArrowRight />}
-						accentColorText={accentColorText}>
+						accentColorText={accentColorText}
+					>
 						{callToActionText}
 					</TextLink>
 				</div>
