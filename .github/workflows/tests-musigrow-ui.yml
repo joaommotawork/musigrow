@@ -10,7 +10,7 @@ on:
 jobs:
     test:
         timeout-minutes: 60
-        runs-on: ubuntu-latest
+        runs-on: ${{ vars.CI_RUNNER == 'self-hosted' && fromJSON('["self-hosted","linux","x64","joao-linux"]') || 'ubuntu-latest' }}
         defaults:
             run:
                 working-directory: packages/musigrow-ui
