@@ -1,20 +1,20 @@
 import {
-	StatisticsCardTypeOneProps,
 	StatisticsCardTypeOne,
-} from '@library/molecules';
-import { Fragment } from 'react';
-import classnames from 'classnames';
+	StatisticsCardTypeOneProps,
+} from "@library/molecules";
+import classnames from "classnames";
+import { Fragment } from "react";
 
 export interface StatisticsTypeOneProps {
-	items: StatisticsCardTypeOneProps[];
+	items: Array<StatisticsCardTypeOneProps>;
 }
 
 export const StatisticsTypeOne = ({ items }: StatisticsTypeOneProps) => {
 	const sectionClasses = classnames({
-		'grid gap-5 overflow-hidden justify-items-center': true,
-		'grid-cols-1': items.length >= 1 && items.length < 2,
-		'grid-cols-2': items.length >= 2 && items.length < 4,
-		'grid-cols-2 lg:grid-cols-4': items.length >= 4,
+		"grid gap-5 overflow-hidden justify-items-center": true,
+		"grid-cols-1": items.length >= 1 && items.length < 2,
+		"grid-cols-2": items.length >= 2 && items.length < 4,
+		"grid-cols-2 lg:grid-cols-4": items.length >= 4,
 	});
 
 	return (

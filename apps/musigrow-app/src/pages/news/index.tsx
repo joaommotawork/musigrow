@@ -1,44 +1,35 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import { useAppDispatch } from '@app/hooks';
-import { BlogTypeOne, Headline } from 'musigrow-ui';
-import axios from 'axios';
-import { useRouter } from 'next/router';
+import axios from "axios";
+import { BlogTypeOne, Headline } from "musigrow-ui";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const News: NextPage = ({ locale, newsCollection }: any) => {
-	const { t } = useTranslation('common');
+	const { t } = useTranslation("common");
 	const router = useRouter();
-	const dispatch = useAppDispatch();
 
 	const newsCollectionItems = (newsCollectionData: any) => {
 		return newsCollectionData.map((item: any) => {
 			return {
 				image: (
 					<img
-						className='w-full object-cover object-center md:h-36 lg:h-48'
+						className="w-full object-cover object-center md:h-36 lg:h-48"
 						src={item.attributes.gallery.data[0].attributes.url}
-						alt='blog'
+						alt="blog"
 					/>
 				),
 				category: t(`news.categories.${item.attributes.category}`),
 				title: item.attributes.title,
 				description: item.attributes.content,
-				callToActionText: t('news.learnMore'),
+				callToActionText: t("news.learnMore"),
 				callToActionOnClick: () =>
-					router.push(
-						'/news/[slug]',
-						`/news/${item.attributes.slug}`,
-					),
+					router.push("/news/[slug]", `/news/${item.attributes.slug}`),
 				accentColorBackground:
-					item.attributes.category === 'events'
-						? 'bg-blue-50'
-						: undefined,
+					item.attributes.category === "events" ? "bg-blue-50" : undefined,
 				accentColorText:
-					item.attributes.category === 'events'
-						? 'text-blue-500'
-						: undefined,
+					item.attributes.category === "events" ? "text-blue-500" : undefined,
 			};
 		});
 	};
@@ -46,12 +37,12 @@ const News: NextPage = ({ locale, newsCollection }: any) => {
 	return (
 		<>
 			<Head>
-				<title>{`${t('news.headTitle')} | Orquestra ISTEC`}</title>
+				<title>{`${t("news.headTitle")} | Orquestra ISTEC`}</title>
 			</Head>
 
-			<div className='flex w-full flex-col gap-5'>
-				<Headline subHeadlineText={t('news.subTitle')}>
-					{t('news.title')}
+			<div className="flex w-full flex-col gap-5">
+				<Headline subHeadlineText={t("news.subTitle")}>
+					{t("news.title")}
 				</Headline>
 				<BlogTypeOne items={newsCollectionItems(newsCollection)} />
 			</div>
@@ -67,7 +58,7 @@ export async function getStaticProps({ locale }: any) {
 
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['common'])),
+			...(await serverSideTranslations(locale, ["common"])),
 			newsCollection,
 		},
 		revalidate: 60,

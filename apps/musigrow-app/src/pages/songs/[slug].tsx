@@ -1,30 +1,27 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import { useAppDispatch } from '@app/hooks';
-import Image from 'next/image';
-import { Headline } from 'musigrow-ui';
-import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import remarkEmoji from 'remark-emoji';
-import { FaPaperclip } from 'react-icons/fa';
-import YouTube, { YouTubeProps } from 'react-youtube';
+import axios from "axios";
+import { Headline } from "musigrow-ui";
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { FaPaperclip } from "react-icons/fa";
+import ReactMarkdown from "react-markdown";
+import YouTube, { YouTubeProps } from "react-youtube";
+import remarkEmoji from "remark-emoji";
+import remarkGfm from "remark-gfm";
 
 const Songs: NextPage = ({ locale, songs }: any) => {
-	const { t } = useTranslation('common');
-	// The `state` arg is correctly typed as `RootState` already
-	const dispatch = useAppDispatch();
+	const { t } = useTranslation("common");
 
-	const onPlayerReady: YouTubeProps['onReady'] = (event) => {
+	const onPlayerReady: YouTubeProps["onReady"] = (event) => {
 		// access to player in all event handlers via event.target
 		event.target.pauseVideo();
 	};
 
-	const opts: YouTubeProps['opts'] = {
-		height: '400',
-		width: '100%',
+	const opts: YouTubeProps["opts"] = {
+		height: "400",
+		width: "100%",
 		playerVars: {
 			// https://developers.google.com/youtube/player_parameters
 			autoplay: 1,
@@ -34,67 +31,54 @@ const Songs: NextPage = ({ locale, songs }: any) => {
 	return (
 		<>
 			<Head>
-				<title>{`${t('songs.headTitle')} | Orquestra ISTEC`}</title>
+				<title>{`${t("songs.headTitle")} | Orquestra ISTEC`}</title>
 			</Head>
 
-			<div className='flex w-full flex-col gap-5'>
+			<div className="flex w-full flex-col gap-5">
 				{songs ? (
 					<>
-						<Headline subHeadlineText={t('songs.subTitle')}>
+						<Headline subHeadlineText={t("songs.subTitle")}>
 							{`${songs?.attributes.name} - ${songs?.attributes.author}`}
 						</Headline>
 						{songs?.attributes.description}
-						<div className='grid w-full grid-cols-1 justify-items-center gap-5 overflow-hidden sm:grid-cols-2'>
-							<div className='w-full min-w-fit'>
+						<div className="grid w-full grid-cols-1 justify-items-center gap-5 overflow-hidden sm:grid-cols-2">
+							<div className="w-full min-w-fit">
 								{songs?.attributes.lyrics ? (
 									<ReactMarkdown
 										components={{
-											h1({
-												node,
-												className,
-												children,
-												...props
-											}) {
+											h1({ node, className, children, ...props }) {
 												return (
-													<h1
-														className='text-xl font-bold'
-														{...props}>
+													<h1 className="text-xl font-bold" {...props}>
 														{children}
 													</h1>
 												);
 											},
 										}}
-										remarkPlugins={[
-											remarkGfm,
-											remarkEmoji,
-										]}>
+										remarkPlugins={[remarkGfm, remarkEmoji]}
+									>
 										{songs?.attributes.lyrics}
 									</ReactMarkdown>
 								) : (
-									<div>{t('songs.noLyrics')}</div>
+									<div>{t("songs.noLyrics")}</div>
 								)}
 							</div>
-							<div className='flex w-full min-w-fit flex-col gap-5'>
+							<div className="flex w-full min-w-fit flex-col gap-5">
 								{songs?.attributes.youtubeVideoId && (
 									<YouTube
-										videoId={
-											songs?.attributes.youtubeVideoId
-										}
+										videoId={songs?.attributes.youtubeVideoId}
 										opts={opts}
 										onReady={onPlayerReady}
 									/>
 								)}
 								{songs?.attributes.urlMusicSheet && (
-									<div className='flex items-center gap-2'>
-										<span className='font-bold'>
-											{t('songs.musicSheet')}:
-										</span>
+									<div className="flex items-center gap-2">
+										<span className="font-bold">{t("songs.musicSheet")}:</span>
 										<a
-											href={
-												songs?.attributes.urlMusicSheet
-											}
-											target='_blank'>
-											<FaPaperclip className='h-4 cursor-pointer' />
+											href={songs?.attributes.urlMusicSheet}
+											target="_blank"
+											rel="noopener"
+										>
+											<FaPaperclip className="h-4 cursor-pointer" />
 										</a>
 									</div>
 								)}
@@ -130,7 +114,7 @@ export async function getStaticProps({ locale, params }: any) {
 
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['common'])),
+			...(await serverSideTranslations(locale, ["common"])),
 			songs: songs[0],
 		},
 	};

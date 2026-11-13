@@ -1,9 +1,9 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import { useAppDispatch } from '@app/hooks';
-import { Headline, TeamTypeOne } from 'musigrow-ui';
+import axios from "axios";
+import { Headline, TeamTypeOne } from "musigrow-ui";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
 	FaEnvelope,
 	FaFacebook,
@@ -13,21 +13,18 @@ import {
 	FaSpotify,
 	FaWhatsapp,
 	FaYoutube,
-} from 'react-icons/fa';
-import axios from 'axios';
+} from "react-icons/fa";
 
 const Members: NextPage = ({ locale, membersCollection }: any) => {
-	const { t } = useTranslation('common');
-	// The `state` arg is correctly typed as `RootState` already
-	const dispatch = useAppDispatch();
+	const { t } = useTranslation("common");
 
 	const membersCollectionItems = (membersCollectionData: any) => {
 		return membersCollectionData.map((member: any) => {
 			return {
 				image: (
 					<img
-						alt='team'
-						className='mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center'
+						alt="team"
+						className="mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
 						src={member.attributes.photo.data.attributes.url}
 					/>
 				),
@@ -39,11 +36,9 @@ const Members: NextPage = ({ locale, membersCollection }: any) => {
 						),
 					},
 					{
-						name: t(
-							`members.vocalRange.${member.attributes.vocalRange}`,
-						),
-						accentColorBackground: 'bg-blue-50',
-						accentColorText: 'text-blue-500',
+						name: t(`members.vocalRange.${member.attributes.vocalRange}`),
+						accentColorBackground: "bg-blue-50",
+						accentColorText: "text-blue-500",
 					},
 				],
 				contacts: (
@@ -51,57 +46,73 @@ const Members: NextPage = ({ locale, membersCollection }: any) => {
 						{member.attributes.contacts.email && (
 							<a
 								href={`mailto:${member.attributes.contacts.email}`}
-								target='_blank'>
-								<FaEnvelope className='h-4 cursor-pointer' />
+								target="_blank"
+								rel="noopener"
+							>
+								<FaEnvelope className="h-4 cursor-pointer" />
 							</a>
 						)}
 						{member.attributes.contacts.phoneNumber && (
 							<a
 								href={`https://wa.me/${member.attributes.contacts.phoneNumber}`}
-								target='_blank'>
-								<FaWhatsapp className='h-4 cursor-pointer' />
+								target="_blank"
+								rel="noopener"
+							>
+								<FaWhatsapp className="h-4 cursor-pointer" />
 							</a>
 						)}
 						{member.attributes.contacts.linkedin && (
 							<a
 								href={`https://www.linkedin.com/in/${member.attributes.contacts.linkedin}`}
-								target='_blank'>
-								<FaLinkedin className='h-4 cursor-pointer' />
+								target="_blank"
+								rel="noopener"
+							>
+								<FaLinkedin className="h-4 cursor-pointer" />
 							</a>
 						)}
 						{member.attributes.contacts.facebook && (
 							<a
 								href={`https://www.facebook.com/${member.attributes.contacts.facebook}`}
-								target='_blank'>
-								<FaFacebook className='h-4 cursor-pointer' />
+								target="_blank"
+								rel="noopener"
+							>
+								<FaFacebook className="h-4 cursor-pointer" />
 							</a>
 						)}
 						{member.attributes.contacts.instagram && (
 							<a
 								href={`https://www.instagram.com/${member.attributes.contacts.instagram}`}
-								target='_blank'>
-								<FaInstagram className='h-4 cursor-pointer' />
+								target="_blank"
+								rel="noopener"
+							>
+								<FaInstagram className="h-4 cursor-pointer" />
 							</a>
 						)}
 						{member.attributes.contacts.spotify && (
 							<a
 								href={`https://open.spotify.com/artist/${member.attributes.contacts.spotify}`}
-								target='_blank'>
-								<FaSpotify className='h-4 cursor-pointer' />
+								target="_blank"
+								rel="noopener"
+							>
+								<FaSpotify className="h-4 cursor-pointer" />
 							</a>
 						)}
 						{member.attributes.contacts.youtube && (
 							<a
 								href={`https://www.youtube.com/${member.attributes.contacts.youtube}`}
-								target='_blank'>
-								<FaYoutube className='h-4 cursor-pointer' />
+								target="_blank"
+								rel="noopener"
+							>
+								<FaYoutube className="h-4 cursor-pointer" />
 							</a>
 						)}
 						{member.attributes.contacts.soundcloud && (
 							<a
 								href={`https://www.soundcloud.com/${member.attributes.contacts.soundcloud}`}
-								target='_blank'>
-								<FaSoundcloud className='h-4 cursor-pointer' />
+								target="_blank"
+								rel="noopener"
+							>
+								<FaSoundcloud className="h-4 cursor-pointer" />
 							</a>
 						)}
 					</>
@@ -113,16 +124,14 @@ const Members: NextPage = ({ locale, membersCollection }: any) => {
 	return (
 		<>
 			<Head>
-				<title>{`${t('members.headTitle')} | Orquestra ISTEC`}</title>
+				<title>{`${t("members.headTitle")} | Orquestra ISTEC`}</title>
 			</Head>
 
-			<div className='flex w-full flex-col gap-5'>
-				<Headline subHeadlineText={t('members.subTitle')}>
-					{t('members.title')}
+			<div className="flex w-full flex-col gap-5">
+				<Headline subHeadlineText={t("members.subTitle")}>
+					{t("members.title")}
 				</Headline>
-				<TeamTypeOne
-					items={membersCollectionItems(membersCollection)}
-				/>
+				<TeamTypeOne items={membersCollectionItems(membersCollection)} />
 			</div>
 		</>
 	);
@@ -136,7 +145,7 @@ export async function getStaticProps({ locale }: any) {
 
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['common'])),
+			...(await serverSideTranslations(locale, ["common"])),
 			membersCollection,
 		},
 		revalidate: 60,

@@ -1,19 +1,17 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import { useAppDispatch } from '@app/hooks';
-import Image from 'next/image';
-import { FeatureTypeOne, Headline } from 'musigrow-ui';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import { FaMusic } from 'react-icons/fa';
+import axios from "axios";
+import { FeatureTypeOne, Headline } from "musigrow-ui";
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useEffect, useState } from "react";
+import { FaMusic } from "react-icons/fa";
 
 const News: NextPage = ({ locale, news }: any) => {
-	const { t } = useTranslation('common');
+	const { t } = useTranslation("common");
 	const router = useRouter();
-	const dispatch = useAppDispatch();
 	const [event, setEvent] = useState<any>();
 
 	const songsCollectionItems = (songsCollectionData: any) => {
@@ -22,58 +20,53 @@ const News: NextPage = ({ locale, news }: any) => {
 				title: item.attributes.name,
 				author: item.attributes.author,
 				description: item.attributes.description,
-				icon: <FaMusic className='h-4' />,
-				callToActionText: t('songs.learnMore'),
+				icon: <FaMusic className="h-4" />,
+				callToActionText: t("songs.learnMore"),
 				callToActionOnClick: () =>
-					router.push(
-						'/songs/[slug]',
-						`/songs/${item.attributes.slug}`,
-					),
+					router.push("/songs/[slug]", `/songs/${item.attributes.slug}`),
 			};
 		});
 	};
 
+	const eventSlug = news?.attributes?.event?.data?.attributes?.slug;
+
 	useEffect(() => {
 		const getEvent = async () => {
 			const resEvent = await axios.get(
-				`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/events-collection?filters\[slug][$contains]=${news.attributes.event.data.attributes.slug}&populate=songs`,
+				`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/events-collection?filters\[slug][$contains]=${eventSlug}&populate=songs`,
 			);
 			setEvent(resEvent.data.data[0]);
 		};
-		if (news?.attributes?.event?.data?.attributes?.slug) {
+		if (eventSlug) {
 			getEvent();
 		}
-	}, []);
+	}, [eventSlug]);
 
 	return (
 		<>
 			<Head>
-				<title>{`${t('news.headTitle')} | Orquestra ISTEC`}</title>
+				<title>{`${t("news.headTitle")} | Orquestra ISTEC`}</title>
 			</Head>
 
-			<div className='flex w-full flex-col gap-5'>
+			<div className="flex w-full flex-col gap-5">
 				{news ? (
 					<>
-						<Headline subHeadlineText={t('news.subTitle')}>
+						<Headline subHeadlineText={t("news.subTitle")}>
 							{news?.attributes.title}
 						</Headline>
 						<Image
-							src={
-								news?.attributes.gallery.data[0].attributes.url
-							}
-							alt={t('home.slider.one')}
+							src={news?.attributes.gallery.data[0].attributes.url}
+							alt={t("home.slider.one")}
 							width={1280}
 							height={641}
-							layout='responsive'
+							layout="responsive"
 						/>
 						{news?.attributes.content}
 						{event && (
-							<div className='flex w-full flex-col gap-5'>
-								<Headline subHeadlineText={t('news.songs')} />
+							<div className="flex w-full flex-col gap-5">
+								<Headline subHeadlineText={t("news.songs")} />
 								<FeatureTypeOne
-									items={songsCollectionItems(
-										event.attributes.songs.data,
-									)}
+									items={songsCollectionItems(event.attributes.songs.data)}
 								/>
 							</div>
 						)}
@@ -107,7 +100,7 @@ export async function getStaticProps({ locale, params }: any) {
 
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['common'])),
+			...(await serverSideTranslations(locale, ["common"])),
 			news: news[0],
 		},
 	};
