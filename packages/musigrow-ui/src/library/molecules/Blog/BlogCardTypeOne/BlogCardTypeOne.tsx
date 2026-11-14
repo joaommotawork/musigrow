@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
-import TextLink from '@library/atoms/TextLink/TextLink';
-import { FaArrowRight } from 'react-icons/fa';
-import { TextTag } from '@library/atoms';
+import { TextTag } from "@library/atoms";
+import TextLink from "@library/atoms/TextLink/TextLink";
+import React, { ReactNode } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 export interface BlogCardTypeOneProps {
 	image?: ReactNode;
@@ -23,30 +23,30 @@ export const BlogCardTypeOne = ({
 	description,
 	callToActionText,
 	callToActionOnClick,
-	accentColorBackground = 'bg-red-50',
-	accentColorText = 'text-red-500',
+	accentColorBackground = "bg-red-50",
+	accentColorText = "text-red-500",
 }: BlogCardTypeOneProps) => {
 	return (
-		<div className='flex flex-col overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60'>
+		<div className="flex flex-col overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60">
 			{image}
-			<div className='flex flex-col gap-2 p-6'>
+			<div className="flex flex-col gap-2 p-6">
 				{category && (
 					<TextTag
 						accentColorBackground={accentColorBackground}
-						accentColorText={accentColorText}>
+						accentColorText={accentColorText}
+					>
 						{category}
 					</TextTag>
 				)}
-				<h1 className='text-lg font-medium capitalize text-black'>
-					{title}
-				</h1>
-				<p className='leading-relaxed line-clamp-3'>{description}</p>
+				<h1 className="text-lg font-medium capitalize text-black">{title}</h1>
+				<p className="leading-relaxed line-clamp-3">{description}</p>
 			</div>
-			<div className='mt-auto px-6 pb-6'>
+			<div className="mt-auto px-6 pb-6">
 				<TextLink
 					textOnClick={callToActionOnClick}
 					icon={<FaArrowRight />}
-					accentColorText={accentColorText}>
+					accentColorText={accentColorText}
+				>
 					{callToActionText}
 				</TextLink>
 			</div>

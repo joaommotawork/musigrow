@@ -1,0 +1,10 @@
+language js
+
+or {
+	`$c.length < 0`,
+	`$c.size < 0`,
+	`$c.length >= 0`,
+	`$c.size >= 0`
+} as $cmp where {
+	register_diagnostic(span=$cmp, message="Collection sizes are never negative, so this check is constant (sonarjs/no-collection-size-mischeck).", severity="error")
+}

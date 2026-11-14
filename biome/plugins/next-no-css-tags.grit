@@ -1,0 +1,15 @@
+language js
+
+JsxSelfClosingElement(name=$n) as $el where {
+	$n <: r"link",
+	$el <: contains JsxAttribute(name=$rn, initializer=$rv) where {
+		$rn <: r"rel",
+		$rv <: contains r"\"stylesheet\""
+	},
+	$el <: contains JsxAttribute(name=$hn, initializer=$hv) where {
+		$hn <: r"href",
+		$hv <: contains r"\"[^\"]*\"",
+		$hv <: not contains r"\"https?:.*"
+	},
+	register_diagnostic(span=$el, message="Do not include stylesheets manually (@next/next/no-css-tags).", severity="warn")
+}

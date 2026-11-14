@@ -1,0 +1,6 @@
+language js
+
+JsSwitchStatement() as $sw where {
+	$sw <: r"(?s)(?:.*?\bcase\b){31}.*",
+	register_diagnostic(span=$sw, message="Reduce this switch to at most 30 cases (sonarjs/max-switch-cases).", severity="error")
+}

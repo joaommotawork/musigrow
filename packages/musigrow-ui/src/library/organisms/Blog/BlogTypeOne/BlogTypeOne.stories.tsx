@@ -1,12 +1,12 @@
-import { Meta } from '@storybook/react/types-6-0';
-import { Story } from '@storybook/react';
 import {
 	BlogTypeOne,
 	BlogTypeOneProps,
-} from '@library/organisms/Blog/BlogTypeOne/BlogTypeOne';
+} from "@library/organisms/Blog/BlogTypeOne/BlogTypeOne";
+import { Story } from "@storybook/react";
+import { Meta } from "@storybook/react/types-6-0";
 
 export default {
-	title: 'Organisms/Blog/BlogTypeOne',
+	title: "Organisms/Blog/BlogTypeOne",
 	component: BlogTypeOne,
 } as Meta;
 
@@ -18,47 +18,47 @@ Default.args = {
 		{
 			image: (
 				<img
-					className='w-full object-cover object-center md:h-36 lg:h-48'
-					src='https://dummyimage.com/720x400'
-					alt='blog'
+					className="w-full object-cover object-center md:h-36 lg:h-48"
+					src="https://dummyimage.com/720x400"
+					alt="blog"
 				/>
 			),
-			category: 'Category',
-			title: 'The Catalyzer',
+			category: "Category",
+			title: "The Catalyzer",
 			description:
-				'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-			callToActionText: 'Learn More',
-			callToActionOnClick: () => console.log('Call To Action Clicked'),
+				"Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
+			callToActionText: "Learn More",
+			callToActionOnClick: () => console.log("Call To Action Clicked"),
 		},
 		{
 			image: (
 				<img
-					className='w-full object-cover object-center md:h-36 lg:h-48'
-					src='https://dummyimage.com/720x400'
-					alt='blog'
+					className="w-full object-cover object-center md:h-36 lg:h-48"
+					src="https://dummyimage.com/720x400"
+					alt="blog"
 				/>
 			),
-			category: 'Category',
-			title: 'The Catalyzer',
+			category: "Category",
+			title: "The Catalyzer",
 			description:
-				'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-			callToActionText: 'Learn More',
-			callToActionOnClick: () => console.log('Call To Action Clicked'),
+				"Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
+			callToActionText: "Learn More",
+			callToActionOnClick: () => console.log("Call To Action Clicked"),
 		},
 		{
 			image: (
 				<img
-					className='w-full object-cover object-center md:h-36 lg:h-48'
-					src='https://dummyimage.com/720x400'
-					alt='blog'
+					className="w-full object-cover object-center md:h-36 lg:h-48"
+					src="https://dummyimage.com/720x400"
+					alt="blog"
 				/>
 			),
-			category: 'Category',
-			title: 'The Catalyzer',
+			category: "Category",
+			title: "The Catalyzer",
 			description:
-				'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
-			callToActionText: 'Learn More',
-			callToActionOnClick: () => console.log('Call To Action Clicked'),
+				"Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat. Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
+			callToActionText: "Learn More",
+			callToActionOnClick: () => console.log("Call To Action Clicked"),
 		},
 	],
 };

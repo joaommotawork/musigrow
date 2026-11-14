@@ -1,9 +1,9 @@
-import NProgressLibrary from 'nprogress';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useRouter } from "next/router";
+import NProgressLibrary from "nprogress";
+import { useEffect } from "react";
 
 export default function NProgress() {
-	const router = useRouter();
+	const { events } = useRouter();
 
 	useEffect(() => {
 		let timeout: NodeJS.Timeout;
@@ -17,14 +17,14 @@ export default function NProgress() {
 			NProgressLibrary.done();
 		};
 
-		router.events.on('routeChangeStart', start);
-		router.events.on('routeChangeComplete', done);
-		router.events.on('routeChangeError', done);
+		events.on("routeChangeStart", start);
+		events.on("routeChangeComplete", done);
+		events.on("routeChangeError", done);
 		return () => {
-			router.events.off('routeChangeStart', start);
-			router.events.off('routeChangeComplete', done);
-			router.events.off('routeChangeError', done);
+			events.off("routeChangeStart", start);
+			events.off("routeChangeComplete", done);
+			events.off("routeChangeError", done);
 		};
-	}, []);
+	}, [events]);
 	return <></>;
 }

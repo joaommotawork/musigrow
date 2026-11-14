@@ -1,9 +1,9 @@
-import { Meta } from '@storybook/react/types-6-0';
-import { Story } from '@storybook/react';
 import {
 	HeaderTypeOne,
 	HeaderTypeOneProps,
-} from '@library/molecules/Header/HeaderTypeOne/HeaderTypeOne';
+} from "@library/molecules/Header/HeaderTypeOne/HeaderTypeOne";
+import { Story } from "@storybook/react";
+import { Meta } from "@storybook/react/types-6-0";
 import {
 	FaEnvelope,
 	FaFacebook,
@@ -13,15 +13,15 @@ import {
 	FaSpotify,
 	FaWhatsapp,
 	FaYoutube,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 export default {
-	title: 'Molecules/Header/HeaderTypeOne',
+	title: "Molecules/Header/HeaderTypeOne",
 	component: HeaderTypeOne,
 } as Meta;
 
 const Template: Story<HeaderTypeOneProps> = (args) => (
-	<div className='flex h-[500px] w-[500px] items-center justify-center'>
+	<div className="flex h-[500px] w-[500px] items-center justify-center">
 		<HeaderTypeOne {...args} />
 	</div>
 );
@@ -30,9 +30,9 @@ export const Default = Template.bind({});
 Default.args = {
 	image: (
 		<img
-			alt='team'
-			className='h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center'
-			src='https://dummyimage.com/80x80'
+			alt="team"
+			className="h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
+			src="https://dummyimage.com/80x80"
 		/>
 	),
 };

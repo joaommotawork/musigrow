@@ -1,0 +1,15 @@
+language js
+
+or {
+	`$a && $a`,
+	`$a || $a`,
+	`$a - $a`,
+	`$a / $a`,
+	`$a & $a`,
+	`$a | $a`,
+	`$a ^ $a`,
+	`$a == $a`,
+	`$a != $a`
+} as $expr where {
+	register_diagnostic(span=$expr, message="Identical sub-expressions on both sides of a binary operator (sonarjs/no-identical-expressions).", severity="error")
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export interface ButtonProps {
 	children: string;
@@ -12,13 +12,14 @@ export interface ButtonProps {
 export const Button = ({
 	children,
 	buttonOnClick,
-	accentColorBackground = 'bg-red-500',
-	accentColorBackgroundHover = 'bg-red-600',
+	accentColorBackground = "bg-red-500",
+	accentColorBackgroundHover = "bg-red-600",
 }: ButtonProps) => {
 	return (
 		<button
 			className={`rounded border-0 ${accentColorBackground} py-2 px-6 text-lg text-white hover:${accentColorBackgroundHover} focus:outline-none`}
-			onClick={buttonOnClick}>
+			onClick={buttonOnClick}
+		>
 			{children}
 		</button>
 	);

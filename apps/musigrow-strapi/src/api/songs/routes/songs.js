@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /**
  * songs router.
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::songs.songs');
+module.exports = createCoreRouter("api::songs.songs");

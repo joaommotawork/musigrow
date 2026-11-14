@@ -1,0 +1,11 @@
+language js
+
+or {
+	`let module = $v`,
+	`const module = $v`,
+	`var module = $v`,
+	`let module`,
+	`var module`
+} as $decl where {
+	register_diagnostic(span=$decl, message="Do not assign to the variable `module` (@next/next/no-assign-module-variable).", severity="error")
+}

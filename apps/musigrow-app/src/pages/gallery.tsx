@@ -1,33 +1,31 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import { useAppDispatch } from '@app/hooks';
-import { Headline } from 'musigrow-ui';
-import axios from 'axios';
+import axios from "axios";
+import { Headline } from "musigrow-ui";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Gallery: NextPage = ({ locale, galleryPage }: any) => {
-	const { t } = useTranslation('common');
-	// The `state` arg is correctly typed as `RootState` already
-	const dispatch = useAppDispatch();
+	const { t } = useTranslation("common");
 
 	return (
 		<>
 			<Head>
-				<title>{`${t('gallery.headTitle')} | Orquestra ISTEC`}</title>
+				<title>{`${t("gallery.headTitle")} | Orquestra ISTEC`}</title>
 			</Head>
 
-			<div className='flex w-full flex-col gap-5'>
-				<Headline subHeadlineText={t('gallery.subTitle')}>
-					{t('gallery.title')}
+			<div className="flex w-full flex-col gap-5">
+				<Headline subHeadlineText={t("gallery.subTitle")}>
+					{t("gallery.title")}
 				</Headline>
-				<div className='grid w-full grid-cols-1 justify-items-center gap-5 overflow-hidden sm:grid-cols-2 lg:grid-cols-3'>
+				<div className="grid w-full grid-cols-1 justify-items-center gap-5 overflow-hidden sm:grid-cols-2 lg:grid-cols-3">
 					{galleryPage.attributes.images.data.map((image: any) => {
 						return (
 							<img
-								alt='gallery'
+								key={image.id}
+								alt="gallery"
 								src={image.attributes.url}
-								className='max-h-[275.55px] w-full object-cover object-center'
+								className="max-h-[275.55px] w-full object-cover object-center"
 							/>
 						);
 					})}
@@ -45,7 +43,7 @@ export async function getStaticProps({ locale }: any) {
 
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['common'])),
+			...(await serverSideTranslations(locale, ["common"])),
 			galleryPage,
 		},
 		revalidate: 60,

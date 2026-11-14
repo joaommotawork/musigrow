@@ -1,0 +1,5 @@
+language js
+
+`$story.play()` as $call where {
+	register_diagnostic(span=$call, message="Pass the play context when calling another story's play function (storybook/context-in-play-function).", severity="error")
+}

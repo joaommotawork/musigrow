@@ -1,0 +1,6 @@
+language js
+
+JsxText() as $t where {
+	$t <: r"(?s).*[\"'].*",
+	register_diagnostic(span=$t, message="Escape quote characters in JSX text, e.g. `&apos;` or `&quot;` (react/no-unescaped-entities).", severity="error")
+}

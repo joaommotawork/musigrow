@@ -1,0 +1,5 @@
+language js
+
+`this.isMounted()` as $call where {
+	register_diagnostic(span=$call, message="Do not use isMounted (react/no-is-mounted).", severity="error")
+}

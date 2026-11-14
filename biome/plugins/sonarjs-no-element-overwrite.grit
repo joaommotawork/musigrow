@@ -1,0 +1,9 @@
+language js
+
+JsExpressionStatement() as $stmt where {
+	$stmt <: contains `$o[$k] = $b`,
+	$stmt <: after JsExpressionStatement() as $prev where {
+		$prev <: contains `$o[$k] = $a`
+	},
+	register_diagnostic(span=$stmt, message="This element is overwritten before it is used (sonarjs/no-element-overwrite).", severity="error")
+}

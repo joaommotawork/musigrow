@@ -1,0 +1,6 @@
+language js
+
+JsAssignmentExpression() as $assign where {
+	$assign <: r"(?s)[^=]*[^=!<>]=[+!-](?:[^=].*)?",
+	register_diagnostic(span=$assign, message="Did you mean a compound operator such as += or -=? (sonarjs/non-existent-operator)", severity="error")
+}

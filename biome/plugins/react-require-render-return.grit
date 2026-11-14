@@ -1,0 +1,7 @@
+language js
+
+`render() { $body }` as $m where {
+	$body <: not contains `return $_`,
+	$body <: not contains `return`,
+	register_diagnostic(span=$m, message="`render` must return a value (react/require-render-return).", severity="error")
+}

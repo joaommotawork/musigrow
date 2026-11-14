@@ -1,0 +1,6 @@
+language js
+
+`return $x;` as $ret where {
+	$ret <: after `const $x = $v;`,
+	register_diagnostic(span=$ret, message="Return the expression directly instead of assigning it to a temporary variable (sonarjs/prefer-immediate-return).", severity="error")
+}

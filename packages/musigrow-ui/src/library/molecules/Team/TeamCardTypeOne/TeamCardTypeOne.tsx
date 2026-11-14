@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { TextTag } from '@library/atoms';
+import { TextTag } from "@library/atoms";
+import { ReactNode } from "react";
 
 export interface Category {
 	name: string;
@@ -10,7 +10,7 @@ export interface Category {
 export interface TeamCardTypeOneProps {
 	image?: ReactNode;
 	children: string;
-	categories?: Category[];
+	categories?: Array<Category>;
 	description?: string;
 	contacts?: ReactNode;
 	accentColorBackground?: string;
@@ -23,14 +23,15 @@ export const TeamCardTypeOne = ({
 	categories,
 	description,
 	contacts,
-	accentColorBackground = 'bg-red-50',
-	accentColorText = 'text-red-500',
+	accentColorBackground = "bg-red-50",
+	accentColorText = "text-red-500",
 }: TeamCardTypeOneProps) => {
-	const renderCategories = (categories: Category[]) => {
+	const renderCategories = (categories: Array<Category>) => {
 		return (
-			<div className='flex flex-wrap gap-2'>
+			<div className="flex flex-wrap gap-2">
 				{categories.map((category) => (
 					<TextTag
+						key={category.name}
 						accentColorBackground={
 							category.accentColorBackground
 								? category.accentColorBackground
@@ -40,7 +41,8 @@ export const TeamCardTypeOne = ({
 							category.accentColorText
 								? category.accentColorText
 								: accentColorText
-						}>
+						}
+					>
 						{category.name}
 					</TextTag>
 				))}
@@ -49,18 +51,14 @@ export const TeamCardTypeOne = ({
 	};
 
 	return (
-		<div className='w-full min-w-fit'>
-			<div className='flex h-full items-center rounded-lg border border-gray-200 p-4'>
+		<div className="w-full min-w-fit">
+			<div className="flex h-full items-center rounded-lg border border-gray-200 p-4">
 				{image}
-				<div className='flex flex-col gap-2'>
+				<div className="flex flex-col gap-2">
 					{categories && renderCategories(categories)}
-					{description && <p className='text-black'>{description}</p>}
-					<h2 className='title-font font-medium text-black'>
-						{children}
-					</h2>
-					{contacts && (
-						<div className='flex flex-wrap gap-2'>{contacts}</div>
-					)}
+					{description && <p className="text-black">{description}</p>}
+					<h2 className="title-font font-medium text-black">{children}</h2>
+					{contacts && <div className="flex flex-wrap gap-2">{contacts}</div>}
 				</div>
 			</div>
 		</div>

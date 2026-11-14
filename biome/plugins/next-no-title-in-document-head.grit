@@ -1,0 +1,14 @@
+language js
+
+file($body) where {
+	$body <: contains `import { $specs } from "next/document"` where {
+		$specs <: contains `Head`
+	},
+	$body <: contains bubble `<Head>$kids</Head>` where {
+		$kids <: contains or {
+			`<title>$_</title>` as $t,
+			`<title />` as $t
+		},
+		register_diagnostic(span=$t, message="Do not use `<title>` with `<Head />` from `next/document` (@next/next/no-title-in-document-head).", severity="warn")
+	}
+}

@@ -4288,12 +4288,7 @@
 							},
 							"type": {
 								"type": "string",
-								"enum": [
-									"strings",
-									"woodwinds",
-									"brass",
-									"percussion"
-								]
+								"enum": ["strings", "woodwinds", "brass", "percussion"]
 							}
 						}
 					}
@@ -4345,12 +4340,7 @@
 										},
 										"type": {
 											"type": "string",
-											"enum": [
-												"strings",
-												"woodwinds",
-												"brass",
-												"percussion"
-											]
+											"enum": ["strings", "woodwinds", "brass", "percussion"]
 										},
 										"createdAt": {
 											"type": "string",
@@ -4719,12 +4709,7 @@
 									},
 									"type": {
 										"type": "string",
-										"enum": [
-											"strings",
-											"woodwinds",
-											"brass",
-											"percussion"
-										]
+										"enum": ["strings", "woodwinds", "brass", "percussion"]
 									},
 									"createdAt": {
 										"type": "string",

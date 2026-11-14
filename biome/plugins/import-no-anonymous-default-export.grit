@@ -1,0 +1,13 @@
+language js
+
+or {
+	`export default ($params) => $body`,
+	`export default async ($params) => $body`,
+	`export default function ($params) { $body }`,
+	`export default async function ($params) { $body }`,
+	`export default { $props }`,
+	`export default [ $items ]`,
+	`export default class { $members }`
+} as $e where {
+	register_diagnostic(span=$e, message="Assign a value to a variable before exporting it as the module default (import/no-anonymous-default-export).", severity="warn")
+}

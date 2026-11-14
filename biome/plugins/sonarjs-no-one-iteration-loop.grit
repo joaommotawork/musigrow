@@ -1,0 +1,13 @@
+language js
+
+or {
+	`for ($i; $c; $u) { $body }`,
+	`for (const $x of $xs) { $body }`,
+	`for (const $x in $xs) { $body }`,
+	`while ($c) { $body }`
+} as $loop where {
+	$body <: r"(?s).*\b(?:break|return\b[^;]*|throw\b[^;]*);\s*",
+	$body <: not r"(?s).*\bcontinue\b.*",
+	$body <: not r"(?s).*\b(?:if|switch|try)\b.*",
+	register_diagnostic(span=$loop, message="This loop always exits on its first iteration (sonarjs/no-one-iteration-loop).", severity="error")
+}

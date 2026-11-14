@@ -1,0 +1,20 @@
+language js
+
+or {
+	`$a === true`,
+	`$a === false`,
+	`$a !== true`,
+	`$a !== false`,
+	`$a == true`,
+	`$a == false`,
+	`true === $a`,
+	`false === $a`,
+	`$a || true`,
+	`$a || false`,
+	`$a && true`,
+	`$a && false`,
+	`!true`,
+	`!false`
+} as $expr where {
+	register_diagnostic(span=$expr, message="Redundant boolean literal (sonarjs/no-redundant-boolean).", severity="error")
+}
