@@ -1,6 +1,6 @@
 name: Claude Review
 
-# Automatic, advisory Claude code review for ready (non-draft) pull requests from
+# Blocking pre-merge Claude code review for ready (non-draft) pull requests from
 # this repository. PR-only: main pushes have nothing to review.
 # Setup: repository secret CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`).
 # Runner: vars.CI_RUNNER selects hosted (default) or the self-hosted fleet.
@@ -20,6 +20,7 @@ permissions:
 
 jobs:
   review:
+    name: Claude Review
     # Skip drafts, forks (no secrets, untrusted code) and dependency bots (cost).
     if: >-
       (github.event_name != 'pull_request' || github.event.pull_request.draft == false) &&
@@ -34,6 +35,7 @@ jobs:
           fetch-depth: 1
 
       - name: Claude review
+        id: review
         uses: anthropics/claude-code-action@f3b070c88125d33dbae5653df5f143101d4ea9dc # v1.0.276
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -58,5 +60,27 @@ jobs:
             Use inline comments for specific, actionable findings only. Skip style
             nits that lint or formatting already enforce. If nothing material is
             found, say so briefly. Do not push commits or approve the PR.
+
+            Finish with the structured result. important_findings counts the
+            findings that must be fixed before merge: a correctness bug, a
+            regression or a security problem that you verified in the code. Nits,
+            test suggestions and pre-existing problems do not count.
           claude_args: |
+            --model claude-opus-5-5
+            --effort medium
             --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr diff:*),Bash(gh pr view:*)"
+            --json-schema '{"type":"object","properties":{"important_findings":{"type":"integer","minimum":0},"summary":{"type":"string"}},"required":["important_findings","summary"]}'
+
+      - name: Gate on Important findings
+        env:
+          RESULT: ${{ steps.review.outputs.structured_output }}
+        run: |
+          count=$(printf '%s' "$RESULT" | jq -er '.important_findings') || {
+            echo "::error::The review returned no verdict; re-run the Claude Review check."
+            exit 1
+          }
+          if [ "$count" -gt 0 ]; then
+            echo "::error::Claude Review found $count Important finding(s); fix them and push."
+            exit 1
+          fi
+          echo "Claude Review: no Important findings."
