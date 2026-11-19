@@ -1,9 +1,10 @@
 # Verifica que o texto em português segue o português europeu (AO90).
-# A Action vem do mirror público joaommota-labs/pt-pt-lint (tag v1).
+# A Action vem do mirror público joaommota-labs/pt-pt-lint (tag v1, fixada por SHA).
 name: pt-PT
 
 on:
   pull_request:
+    types: [opened, reopened, synchronize, ready_for_review, converted_to_draft]
   push:
     branches: [main]
 
@@ -16,8 +17,9 @@ concurrency:
 
 jobs:
   pt-pt:
-    runs-on: ${{ vars.CI_RUNNER == 'self-hosted' && fromJSON('["self-hosted","linux","x64","joao-linux"]') || 'ubuntu-latest' }}
+    if: ${{ github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
+    runs-on: ${{ vars.CI_RUNNER == 'self-hosted' && fromJSON('["self-hosted","linux","x64","joao-linux"]') || 'ubuntu-24.04' }}
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: joaommota-labs/pt-pt-lint@v1
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: joaommota-labs/pt-pt-lint@8b62c4e9b734ef0eec48f385e49a5a71d866f8e8 # v1
