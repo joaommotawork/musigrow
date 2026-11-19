@@ -13,7 +13,8 @@ on:
 jobs:
   chromatic-deployment:
     # Operating System
-    runs-on: ${{ vars.CI_RUNNER == 'self-hosted' && fromJSON('["self-hosted","linux","x64","joao-linux"]') || 'ubuntu-latest' }}
+    runs-on: ${{ vars.CI_RUNNER == 'self-hosted' && fromJSON('["self-hosted","linux","x64","joao-linux"]') || (vars.CI_RUNNER == 'blacksmith' && 'blacksmith-2vcpu-ubuntu-2404' || 'ubuntu-latest') }}
+    timeout-minutes: 20
     # Job steps
     steps:
       - uses: actions/checkout@v3
