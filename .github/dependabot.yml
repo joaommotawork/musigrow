@@ -1,11 +1,28 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
 version: 2
+# Baseline from joaommota-labs/project-bootstrap: one grouped PR per
+# ecosystem per week.
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
+      day: "monday"
+    groups:
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+      all:
+        applies-to: version-updates
+        patterns: ["*"]
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    groups:
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+      all:
+        applies-to: version-updates
+        patterns: ["*"]
