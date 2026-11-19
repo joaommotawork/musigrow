@@ -1,5 +1,5 @@
 # Verifica que o texto em português segue o português europeu (AO90).
-# Correção local: npx @joaommotawork/pt-pt-lint --fix
+# A Action vem do mirror público joaommota-labs/pt-pt-lint (tag v1).
 name: pt-PT
 
 on:
@@ -16,8 +16,8 @@ concurrency:
 
 jobs:
   pt-pt:
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.CI_RUNNER == 'self-hosted' && fromJSON('["self-hosted","linux","x64","joao-linux"]') || 'ubuntu-latest' }}
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - uses: joaommotawork/packages/packages/pt-pt-lint@main
+      - uses: joaommota-labs/pt-pt-lint@v1
