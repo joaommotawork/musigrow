@@ -17,17 +17,17 @@ jobs:
     timeout-minutes: 20
     # Job steps
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v7
         with:
           node-version: 16
       - name: Install Dependencies
         run: yarn install
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
-        uses: chromaui/action@v1
+        uses: chromaui/action@v17
         # Chromatic GitHub Action options
         with:
           workingDir: packages/musigrow-ui
