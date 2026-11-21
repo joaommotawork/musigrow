@@ -27,7 +27,7 @@ jobs:
       github.event.pull_request.head.repo.full_name == github.repository &&
       github.event.pull_request.user.type != 'Bot'
     runs-on: ${{ vars.CI_RUNNER == 'self-hosted' && fromJSON('["self-hosted","linux","x64","joao-linux"]') || 'ubuntu-24.04' }}
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,6 +36,59 @@ jobs:
 
       - name: Claude review
         id: review
+        # A run without a verdict is retried once below; the gate decides.
+        continue-on-error: true
+        uses: anthropics/claude-code-action@f3b070c88125d33dbae5653df5f143101d4ea9dc # v1.0.276
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Alternative to the subscription token:
+          # anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          track_progress: true
+          prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ github.event.pull_request.number }}
+
+            Review this pull request. First read the repository guidance
+            (AGENTS.md, CLAUDE.md, CONTRIBUTING.md or README.md, whichever exist)
+            and apply its rules when judging the diff.
+
+            Focus on, in order:
+            1. Correctness bugs and regressions.
+            2. Security: authorization, secrets, injection, unsafe input handling.
+            3. Contract or schema drift between the parts the change touches.
+            4. Missing or weak tests for changed behavior.
+            5. CI changes that break the repository workflow policy.
+
+            Use inline comments for specific, actionable findings only. Skip style
+            nits that lint or formatting already enforce. If nothing material is
+            found, say so briefly. Do not push commits or approve the PR.
+
+            Finish with the structured result. important_findings counts the
+            findings that must be fixed before merge: a correctness bug, a
+            regression or a security problem that you verified in the code. Nits,
+            test suggestions and pre-existing problems do not count.
+          claude_args: |
+            --model claude-opus-5-5
+            --effort medium
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr diff:*),Bash(gh pr view:*)"
+            --json-schema '{"type":"object","properties":{"important_findings":{"type":"integer","minimum":0},"summary":{"type":"string"}},"required":["important_findings","summary"]}'
+
+      - name: Check for a verdict
+        id: verdict
+        env:
+          RESULT: ${{ steps.review.outputs.structured_output }}
+        run: |
+          if printf '%s' "$RESULT" | jq -e '.important_findings | numbers' >/dev/null 2>&1; then
+            echo "retry=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::The review returned no verdict; retrying once."
+            echo "retry=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Claude review (retry)
+        id: review_retry
+        if: steps.verdict.outputs.retry == 'true'
+        continue-on-error: true
         uses: anthropics/claude-code-action@f3b070c88125d33dbae5653df5f143101d4ea9dc # v1.0.276
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -73,7 +126,7 @@ jobs:
 
       - name: Gate on Important findings
         env:
-          RESULT: ${{ steps.review.outputs.structured_output }}
+          RESULT: ${{ steps.review_retry.outputs.structured_output || steps.review.outputs.structured_output }}
         run: |
           count=$(printf '%s' "$RESULT" | jq -er '.important_findings') || {
             echo "::error::The review returned no verdict; re-run the Claude Review check."
